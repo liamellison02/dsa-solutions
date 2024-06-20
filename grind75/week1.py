@@ -70,11 +70,12 @@ class Solution:
 
         while ptr2 < len(prices):
             if prices[ptr2] < prices[ptr1]:
+                ptr1 = ptr2
                 ptr2 += 1
-                ptr1 += 1
             else:
                 if prices[ptr2] - prices[ptr1] > profit:
                     profit = prices[ptr2] - prices[ptr1]
                 ptr2 += 1
 
         return profit
+        
