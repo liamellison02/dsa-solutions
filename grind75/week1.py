@@ -8,12 +8,13 @@ class ListNode:
         self.next = next
 
 class Solution:
-    
+
     # 1. Two Sum
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashMap = {}
         index = 0
         diff = 0
+        
         for item in nums:
             diff = target - item
             if diff in hashMap:
@@ -26,6 +27,7 @@ class Solution:
         opens = [ '(', '{', '[' ]
         closes = [ ')', '}', ']' ]
         stack = []
+        
         for v in s:
             if v in opens:
                 stack.append(v)
@@ -43,19 +45,16 @@ class Solution:
 
     # 3. Merge Two Sorted Lists
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        
         head = ListNode()
         tail = head
 
         while list1 and list2:
-
             if list1.val < list2.val:
                 tail.next = list1
                 list1 = list1.next
             else:
                 tail.next = list2
                 list2 = list2.next
-
             tail = tail.next
 
         if list1:
@@ -64,3 +63,18 @@ class Solution:
             tail.next = list2
         
         return head.next
+    
+    # 4. Best Time to Buy and Sell Stock
+    def maxProfit(self, prices: List[int]) -> int:
+        profit, ptr1, ptr2 = 0, 0, 1
+
+        while ptr2 < len(prices):
+            if prices[ptr2] < prices[ptr1]:
+                ptr2 += 1
+                ptr1 += 1
+            else:
+                if prices[ptr2] - prices[ptr1] > profit:
+                    profit = prices[ptr2] - prices[ptr1]
+                ptr2 += 1
+
+        return profit
