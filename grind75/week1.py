@@ -11,6 +11,7 @@ class Solution:
 
     # 1. Two Sum
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Hashmap solution: O(n) time complexity, O(n) space complexity
         hashMap = {}
         index = 0
         diff = 0
@@ -24,6 +25,7 @@ class Solution:
 
     # 2. Valid Parentheses
     def isValid(self, s: str) -> bool:
+        # Stack solution: O(n) time complexity, O(n) space complexity
         opens = [ '(', '{', '[' ]
         closes = [ ')', '}', ']' ]
         stack = []
@@ -45,6 +47,7 @@ class Solution:
 
     # 3. Merge Two Sorted Lists
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # O(n) time complexity, O(1) space complexity
         head = ListNode()
         tail = head
 
@@ -66,6 +69,7 @@ class Solution:
     
     # 4. Best Time to Buy and Sell Stock
     def maxProfit(self, prices: List[int]) -> int:
+        # Two pointers solution: O(n) time complexity, O(1) space complexity
         profit, ptr1, ptr2 = 0, 0, 1
 
         while ptr2 < len(prices):
@@ -79,3 +83,32 @@ class Solution:
 
         return profit
         
+    # 5. Valid Palindrome
+    def isPalindrome(self, s: str) -> bool:
+        # Two pointers solution: O(n/2) = O(n) time complexity, O(1) space complexity
+        lb, rb = 0, len(s) - 1
+        while lb <= rb:
+            if s[lb].isalnum() and s[rb].isalnum():
+                if s[lb].upper() != s[rb].upper():
+                    return False
+                else:
+                    lb += 1
+                    rb -= 1
+            else:
+                if not s[lb].isalnum():
+                    lb +=1
+                if not s[rb].isalnum():
+                    rb -=1
+        
+        return True
+
+
+
+if __name__ == '__main__':
+    sol = Solution()
+    print(sol.twoSum([2,7,11,15], 9)) # [0, 1]
+    print(sol.isValid("()")) # True
+    print(sol.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))) # 1 -> 1 -> 2 -> 3 -> 4 -> 4
+    print(sol.maxProfit([7,1,5,3,6,4])) # 5
+    print(sol.isPalindrome("Az a")) # True
+    
