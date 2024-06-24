@@ -1,4 +1,5 @@
 import collections
+import string
 from typing import List, Dict, Tuple, Any, Union, Optional
 
 # Definition for singly-linked list.
@@ -6,6 +7,12 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+        
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Solution:
 
@@ -101,7 +108,13 @@ class Solution:
                     rb -=1
         
         return True
-
+    
+    # 6. Invert Binary Tree
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
+        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        return root
 
 
 if __name__ == '__main__':
@@ -111,4 +124,5 @@ if __name__ == '__main__':
     print(sol.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))) # 1 -> 1 -> 2 -> 3 -> 4 -> 4
     print(sol.maxProfit([7,1,5,3,6,4])) # 5
     print(sol.isPalindrome("Az a")) # True
+    print(sol.invertTree(TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))).val) # 4
     
