@@ -115,9 +115,27 @@ class Solution:
             return None
         root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
         return root
+    
+    # 7. Vaild Anagram
+    def isAnagram(self, s: str, t: str) -> bool:
+        hm = dict.fromkeys(string.ascii_lowercase, 0)
+        total = 0
+        
+        for c in s:
+            hm[c]+=1
+            total+=1
+        for i in t:
+            if hm[i] > 0:
+                hm[i]-=1
+                total-=1
+            else:
+                return False
+        
+        return True if total == 0 else False
 
 
 if __name__ == '__main__':
+    # Initial Test Cases
     sol = Solution()
     print(sol.twoSum([2,7,11,15], 9)) # [0, 1]
     print(sol.isValid("()")) # True
@@ -125,4 +143,5 @@ if __name__ == '__main__':
     print(sol.maxProfit([7,1,5,3,6,4])) # 5
     print(sol.isPalindrome("Az a")) # True
     print(sol.invertTree(TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))).val) # 4
+    print(sol.isAnagram("anagram", "nagaram")) # True
     
