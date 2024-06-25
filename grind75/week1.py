@@ -132,6 +132,19 @@ class Solution:
                 return False
         
         return True if total == 0 else False
+    
+    # 8. Binary Search
+    def binarySearch(self, nums: List[int], target: int) -> int:
+        lb, rb, mid = 0, len(nums)-1, 0
+        while lb <= rb:
+            mid = (lb + rb) // 2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                lb = mid + 1
+            else:
+                rb = mid - 1
+        return -1
 
 
 if __name__ == '__main__':
@@ -144,4 +157,5 @@ if __name__ == '__main__':
     print(sol.isPalindrome("Az a")) # True
     print(sol.invertTree(TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))).val) # 4
     print(sol.isAnagram("anagram", "nagaram")) # True
+    print(sol.binarySearch([-1,0,3,5,9,12], 9)) # 4
     
