@@ -167,6 +167,16 @@ class Solution:
         
         fill(sr, sc)
         return image
+    
+    # 10. Lowest Common Ancestor of a Binary Search Tree
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+        while root:
+            if root.val < p.val and root.val < q.val:
+                root = root.right
+            elif root.val > p.val and root.val > q.val:
+                root = root.left
+            else:
+                return root
 
 
 if __name__ == '__main__':
@@ -181,4 +191,5 @@ if __name__ == '__main__':
     print(sol.isAnagram("anagram", "nagaram")) # True
     print(sol.binarySearch([-1,0,3,5,9,12], 9)) # 4
     print(sol.floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)) # [[2,2,2],[2,2,0],[2,0,1]]
+    print(sol.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4, TreeNode(3), TreeNode(5))), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(8)).val) # 6
     
