@@ -94,6 +94,7 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
         # Two pointers solution: O(n/2) = O(n) time complexity, O(1) space complexity
         lb, rb = 0, len(s) - 1
+
         while lb <= rb:
             if s[lb].isalnum() and s[rb].isalnum():
                 if s[lb].upper() != s[rb].upper():
@@ -136,6 +137,7 @@ class Solution:
     # 8. Binary Search
     def binarySearch(self, nums: List[int], target: int) -> int:
         lb, rb, mid = 0, len(nums)-1, 0
+
         while lb <= rb:
             mid = (lb + rb) // 2
             if nums[mid] == target:
@@ -144,7 +146,27 @@ class Solution:
                 lb = mid + 1
             else:
                 rb = mid - 1
+
         return -1
+    
+    # 9. Flood Fill
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
+        rows, cols, color = len(image)-1, len(image[0])-1, image[sr][sc]
+        
+        def fill(sr, sc):
+            if not (0 <= sr <= rows and 0 <= sc <= cols):
+                return
+            if image[sr][sc] != color or image[sr][sc] == newColor:
+                return
+            else:
+                image[sr][sc] = newColor
+                fill(sr+1,sc)
+                fill(sr,sc+1)
+                fill(sr-1,sc)
+                fill(sr,sc-1)
+        
+        fill(sr, sc)
+        return image
 
 
 if __name__ == '__main__':
@@ -158,4 +180,5 @@ if __name__ == '__main__':
     print(sol.invertTree(TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))).val) # 4
     print(sol.isAnagram("anagram", "nagaram")) # True
     print(sol.binarySearch([-1,0,3,5,9,12], 9)) # 4
+    print(sol.floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)) # [[2,2,2],[2,2,0],[2,0,1]]
     
