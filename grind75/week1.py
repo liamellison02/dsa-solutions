@@ -121,7 +121,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         hm = dict.fromkeys(string.ascii_lowercase, 0)
         total = 0
-        
+
         for c in s:
             hm[c]+=1
             total+=1
@@ -177,6 +177,23 @@ class Solution:
                 root = root.left
             else:
                 return root
+            
+    # 11. Balanced Binary Tree
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        self.balanced = True
+
+        def dfs(root):         
+            if not root: 
+                return 0
+            left = dfs(root.left)
+            right = dfs(root.right)
+            if (abs(left - right) > 1):
+                self.balanced= False
+                
+            return max(left, right) + 1
+        
+        dfs(root)
+        return self.balanced
 
 
 if __name__ == '__main__':
@@ -192,4 +209,4 @@ if __name__ == '__main__':
     print(sol.binarySearch([-1,0,3,5,9,12], 9)) # 4
     print(sol.floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)) # [[2,2,2],[2,2,0],[2,0,1]]
     print(sol.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4, TreeNode(3), TreeNode(5))), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(8)).val) # 6
-    
+    print(sol.isBalanced(TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))))) # True
