@@ -194,6 +194,31 @@ class Solution:
         
         dfs(root)
         return self.balanced
+    
+    # 12. Linked List Cycle
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        tortoise = hare = head
+
+        while hare and hare.next:
+            tortoise = tortoise.next
+            hare = hare.next.next
+
+            if tortoise == hare: 
+                return True
+                
+        return False
+    
+    # If you want to make it slightly more efficient, you can use try-except block:
+    # def hasCycle(self, head: Optional[ListNode]) -> bool:
+    #     try:
+    #         tortoise = head
+    #         hare = head.next
+    #         while tortoise is not hare:
+    #             tortoise = tortoise.next
+    #             hare = hare.next.next
+    #         return True
+    #     except:
+    #         return False
 
 
 if __name__ == '__main__':
