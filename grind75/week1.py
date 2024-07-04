@@ -219,6 +219,7 @@ class Solution:
     #     except:
     #         return False
 
+    # 13. Remove Nth Node From End of List
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         if not head:
         # handles null list, single node list if n > 1, and 2-node list if n > 2
@@ -248,6 +249,16 @@ class Solution:
 
         walker.next = walker.next.next # removes the target node
         return head
+
+    # 14. Reverse Linked List
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        curr, prev, temp = head, None, None
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
 
 
 if __name__ == '__main__':
