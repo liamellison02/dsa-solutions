@@ -1,4 +1,3 @@
-import collections
 import string
 from typing import List, Dict, Tuple, Any, Union, Optional
 
@@ -219,7 +218,48 @@ class Solution:
     #         return True
     #     except:
     #         return False
-    
+
+    # 13. Remove Nth Node From End of List
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        if not head:
+        # handles null list, single node list if n > 1, and 2-node list if n > 2
+            return head
+
+        runner = head
+        # walker starts as dummy node with next pointing to head so when we walk up
+        # the LL, we can stop right before the n-before-last node and remove the
+        # pointer to our target node
+        walker = ListNode()
+        walker.next = head
+        gap = n # counter variable for our gap between walker and runner
+
+        while gap > 0:
+            if not runner.next:
+                # handles when n > len(list) and n == len(list)
+                if gap == 1:
+                    head = head.next
+                    return head
+            runner = runner.next
+            gap -= 1
+
+        while runner:
+            # walks up list until runner reaches end
+            walker = walker.next
+            runner = runner.next
+
+        walker.next = walker.next.next # removes the target node
+        return head
+
+    # 14. Reverse Linked List
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        curr, prev, temp = head, None, None
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
+
 
 if __name__ == '__main__':
     # Initial Test Cases
