@@ -248,6 +248,23 @@ class Solution:
             prev = curr
             curr = temp
         return prev
+    
+    # 15. Top K Frequent Elements
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        countMap = {}
+        freq = [[] for i in range(len(nums) + 1)]
+
+        for n in nums:
+            countMap[n] = countMap.get(n, 0) + 1
+        for n, c in countMap.items():
+            freq[c].append(n)
+        
+        res = []
+        for i in range(len(freq)-1, 0, -1):
+            for n in freq[i]:
+                res.append(n)
+                if len(res) == k:
+                    return res
 
 
 if __name__ == '__main__':
