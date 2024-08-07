@@ -308,6 +308,35 @@ class Solution:
             longest = max(longest, rb-lb+1)
 
         return longest
+    
+    # 18. Longest Palindromic Substring
+    def longestPalindrome(s: str):
+        if len(s) == 1:
+            return s
+
+        if s == s[::-1]:
+            return s
+
+        longest = ""
+        curr = ""
+        temp = ""
+        for i in range(len(s)-1, -1, -1):
+            curr = ""
+            for j in range(len(s)):
+                if i == j:
+                    if len(curr) == 0:
+                        curr = s[i]
+                else:
+                    temp = s[j:i+1]
+                    if temp == temp[::-1]:
+                        if len(temp) > len(curr):
+                            curr = temp
+
+            if len(curr) > len(longest):
+                longest = curr
+
+
+        return longest
 
 
 if __name__ == '__main__':
