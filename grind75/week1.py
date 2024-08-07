@@ -265,6 +265,36 @@ class Solution:
                 res.append(n)
                 if len(res) == k:
                     return res
+                
+    # 16. Encode and Decode Strings
+    def encode(self, strs: List[str]) -> str:
+        ret = ""
+        for s in strs:
+            ret += str(len(s)) + '#' + s
+        return ret
+
+    def decode(self, s: str) -> List[str]:
+        temp = ""
+        currDelim = 0
+        i = 0
+        retArr = []
+        while i < len(s):
+            if currDelim == 0:
+                while s[i] != "#":
+                    temp += s[i]
+                    i += 1
+                currDelim = int(temp)
+                if currDelim == 0:
+                    retArr.append("")
+                temp = ""
+                i += 1
+            else:
+                retArr.append(s[i:i+currDelim])
+                i += currDelim
+                currDelim = 0
+        
+        return retArr
+    
 
 
 if __name__ == '__main__':
