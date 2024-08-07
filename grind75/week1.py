@@ -337,6 +337,30 @@ class Solution:
 
 
         return longest
+    
+    # 19. Product of Array Except Self
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        products = [0 for n in range(len(nums))]
+        totalProduct = 1
+        numZeroes = 0
+        zeroIndex = None
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                totalProduct *= nums[i]
+            elif numZeroes < 1:
+                numZeroes += 1
+                zeroIndex = i
+            else:
+                return products
+        
+        if numZeroes == 1:
+            products[zeroIndex] = totalProduct
+            return products
+
+        for j in range(len(nums)):
+            products[j] = (totalProduct)//nums[j]
+        
+        return products
 
 
 if __name__ == '__main__':
