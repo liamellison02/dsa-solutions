@@ -1,6 +1,16 @@
 import string
 from typing import List, Dict, Tuple, Any, Union, Optional
-from resources import ListNode, TreeNode
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+        
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Solution:
 
@@ -335,7 +345,6 @@ class Solution:
             if len(curr) > len(longest):
                 longest = curr
 
-
         return longest
     
     # 19. Product of Array Except Self
@@ -361,19 +370,185 @@ class Solution:
             products[j] = (totalProduct)//nums[j]
         
         return products
+    
+    
+    def findPairs(numbers):
+        arrLen = len(numbers)
+        i, j, numPairs = 0, 0, 0
+        iArr, jArr = [], []
+        
+        def digitArr(num: int):
+            # function to return digits of an int as an ordered int arr
+            retArr = []
+            temp = num
+            while temp > 0:
+                retArr.append(temp % 10)
+                temp = temp // 10
+            return retArr
+            
+        def compareDigitArrs(arr1: list, arr2: list):
+            # function to compare ordered int arrs
+            invalidCount = 0
+            invalidIndices = []
+            
+            if len(arr1) != len(arr2):
+                return False
+                
+            for num in range(len(arr1)):
+                if invalidCount > 2:
+                    return False
+                if arr1[num] == arr2[num]:
+                    continue
+                invalidCount += 1
+                invalidIndices.append(num)
+            
+            if (invalidCount == 2 and arr1[invalidIndices[0]] == arr2[invalidIndices[1]] and arr1[invalidIndices[1]] == arr2[invalidIndices[0]]) or invalidCount == 0:
+                return True
+            else:
+                return False
+        
+        
+        while i < arrLen:
+            j = i + 1
+            iArr = digitArr(numbers[i])
+                
+            while j < arrLen:
+                # check if you can just swap two digits to make same nums
+                jArr = digitArr(numbers[j])
+                if compareDigitArrs(iArr, jArr):
+                    numPairs += 1
+                j += 1
+            i += 1
+        
+        return numPairs
+
+    # 20. Spiral Matrix                
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        lb, rb, tb, bb = 0, len(matrix[0]), 0, len(matrix)
+        output = []
+
+        while lb < rb or tb < bb:
+
+            # Traverse top row, left to right
+            if lb < rb:
+                for num in matrix[tb][lb:rb]:
+                    output.append(num)
+            else:
+                break
+            tb += 1
+
+            # Traverse far right column, top to bottom
+            if tb < bb:
+                i = tb
+                while i < bb:
+                    output.append(matrix[i][rb-1])
+                    i += 1
+            else:
+                break
+            rb -= 1
+            
+            # Traverse bottom row, right to left
+            if lb < rb:
+                for i in range(rb-1, lb-1, -1):
+                    output.append(matrix[bb-1][i])
+            else:
+                break
+            bb -= 1
+
+            # Traverse far left column, bottom to top
+            if tb < bb:
+                i = bb - 1
+                while i >= tb:
+                    output.append(matrix[i][lb])
+                    i -= 1
+            else:
+                break         
+            lb += 1
+
+        return output
+
+    # 21. Spiral Matrix II
+    def generateMatrix(self, n: int) -> List[List[int]]:
+        matrix = [[0 for i in range(n)] for j in range(n)]  
+        lb, rb, ub, bb = 0, n, 0, n
+        i = 1
+
+        while lb < rb and ub < bb and i <= n*n:
+
+            for j in range(lb, rb, 1):
+                matrix[ub][j] = i
+                i += 1
+            ub += 1
+
+            if not ub < bb:
+                break
+            
+            j = ub
+            while j < bb:
+                matrix[j][rb-1] = i
+                i += 1
+                j += 1
+            rb -= 1
+
+            if not lb < rb:
+                break
+
+            for j in range(rb-1, lb-1, -1):
+                matrix[bb-1][j] = i
+                i += 1
+            bb -= 1
+
+            if not ub < bb:
+                break
+            
+            j = bb-1
+            while j >= ub:
+                matrix[j][lb] = i
+                i += 1
+                j -= 1
+            lb += 1
+
+        return matrix
+    
+    # 21. Reshape the Matrix
+    def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:
+        if (r == len(mat) and c == len(mat[0])) or r*c != len(mat)*len(mat[0]):
+            return mat
+        
+        matrix = [[0 for i in range(c)] for j in range(r)]
+        x, y = 0, 0
+
+        for row in mat:
+            for num in row:
+                if not x < c:
+                    y += 1
+                    x = 0
+                matrix[y][x] = num
+                x += 1
+        
+        return matrix
+    
+
+
+    # modulo num by 10, store result in hm as key, w value as the index
+    # int div num by 10, repeat process with result if result > 0
+            
 
 
 if __name__ == '__main__':
     # Initial Test Cases
     sol = Solution()
-    print(sol.twoSum([2,7,11,15], 9)) # [0, 1]
-    print(sol.isValid("()")) # True
-    print(sol.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))) # 1 -> 1 -> 2 -> 3 -> 4 -> 4
-    print(sol.maxProfit([7,1,5,3,6,4])) # 5
-    print(sol.isPalindrome("Az a")) # True
-    print(sol.invertTree(TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))).val) # 4
-    print(sol.isAnagram("anagram", "nagaram")) # True
-    print(sol.binarySearch([-1,0,3,5,9,12], 9)) # 4
-    print(sol.floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)) # [[2,2,2],[2,2,0],[2,0,1]]
-    print(sol.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4, TreeNode(3), TreeNode(5))), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(8)).val) # 6
-    print(sol.isBalanced(TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))))) # True
+    # print(sol.twoSum([2,7,11,15], 9)) # [0, 1]
+    # print(sol.isValid("()")) # True
+    # print(sol.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))) # 1 -> 1 -> 2 -> 3 -> 4 -> 4
+    # print(sol.maxProfit([7,1,5,3,6,4])) # 5
+    # print(sol.isPalindrome("Az a")) # True
+    # print(sol.invertTree(TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))).val) # 4
+    # print(sol.isAnagram("anagram", "nagaram")) # True
+    # print(sol.binarySearch([-1,0,3,5,9,12], 9)) # 4
+    # print(sol.floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)) # [[2,2,2],[2,2,0],[2,0,1]]
+    # print(sol.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4, TreeNode(3), TreeNode(5))), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(8)).val) # 6
+    # print(sol.isBalanced(TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))))) # True
+    # print(sol.spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]])) # [1,2,3,4,8,12,11,10,9,5,6,7]
+    print(sol.generateMatrix(3)) # [[1,2,3],[8,9,4],[7,6,5]]
+ 
