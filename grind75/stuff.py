@@ -170,11 +170,105 @@ def largestXFigure(matrix):
     #                 else:
     #                     break
     #             maxLen = max(maxLen, currLen)
+    
+def isValidSudoku(board: list) -> bool:
+    # check rows for 1-9
+    # check columns for 1-9
+    # check boxes for 1-9
+
+    # for box in board:
+    #   check if num in row or col
+    #   check if num in boxes
+
+    rows, cols, boxes = [set()]*9, [set()]*9, [set()]*9
+
+    first, second, third = set([0,1,2]), set([3,4,5]), set([6,7,8])
+
+
+    for row in range(len(board)):
+        for col in range(len(board[0])):
+            if board[row][col] == ".":
+                continue
+            box = 0
+            if col in first:
+                box = 0
+            elif col in second:
+                box = 1
+            elif col in third:
+                box = 2
+            
+            if row in second:
+                box += 3
+            elif row in third:
+                box += 6
+
+            if (
+                board[row][col] in rows[row]
+                or board[row][col] in cols[col]
+                or board[row][col] in boxes[box]
+            ):
+                return False
+
+            rows[row].add(board[row][col])
+            cols[col].add(board[row][col])
+            boxes[box].add(board[row][col])
+
+    return True
+    
+def longestDiverseString(a: int, b: int, c: int) -> str:
+    # while we have chars left:
+        # if last two values in stack are consecutive:
+            # check if we can add a diff char
+            # if not, return stack as a string
+        # if not consecutive chars previously, then we add the char
+        # with the highest remaining usages left
+    ret, usages = [], {"a": a, "b": b, "c": c}
+
+    while usages["a"] > 0 or usages["b"] > 0 or usages["c"] > 0:
+
+        if len(ret) > 1 and ret[len(ret)-1] == ret[len(ret)-2]:
+            chars = {"a", "b", "c"}
+            chars.remove(ret[len(ret)-1])
+            temp, counter = {}, 0
+            for char in chars:
+                if usages[char] == 0:
+                    counter += 1
+                temp[char] = usages[char]
+            if counter == 2:
+                return "".join(ret)
+            curr = max(temp)
+
+        else:
+            curr = max(usages)
+        
+        ret.append(curr)
+        usages[curr] -= 1
+
+    return "".join(ret)
 
 if __name__ == "__main__":
-    print(peakMeetings([[1, 5], [2, 4], [4, 5], [4, 6], [2, 7], [6,9]])) # 4
-    print(largestXFigure([[1, 0, 1, 0, 1], 
-                          [0, 1, 0, 1, 0], 
-                          [1, 0, 1, 0, 1],
-                          [0, 1, 0, 1, 0], 
-                          [1, 0, 1, 0, 1]])) # ((2, 2), 3)
+    # x,y = "abcd", "abcde"
+
+    # dp = [[0]*(len(x)+1)]*(len(y)+1)
+
+    # for row in dp:
+    #     print(row)
+
+
+    # print("\n")
+    # i = 1
+    # for lwc in range(1, len(dp)):
+    #     for swc in range(1, len(dp[0])):
+    #         print(f'Iteration #{i}: lwc={lwc},swc={swc}\n')
+    #         i += 1
+
+    # print(f'Longest subsequence = {dp[len(y)][len(x)]}')
+    # print(peakMeetings([[1, 5], [2, 4], [4, 5], [4, 6], [2, 7], [6,9]])) # 4
+    # print(largestXFigure([[1, 0, 1, 0, 1], 
+    #                       [0, 1, 0, 1, 0], 
+    #                       [1, 0, 1, 0, 1],
+    #                       [0, 1, 0, 1, 0], 
+    #                       [1, 0, 1, 0, 1]])) # ((2, 2), 3)
+    # board=[["1","2",".",".","3",".",".",".","."],["4",".",".","5",".",".",".",".","."],[".","9","8",".",".",".",".",".","3"],["5",".",".",".","6",".",".",".","4"],[".",".",".","8",".","3",".",".","5"],["7",".",".",".","2",".",".",".","6"],[".",".",".",".",".",".","2",".","."],[".",".",".","4","1","9",".",".","8"],[".",".",".",".","8",".",".","7","9"]]
+    # print(isValidSudoku(board)) 
+    print(longestDiverseString(1, 1, 7)) # "ccbccacc"
