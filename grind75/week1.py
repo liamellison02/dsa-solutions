@@ -528,11 +528,90 @@ class Solution:
         
         return matrix
     
+    
+    # 22. Subsets
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        subsets = []
+        stack = [([], 0)]
+        currSet, i = None, 0
+        while stack:
+            currSet, i = stack.pop()
+            if i < len(nums):
+                stack.append((currSet.copy(), i+1))
+                currSet.append(nums[i])
+                stack.append((currSet, i+1))
+            else:
+                subsets.append(currSet)
 
+        return subsets
+    
+    
+    # 23. Evaluate Reverse Polish Notation
+    def evalRPN(self, tokens: List[str]) -> int:
+        operands = []
 
-    # modulo num by 10, store result in hm as key, w value as the index
-    # int div num by 10, repeat process with result if result > 0
+        for token in tokens:
+            if token == '+':
+                n = operands.pop()
+                m = operands.pop()
+                operands.append(str(n+m))
+            elif token == '-':
+                n = operands.pop()
+                m = operands.pop()
+                operands.append(str(n-m))
+            elif token == '*':
+                n = operands.pop()
+                m = operands.pop()
+                operands.append(str(n*m))
+            elif token == '/':
+                n = operands.pop()
+                m = operands.pop()
+                operands.append(str(n//m))
+            else:
+                operands.append(int(token))
+        
+        return operands.pop()
+    
+    
+    # 24. Permutations in String
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        if len(s1) > len(s2):
+            return False
+
+        s1Chars = [0] * 26
+        s2Chars = [0] * 26 
+        count = 0
+
+        for i in range(len(s1)):
+            s1Chars[ord(s1[i]) - ord('a')] += 1
+            s2Chars[ord(s2[i]) - ord('a')] += 1
+        
+        for i in range(26):
+            if s1Chars[i] == s2Chars[i]:
+                count += 1
+        
+        if count == 26:
+            return True
+
+        for i in range(len(s1), len(s2)):
+            l, r = ord(s2[i - len(s1)]) - ord('a'), ord(s2[i]) - ord('a')
             
+            if s2Chars[l] == s1Chars[l]:
+                count -= 1
+            s2Chars[l] -= 1
+            if s2Chars[l] == s1Chars[l]:
+                count += 1
+
+            if s2Chars[r] == s1Chars[r]:
+                count -= 1
+            s2Chars[r] += 1
+            if s2Chars[r] == s1Chars[r]:
+                count += 1
+
+            if count == 26:
+                return True
+        
+        return False
 
 
 if __name__ == '__main__':
@@ -550,5 +629,7 @@ if __name__ == '__main__':
     # print(sol.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4, TreeNode(3), TreeNode(5))), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(8)).val) # 6
     # print(sol.isBalanced(TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))))) # True
     # print(sol.spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]])) # [1,2,3,4,8,12,11,10,9,5,6,7]
-    print(sol.generateMatrix(3)) # [[1,2,3],[8,9,4],[7,6,5]]
+    # print(sol.generateMatrix(3)) # [[1,2,3],[8,9,4],[7,6,5]]
+    # print(sol.subsets([1,2,3])) # [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+    print(sol.evalRPN(["2","1","+","3","*"])) # 9
  
