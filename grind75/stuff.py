@@ -94,3 +94,65 @@ def largestXFigure(matrix):
     #                     break
     #             maxLen = max(maxLen, currLen)
     return maxLen
+
+def numIslands(grid) -> int:
+    if not grid or len(grid) < 1:
+        return 0
+
+    islands, curr, rows, cols, visited = 0, None, len(grid), len(grid[0]), set()
+
+    directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
+
+    for row in range(rows):
+        for col in range(cols):
+            curr = (row,col)
+            if not curr in visited:
+
+                if grid[curr[0]][curr[1]] == "1":
+                    # Perform DFS on new island "root"
+                    stack = [curr]
+
+                    while len(stack) > 0:
+                        temp = stack.pop()
+                        if not temp in visited and 0 <= temp[0] < rows and 0 <= temp[1] < cols and grid[temp[0]][temp[1]] == "1":
+                            visited.add(temp)
+                            for rd, cd in directions:
+                                stack.append((temp[0]+rd, temp[1]+cd))
+                    
+                    islands += 1
+
+                else:
+                    visited.add(curr)
+            
+    return islands
+
+def maxAreaOfIsland(grid) -> int:
+    if not grid or len(grid) < 1:
+        return 0
+
+    maxArea, curr, visited, rows, cols = 0, None, set(), len(grid), len(grid[0])
+    # directions = [(1,0),(-1,0),(0,1),(0,-1)]
+
+    for row in range(rows):
+        for col in range(cols):
+            curr = (row,col)
+            if not curr in visited and grid[row][col] == "1":
+                stack = [curr]
+                area = 0
+                while stack:
+                    temp = stack.pop()
+                    if not temp in visited:
+                        visited.add(temp)
+                        if 0 <= temp[0] < rows and 0 <= temp[1] < cols and grid[temp[0]][temp[1]] == "1":
+                            area += 1
+                            stack.append((temp[0]+1,temp[1]))
+                            stack.append((temp[0]-1,temp[1]))
+                            stack.append((temp[0],temp[1]+1))
+                            stack.append((temp[0],temp[1]-1))
+                    if area > maxArea:
+                        maxArea = area
+    
+    return maxArea
+
+if __name__ == "__main__":
+    print(maxAreaOfIsland([[0,1,1,0,1],[1,0,1,0,1],[0,1,1,0,1],[0,1,0,0,1]]))
