@@ -1,4 +1,5 @@
 import collections
+import math
 from typing import Optional
 
 class TreeNode:
@@ -9,9 +10,9 @@ class TreeNode:
 
 # Graphs problem: Determine pre-requisites for courses
 def courseOrder(pr: list):
-    adjList = collections.defaultdict(list) # default value for each key is an empty list
+    adcolList = collections.defaultdict(list) # default value for each key is an empty list
     for c, p in pr:
-        adjList[c].append(p)
+        adcolList[c].append(p)
     visited, c_check = set(), set() # Space complexity: O(n)
     TO = [] # topilogically ordered list
     
@@ -20,7 +21,7 @@ def courseOrder(pr: list):
             return True
         if crse in c_check:
             return False
-        for i in adjList[crse]:
+        for i in adcolList[crse]:
             if not dfs(i):
                 return False
         visited.add(crse)
@@ -28,7 +29,7 @@ def courseOrder(pr: list):
         TO.append(crse)
         return True
     
-    for c in adjList:
+    for c in adcolList:
         if not dfs(c):
             return []   
             
@@ -57,3 +58,27 @@ def thirdSmallest(self, root: Optional[TreeNode]):
     
     return self.res
     
+
+
+
+
+def createSubBoxes(n, x0, x1, y0, y1):
+    rows, cols, boxes = math.ceil(math.sqrt(n)), math.ceil(math.sqrt(n)), []
+
+    boxWidth = (x1 - x0) // cols
+    boxHeight = (y1 - y0) // rows
+
+    for row in range(rows):
+        for col in range(cols):
+            boxes.append((x0 + col*boxWidth, x0 + (col*boxWidth)+boxWidth, y0 + row*boxHeight, y0 + (row*boxHeight)+boxHeight))
+    
+    return boxes
+
+
+def main():
+    print(createSubBoxes(9, 0, 9, 0, 9))
+
+if __name__ == "__main__":
+    main()
+    
+
