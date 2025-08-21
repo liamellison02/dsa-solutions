@@ -3,7 +3,9 @@
 
 interviews/
 */submissions/
-codeforces/*.o
+
+*.o
+*.txt
 
 .DS_Store
 .vscode/
