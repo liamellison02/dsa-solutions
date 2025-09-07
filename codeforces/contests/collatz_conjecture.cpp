@@ -1,15 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #define FOR(i,a,b) for (int i = a; i < b; i++)
 
 typedef long long ll;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-typedef vector<string> vs;
 
 void solution() {
-    return;
+    int k, x;
+    cin >> k >> x;
+    cout << ( (ll)x << k ) << '\n';
 }
 
 int main() {
@@ -19,5 +18,6 @@ int main() {
     int t;
     cin >> t;
     while (t--) solution();
+
     return 0;
 }
