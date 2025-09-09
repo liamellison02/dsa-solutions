@@ -11,16 +11,13 @@ using namespace std;
 #define FOR(i,a,b) for (int i = a; i < b; i++)
 
 typedef long long ll;
-typedef double dbl;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-typedef vector<string> vs;
-typedef vector<char> vc;
-typedef unsigned long long ull;
-typedef unsigned int uint;
 
 void solution() {
-    return;
+    ll a, b;
+    cin >> a >> b;
+    if (a == b) { cout << 0 << "\n"; return; }
+    ll mx = max(a, b), mn = min(a, b);
+    cout << (mx % mn == 0 ? 1 : 2) << "\n";
 }
 
 int main() {

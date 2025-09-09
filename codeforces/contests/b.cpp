@@ -1,26 +1,29 @@
 #include <iostream>
 #include <vector>
-#include <string>
-#include <algorithm>
 #include <climits>
 #include <cmath>
-#include <iomanip>
 
 using namespace std;
 
 #define FOR(i,a,b) for (int i = a; i < b; i++)
 
 typedef long long ll;
-typedef double dbl;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-typedef vector<string> vs;
-typedef vector<char> vc;
-typedef unsigned long long ull;
-typedef unsigned int uint;
 
 void solution() {
-    return;
+    int n;
+    ll m;
+    cin >> n >> m;
+    vector<ll> a(n);
+    FOR(i, 0, n) cin >> a[i];
+
+    sort(a.begin(), a.end(), greater<ll>());
+
+    ll k = min<ll>(n, m);
+    ll ans = 0;
+    FOR(i, 0, (int)k) {
+        ans += a[i] * (m - i);
+    }
+    cout << ans << "\n";
 }
 
 int main() {
