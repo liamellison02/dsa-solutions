@@ -18,6 +18,8 @@ typedef vector<string> vs;
 typedef vector<char> vc;
 typedef unsigned long long ull;
 typedef unsigned int uint;
+typedef unordered_map<string, string> hmss;
+typedef unordered_map<string, int> hmsi;
 
 void solution() {
     return;
