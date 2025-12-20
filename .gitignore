@@ -3,6 +3,7 @@
 
 interviews/
 */submissions/
+scratch/
 
 *.o
 *.txt
@@ -14,3 +15,9 @@ interviews/
 */.pytest_cache/
 */.mypy_cache/
 */.coverage
+
+# build artifacts
+*.out
+*.exe
+__pycache__/
+*.pyc
