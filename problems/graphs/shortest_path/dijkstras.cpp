@@ -4,6 +4,7 @@
 using namespace std;
 using VI = vector<int>;
 using PII = pair<int, int>;
+using VPI = vector<PII>;
 
 int dijkstras(vector<VI> edges, int src, int dest) {
   // returns shortest distance from src to dest, given the graph represented by
@@ -17,7 +18,7 @@ int dijkstras(vector<VI> edges, int src, int dest) {
     adj[s].push_back({d, w});
   }
 
-  priority_queue<PII> heap;
+  priority_queue<PII, VPI, greater<PII>> heap;
   heap.push({0, src});
 
   while (!heap.empty()) {
