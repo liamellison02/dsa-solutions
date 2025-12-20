@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "$#" -lt 5 ]; then
+  echo "Usage:"
+  echo "  ./scripts/new <platform> <id> <slug> <lang> <pattern> [tags]"
+  echo ""
+  echo "Examples:"
+  echo "  ./scripts/new lc 125 valid-palindrome cpp arrays_hashing/two_pointers palindrome,string"
+  echo "  ./scripts/new cf 1791c prepend-append cpp arrays_hashing/two_pointers two-pointers,string"
+  exit 1
+fi
+
+platform="$1"   # lc | cf | ...
+id="$2"
+slug="$3"       # kebab-case
+lang="$4"       # cpp | py
+pattern="$5"    # arrays_hashing/two_pointers
+tags="${6:-}"   # optional, comma-separated
+
+case "$lang" in
+  cpp) ext="cpp" ;;
+  py)  ext="py"  ;;
+  *)
+    echo "Error: language must be 'cpp' or 'py'"
+    exit 1
+    ;;
+esac
+
+dir="problems/$pattern"
+file="$dir/${platform}-${id}-${slug}.${ext}"
+
+# Choose template based on platform if available
+tmpl="templates/${platform}.${ext}"
+if [ ! -f "$tmpl" ]; then
+  tmpl="templates/solution.${ext}"
+fi
+
+mkdir -p "$dir"
+
+if [ -f "$file" ]; then
+  echo "Error: file already exists:"
+  echo "  $file"
+  exit 1
+fi
+
+cp "$tmpl" "$file"
+
+# macOS sed (your environment)
+sed -i '' "s|platform:|platform: $platform|" "$file"
+sed -i '' "s|id:|id: $id|" "$file"
+sed -i '' "s|name:|name: ${slug//-/ }|" "$file"
+sed -i '' "s|pattern:|pattern: $pattern|" "$file"
+sed -i '' "s|tags:|tags: $tags|" "$file"
+
+echo "Created:"
+echo "  $file"
+echo "Template:"
+echo "  $tmpl"
