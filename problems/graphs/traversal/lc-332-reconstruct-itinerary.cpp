@@ -5,6 +5,9 @@ name: reconstruct itinerary
 pattern: graphs/traversal
 tags: dfs, hierholzer, eulerian path/circuit
 complexity:
+E = tickets.size(), V=|airports|
+- time = O(E * logE)
+- space = O(E + V)
 notes: eulerian path finding problem (path using all edges once)
 */
 
