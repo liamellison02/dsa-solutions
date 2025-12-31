@@ -11,26 +11,26 @@ if [ "$#" -lt 5 ]; then
   exit 1
 fi
 
-platform="$1"   # lc | cf | ...
+platform="$1" # lc | cf | ...
 id="$2"
-slug="$3"       # kebab-case
-lang="$4"       # cpp | py
-pattern="$5"    # arrays_hashing/two_pointers
-tags="${6:-}"   # optional, comma-separated
+slug="$3"     # kebab-case
+lang="$4"     # cpp | py
+pattern="$5"  # arrays_hashing/two_pointers
+tags="${6:-}" # optional, comma-separated
 
 case "$lang" in
-  cpp) ext="cpp" ;;
-  py)  ext="py"  ;;
-  *)
-    echo "Error: language must be 'cpp' or 'py'"
-    exit 1
-    ;;
+cpp) ext="cpp" ;;
+py) ext="py" ;;
+*)
+  echo "Error: language must be 'cpp' or 'py'"
+  exit 1
+  ;;
 esac
 
 dir="problems/$pattern"
 file="$dir/${platform}-${id}-${slug}.${ext}"
 
-# Choose template based on platform if available
+# template based on platform
 tmpl="templates/${platform}.${ext}"
 if [ ! -f "$tmpl" ]; then
   tmpl="templates/solution.${ext}"
@@ -46,7 +46,7 @@ fi
 
 cp "$tmpl" "$file"
 
-# macOS sed (your environment)
+# macOS sed
 sed -i '' "s|platform:|platform: $platform|" "$file"
 sed -i '' "s|id:|id: $id|" "$file"
 sed -i '' "s|name:|name: ${slug//-/ }|" "$file"
