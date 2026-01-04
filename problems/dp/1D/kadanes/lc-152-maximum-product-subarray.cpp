@@ -5,8 +5,8 @@ name: maximum product subarray
 pattern: dp/1d/kadanes
 tags: kadanes,array,dp,1d-dp
 complexity:
-- time = O()
-- space = O()
+- time = O(n)
+- space = O(1)
 notes: use kadanes algorithm to track max and min product of any subarray ending
 at i, traversing from i = 0 to nums.size()
 */
