@@ -11,6 +11,7 @@ notes:
 */
 
 #include <algorithm>
+#include <cmath>
 #include <deque>
 #include <map>
 #include <queue>
@@ -21,14 +22,19 @@ notes:
 #include <vector>
 
 using namespace std;
+using LL = long long;
 using PI = pair<int, int>;
 using TI = tuple<int, int, int>;
-using VI = vector<int>;
-using VVI = vector<VI>;
 using VC = vector<char>;
-using VVC = vector<VC>;
+using VI = vector<int>;
+using VS = vector<string>;
 using VPI = vector<PI>;
 using VTI = vector<TI>;
+using VVC = vector<VC>;
+using VVI = vector<VI>;
+using VVS = vector<VS>;
+using MII = map<int, int>;
+using UMII = unordered_map<int, int>;
 
 class Solution {
 public:
