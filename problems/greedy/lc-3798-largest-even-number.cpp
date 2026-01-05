@@ -1,13 +1,13 @@
 /*
-platform:
-id:
-name:
-pattern:
-tags:
+platform: lc
+id: 3798
+name: largest even number
+pattern: greedy
+tags: greedy,string,bit
 complexity:
-- time = O()
-- space = O()
-notes:
+- time = O(n)
+- space = O(1)
+notes: just find rightmost 2 and truncate suffix
 */
 
 #include <algorithm>
@@ -39,5 +39,17 @@ using UMII = unordered_map<int, int>;
 
 class Solution {
 public:
-  // paste method here
+  string largestEven(string s) {
+    int p{-1};
+    for (int i = s.size() - 1; i >= 0; --i) {
+      if (s[i] == '2') {
+        p = i;
+        break;
+      }
+    }
+    if (p == -1)
+      return "";
+    s.erase(p + 1);
+    return s;
+  }
 };
