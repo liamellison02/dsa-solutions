@@ -1,13 +1,15 @@
 /*
 platform: lc
-id: 1161
-name: maximum level sum of a binary tree
-pattern: trees/bfs
-tags: bfs,tree,binary-tree
+id: 1339
+name: maximum product of splitted binary tree
+pattern: trees/dfs
+tags: dfs,binary-tree,tree,postorder
 complexity:
-- time = O(n)
-- space = O(n)
-notes: bfs for each level sum, return first level with the max level sum
+n = # of nodes, h = height of tree
+- time = O(2 * n) = O(n)
+- space = O(h)
+notes: dfs to find total tree sum, then postorder dfs to find subtree sums
+and max value of subtreeSum * (totalSum - subtreeSum) across the entire tree
 */
 
 #include <algorithm>
@@ -48,37 +50,27 @@ struct TreeNode {
 };
 
 class Solution {
+  ll tot, mp;
+
+  ll treesum(TreeNode *n) {
+    return n ? n->val + treesum(n->left) + treesum(n->right) : 0;
+  }
+
+  ll dfs(TreeNode *n) {
+    if (!n)
+      return 0;
+    ll s = n->val + dfs(n->left) + dfs(n->right);
+    mp = max(mp, s * (tot - s));
+    return s;
+  }
+
 public:
-  int maxLevelSum(TreeNode *root) {
-    int ms = root->val, ml{0};
+  int maxProduct(TreeNode *root) {
+    tot = treesum(root);
 
-    vector<pair<TreeNode *, int>> q;
-    vector<int> levels;
+    mp = 0;
+    dfs(root);
 
-    q.push_back({root, 0});
-
-    int i{0};
-    while (i < q.size()) {
-      auto [node, lvl] = q[i];
-
-      if (lvl == levels.size())
-        levels.push_back(node->val);
-      else
-        levels[lvl] += node->val;
-
-      if (node->left)
-        q.push_back({node->left, lvl + 1});
-      if (node->right)
-        q.push_back({node->right, lvl + 1});
-
-      if (i + 1 < q.size() && q[i + 1].second > lvl && levels[lvl] > ms) {
-        ms = levels[lvl];
-        ml = lvl;
-      }
-      ++i;
-    }
-
-    int li = levels.size() - 1;
-    return ms >= levels[li] ? ml + 1 : li + 1;
+    return mp % (ll)(1e9 + 7);
   }
 };
