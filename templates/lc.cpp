@@ -23,7 +23,9 @@ notes:
 #include <vector>
 
 using namespace std;
+
 using ll = long long;
+using ull = unsigned long long;
 using PI = pair<int, int>;
 using TI = tuple<int, int, int>;
 using VC = vector<char>;

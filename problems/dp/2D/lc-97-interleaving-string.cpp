@@ -12,8 +12,11 @@ notes:
 (solution 1 is the space optimized version of solution s2)
 bottom-up dp:
 - dp[i][j] indicates whether s3[i+j:] can be formed by interleaving s1[i:] and
-s2[j:] transitions: dp[i][j] is true if a) (s1[i] == s3[i+j] and dp[i+1][j]) or
-  b) (s2[j] == s3[i+j] and dp[i][j+1]).
+s2[j:]
+transitions:
+dp[i][j] is true if
+a) (s1[i] == s3[i+j] and dp[i+1][j]) or
+b) (s2[j] == s3[i+j] and dp[i][j+1])
 base case:
 dp[sz1][sz2] = true (both strings consumed)
 
