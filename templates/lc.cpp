@@ -16,6 +16,7 @@ notes:
 #include <map>
 #include <queue>
 #include <set>
+#include <stack>
 #include <string>
 #include <tuple>
 #include <unordered_map>
@@ -36,6 +37,8 @@ using VTI = vector<TI>;
 using VVC = vector<VC>;
 using VVI = vector<VI>;
 using VVS = vector<VS>;
+using SI = set<int>;
+using USI = unordered_set<int>;
 using MII = map<int, int>;
 using UMII = unordered_map<int, int>;
 
