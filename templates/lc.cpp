@@ -11,6 +11,7 @@ notes:
 */
 
 #include <algorithm>
+#include <climits>
 #include <cmath>
 #include <deque>
 #include <map>
