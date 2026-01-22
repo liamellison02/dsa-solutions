@@ -46,12 +46,21 @@ fi
 
 cp "$tmpl" "$file"
 
-# macOS sed
-sed -i '' "s|platform:|platform: $platform|" "$file"
-sed -i '' "s|id:|id: $id|" "$file"
-sed -i '' "s|name:|name: ${slug//-/ }|" "$file"
-sed -i '' "s|pattern:|pattern: $pattern|" "$file"
-sed -i '' "s|tags:|tags: $tags|" "$file"
+# sed (GNU/BSD-compatible)
+
+if sed --version >/dev/null 2>&1; then
+  # GNU sed (Linux, WSL)
+  SED_INPLACE=(-i)
+else
+  # BSD sed (macOS)
+  SED_INPLACE=(-i '')
+fi
+
+sed "${SED_INPLACE[@]}" "s|platform:|platform: $platform|" "$file"
+sed "${SED_INPLACE[@]}" "s|id:|id: $id|" "$file"
+sed "${SED_INPLACE[@]}" "s|name:|name: ${slug//-/ }|" "$file"
+sed "${SED_INPLACE[@]}" "s|pattern:|pattern: $pattern|" "$file"
+sed "${SED_INPLACE[@]}" "s|tags:|tags: $tags|" "$file"
 
 echo "Created:"
 echo "  $file"
