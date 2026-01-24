@@ -1,10 +1,12 @@
 """
 platform: lc
 id: 1
-name: two sum
+name: two-sum
 pattern: arrays/hashing
 tags: hashmap,complement
-complexity: O(n) time, O(n) space
+complexity:
+- time = O(n)
+- space = O(n)
 notes:
 """
 
@@ -20,4 +22,3 @@ class Solution:
                 return [hashMap[diff], index]
             hashMap[item] = index
             index += 1
-
