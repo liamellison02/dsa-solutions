@@ -5,19 +5,17 @@ name: regular expression matching
 pattern: dp/interval
 tags: dp,interval-dp,regex,2d-dp,string
 complexity:
-- time = O()
-- space = O()
+- time = O(m * n)
+- space = O(m * n)
 notes:
+bottom-up dp:
+dp[i][j] = can s[i:] be matched to p[j:]?
+
 */
 
 #include <algorithm>
-#include <climits>
-#include <cmath>
-#include <deque>
 #include <map>
-#include <queue>
 #include <set>
-#include <stack>
 #include <string>
 #include <tuple>
 #include <unordered_map>
@@ -55,7 +53,45 @@ struct TreeNode {
       : val(x), left(left), right(right) {}
 };
 
+using VC = vector<char>;
+using VVC = vector<VC>;
+
 class Solution {
 public:
-  // paste method here
+  bool isMatchBottomUp(string s, string p) {
+    int m = s.size(), n = p.size();
+    VVC DP(m + 1, VC(n + 1, 0));
+    DP[m][n] = 1;
+
+    for (int i = m; i >= 0; --i) {
+      for (int j = n - 1; j >= 0; --j) {
+        bool match = i < m && (s[i] == p[j] || p[j] == '.');
+        if (j + 1 < n && p[j + 1] == '*')
+          DP[i][j] = DP[i][j + 2] || (match && DP[i + 1][j]);
+        else
+          DP[i][j] = match && DP[i + 1][j + 1];
+      }
+    }
+
+    return DP[0][0];
+  }
+
+  bool isMatchBottomUpOptimized(string s, string p) {
+    int m = s.size(), n = p.size();
+    VC dp(n + 1, 0), prev(n + 1, 0);
+    prev[n] = 1;
+
+    for (int i = m; i >= 0; --i) {
+      dp[n] = (i == m);
+      for (int j = n - 1; j >= 0; --j) {
+        bool match = i < m && (s[i] == p[j] || p[j] == '.');
+        if (j + 1 < n && p[j + 1] == '*')
+          dp[j] = dp[j + 2] || (match && prev[j]);
+        else
+          dp[j] = match && prev[j + 1];
+      }
+      swap(dp, prev);
+    }
+    return prev[0];
+  }
 };
