@@ -8,6 +8,10 @@ complexity:
 - time = O(n)
 - space = O(1)
 notes:
+must recognize two things:
+1) if sum(gas) < sum(cost), then there is no solution.
+2) if you cannot reach j when starting at i, then no idx from [i..j] is a
+solution.
 */
 
 #include <map>
