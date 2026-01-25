@@ -2,7 +2,7 @@
 platform: lc
 id: 125
 name: valid palindrome
-pattern: arrays_hashing/two_pointers
+pattern: arrays/two_pointers
 tags: palindrome,string
 complexity:
 notes:

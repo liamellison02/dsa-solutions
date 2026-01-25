@@ -3,8 +3,7 @@ platform: lc
 id: 499
 name: the maze III
 pattern: graphs/shortest_path
-tags:
-dijkstras,simulation,heap,minheap,priority-queue,hashtable,hashing,graphs,matrix,strings
+tags: dijkstras,simulation,heap,minheap,priority-queue,hashtable,hashing,graphs,matrix,strings
 complexity:
 - time = O(m^2 * n^2 * max(m,n) * log(m*n))
 - space = O(m^2 * n^2)
