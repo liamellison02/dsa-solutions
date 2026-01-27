@@ -1,13 +1,14 @@
 /*
-platform:
-id:
-name:
-pattern:
-tags:
+platform: lc
+id: 3650
+name: minimum cost path with edge reversal
+pattern: graphs/shortest_path
+tags: dijkstras,shortest_path,graphs,priority-queue,minheap,heap
 complexity:
-- time = O()
-- space = O()
+- time = O(n + mlogm)
+- space = O(n+m)
 notes:
+dijkstras lol
 */
 
 #include <algorithm>
@@ -39,7 +40,6 @@ using VPI = vector<PI>;
 using VTI = vector<TI>;
 using VVC = vector<VC>;
 using VVI = vector<VI>;
-using VVll = vector<Vll>;
 using VVS = vector<VS>;
 using VVPI = vector<VPI>;
 using SI = set<int>;
@@ -59,5 +59,38 @@ struct TreeNode {
 
 class Solution {
 public:
-  // paste method here
+  int minCost(int n, vector<vector<int>> &edges) {
+    VVPI adj(n);
+
+    for (auto &e : edges) {
+      int u{e[0]}, v{e[1]}, w{e[2]};
+      adj[u].push_back({v, w});
+      adj[v].push_back({u, 2 * w});
+    }
+
+    Vll dist(n, LLONG_MAX);
+    priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<>> pq;
+
+    dist[0] = 0;
+    pq.push({0, 0});
+
+    while (!pq.empty()) {
+      auto [d, u] = pq.top();
+      pq.pop();
+
+      if (u == n - 1)
+        return d;
+      if (d > dist[u])
+        continue;
+
+      for (auto &[v, w] : adj[u]) {
+        if (dist[v] > d + w) {
+          dist[v] = d + w;
+          pq.push({dist[v], v});
+        }
+      }
+    }
+
+    return -1;
+  }
 };
