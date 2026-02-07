@@ -2,7 +2,7 @@
 platform: lc
 id: 309
 name: best time to buy and sell stock with cooldown
-pattern: dp/states
+pattern: dp/state_machine
 tags: dp,2d-dp,bottom-up
 complexity:
 - time = O(n)

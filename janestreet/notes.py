@@ -1,7 +1,0 @@
-"""
-
-Markov Perfect Equilibrium
-
-
-"""
-

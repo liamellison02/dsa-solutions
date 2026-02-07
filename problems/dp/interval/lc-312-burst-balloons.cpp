@@ -2,7 +2,7 @@
 platform: lc
 id: 312
 name: burst balloons
-pattern: dp/2D
+pattern: dp/interval
 tags: dp,2d-dp,bottom-up,interval-dp,intervals
 complexity:
 - time = O(n^3)

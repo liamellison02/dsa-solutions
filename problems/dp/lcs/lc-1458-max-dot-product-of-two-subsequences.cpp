@@ -2,7 +2,7 @@
 platform: lc
 id: 1458
 name: max dot product of two subsequences
-pattern: dp/2D
+pattern: dp/lcs
 tags: dp,2d-dp,bottom-up,subsequence
 complexity:
 - time = O(m*n)

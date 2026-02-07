@@ -2,7 +2,7 @@
 platform: lc
 id: 139
 name: word break
-pattern: dp/1d
+pattern: dp/linear
 tags: dp,1d-dp,string,substring,bottom-up
 complexity:
 - time = O(n * m)

@@ -2,7 +2,7 @@
 platform: lc
 id: 97
 name: interleaving string
-pattern: dp/2D
+pattern: dp/lcs
 tags: dp,bottom-up,2D,interval,string
 complexity:
 - time = O(n*m)

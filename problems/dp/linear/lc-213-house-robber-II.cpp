@@ -2,7 +2,7 @@
 platform: lc
 id: 213
 name: house robber II
-pattern: dp/1D
+pattern: dp/linear
 tags: dp,circular-array
 complexity:
 - time = O(n)

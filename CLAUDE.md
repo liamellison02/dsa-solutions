@@ -31,7 +31,7 @@ There is no build system, test framework, or linting configured—solutions are 
 | `binary_search/` | `on_answer/`, `on_array/` |
 | `bit/` | `bitmask/`, `xor/` |
 | `design/` | |
-| `dp/` | `1D/`, `2D/`, `bitmask/`, `digit/`, `grid/`, `interval/`, `knapsack/`, `lcs/`, `lis/`, `states/`, `trees/` |
+| `dp/` | `linear/`, `knapsack/`, `lcs/`, `lis/`, `grid/`, `interval/`, `state_machine/`, `trees/`, `bitmask/`, `digit/` |
 | `graphs/` | `bfs/`, `dsu/`, `shortest_path/`, `topo/`, `traversal/` |
 | `greedy/` | |
 | `heap/` | |

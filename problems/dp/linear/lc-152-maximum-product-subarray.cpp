@@ -2,7 +2,7 @@
 platform: lc
 id: 152
 name: maximum product subarray
-pattern: dp/1d/kadanes
+pattern: dp/linear
 tags: kadanes,array,dp,1d-dp
 complexity:
 - time = O(n)

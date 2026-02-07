@@ -2,7 +2,7 @@
 platform: lc
 id: 91
 name: decode ways
-pattern: dp/1D
+pattern: dp/linear
 tags: dp,string
 complexity:
 - time = O(n)
