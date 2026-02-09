@@ -5,9 +5,8 @@ name: detect squares
 pattern: math/geometry
 tags: design,math,geometry,hashing,hashmap
 complexity:
-- time = O()
-- space = O()
 notes:
+simple design problem, just need to read problem statement carefully
 */
 
 #include <algorithm>
@@ -65,7 +64,26 @@ struct TreeNode {
       : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class DetectSquares {
+  unordered_map<int, unordered_map<int, int>> frq;
+
 public:
-  // paste method here
+  DetectSquares() {}
+  void add(vector<int> point) { ++frq[point[0]][point[1]]; }
+
+  int count(vector<int> point) {
+    int tot{0};
+
+    for (auto &[y, f] : frq[point[0]]) {
+      if (y == point[1])
+        continue;
+
+      int d = abs(y - point[1]);
+
+      tot += f * frq[point[0] + d][point[1]] * frq[point[0] + d][y];
+      tot += f * frq[point[0] - d][point[1]] * frq[point[0] - d][y];
+    }
+
+    return tot;
+  }
 };
