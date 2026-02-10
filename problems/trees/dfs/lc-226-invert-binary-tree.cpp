@@ -1,15 +1,13 @@
 /*
 platform: lc
-id: 1382
-name: balance a binary search tree
+id: 226
+name: invert binary tree
 pattern: trees/dfs
-tags: trees,bst,sorting,inorder-traversal,IOT,stack
+tags: binary-tree,
 complexity:
-- time = O(n)
-- space = O(n)
+- time = O()
+- space = O()
 notes:
-build a sorted list of the input nodes using IOT.
-using the sorted list, rebuild recursively using divide and conquer.
 */
 
 #include <algorithm>
@@ -68,40 +66,10 @@ struct TreeNode {
 };
 
 class Solution {
-  vector<TreeNode *> srtd;
-
 public:
-  TreeNode *rebuild(int l, int r) {
-    if (l > r)
-      return nullptr;
-
-    int mid = l + (r - l) / 2;
-
-    TreeNode *node = srtd[mid];
-    node->left = rebuild(l, mid - 1);
-    node->right = rebuild(mid + 1, r);
-
-    return node;
-  }
-
-  TreeNode *balanceBST(TreeNode *root) {
-    srtd.clear();
-    stack<TreeNode *> stk;
-
-    auto curr = root;
-
-    while (curr || !stk.empty()) {
-      while (curr) {
-        stk.push(curr);
-        curr = curr->left;
-      }
-
-      curr = stk.top();
-      stk.pop();
-      srtd.push_back(curr);
-      curr = curr->right;
-    }
-
-    return rebuild(0, srtd.size() - 1);
+  TreeNode *invertTree(TreeNode *r) {
+    return r ? (swap(r->left, r->right), invertTree(r->left),
+                invertTree(r->right), r)
+             : r;
   }
 };

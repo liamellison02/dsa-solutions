@@ -2,7 +2,7 @@
 platform: lc
 id: 235
 name: lowest-common-ancestor-of-bst
-pattern: trees
+pattern: trees/lca
 tags: bst,tree
 complexity:
 - time = O(h) where h is tree height

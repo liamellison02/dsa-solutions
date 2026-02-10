@@ -42,7 +42,7 @@ There is no build system, test framework, or linting configured—solutions are 
 | `sliding_window/` | |
 | `stack/` | `monotonic/` |
 | `strings/` | `kmp_z/`, `rolling_hash/`, `trie/` |
-| `trees/` | `bfs/`, `dfs/`, `lca/` |
+| `trees/` | `bfs/`, `bst/`, `construct/`, `dfs/`, `lca/`, `traversal/` |
 | `inbox/` | Legacy/uncategorized problems |
 | `scratch/` | Work in progress |
 

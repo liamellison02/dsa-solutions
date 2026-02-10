@@ -2,7 +2,7 @@
 platform: lc
 id: 226
 name: invert-binary-tree
-pattern: trees
+pattern: trees/dfs
 tags: tree,recursion,dfs
 complexity:
 - time = O(n)

@@ -2,7 +2,7 @@
 platform: lc
 id: 110
 name: balanced-binary-tree
-pattern: trees
+pattern: trees/dfs
 tags: tree,dfs,recursion
 complexity:
 - time = O(n)
