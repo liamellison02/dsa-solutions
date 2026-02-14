@@ -5,9 +5,11 @@ name: 4 keys keyboard
 pattern: dp/linear
 tags: greedy,dp,optimization,enumeration
 complexity:
-- time = O()
-- space = O()
+- time = O(n*n)
+- space = O(n)
 notes:
+for each i = [1..n], try spam pasting at all positions j = [1..i-2] to find max
+at each i
 */
 
 #include <algorithm>
