@@ -3,7 +3,7 @@ platform: lc
 id: 763
 name: partition labels
 pattern: greedy
-tags: greedy,intervals,two-pointers,string,sorting,hash-table,hashing
+tags: greedy,intervals,two-pointers,string,sorting,hashing
 complexity:
 - time = O(n)
 - space = O(1)

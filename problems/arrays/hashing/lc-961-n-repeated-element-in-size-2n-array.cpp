@@ -3,7 +3,7 @@ platform: lc
 id: 961
 name: n repeated element in size 2n array
 pattern: arrays/hashing
-tags: hashtable,hashmap,frequencies
+tags: hashing,frequencies
 complexity:
 - time = O(n)
 - space = O(n)

@@ -3,7 +3,7 @@ platform: cf
 id: 432C
 name: football-kit
 pattern: arrays/hashing
-tags: hashmap,counting
+tags: hashing,counting
 complexity:
 - time = O(n)
 - space = O(n)

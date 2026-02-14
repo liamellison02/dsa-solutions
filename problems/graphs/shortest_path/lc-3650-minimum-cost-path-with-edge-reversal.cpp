@@ -3,7 +3,7 @@ platform: lc
 id: 3650
 name: minimum cost path with edge reversal
 pattern: graphs/shortest_path
-tags: dijkstras,shortest_path,graphs,priority-queue,minheap,heap
+tags: dijkstras,shortest-path,graphs,priority-queue,minheap,heap
 complexity:
 - time = O(n + mlogm)
 - space = O(n+m)

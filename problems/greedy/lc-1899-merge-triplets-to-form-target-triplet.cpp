@@ -3,7 +3,7 @@ platform: lc
 id: 1899
 name: merge triplets to form target triplet
 pattern: greedy
-tags: greedy,arrays
+tags: greedy,array
 complexity:
 - time = O(n)
 - space = O(1)

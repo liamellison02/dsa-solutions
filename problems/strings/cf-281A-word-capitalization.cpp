@@ -3,7 +3,7 @@ platform: cf
 id: 281A
 name: word-capitalization
 pattern: strings
-tags: strings,case-conversion
+tags: string,case-conversion
 complexity:
 - time = O(n)
 - space = O(1)

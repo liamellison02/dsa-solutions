@@ -3,7 +3,7 @@ platform: cf
 id: 58A
 name: chat-room
 pattern: strings
-tags: strings,subsequence
+tags: string,subsequence
 complexity:
 - time = O(n)
 - space = O(1)

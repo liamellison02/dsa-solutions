@@ -3,7 +3,7 @@ platform: cf
 id: 32B
 name: borze
 pattern: strings
-tags: strings,decoding
+tags: string,decoding
 complexity:
 - time = O(n)
 - space = O(n)

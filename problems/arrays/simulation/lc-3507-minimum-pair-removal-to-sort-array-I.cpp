@@ -3,7 +3,7 @@ platform: lc
 id: 3507
 name: minimum pair removal to sort array I
 pattern: arrays/simulation
-tags: arrays,simulation,sorting
+tags: array,simulation,sorting
 complexity:
 - time = O(n^2)
 - space = O(1)

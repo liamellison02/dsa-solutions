@@ -3,7 +3,7 @@ platform: lc
 id: 1984
 name: minimum difference between highest and lowest of k scores
 pattern: sliding_window
-tags: sorting,sliding-window,arrays
+tags: sorting,sliding-window,array
 complexity:
 - time = O(nlogn)
 - space = O(1)

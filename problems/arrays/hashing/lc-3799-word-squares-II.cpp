@@ -3,7 +3,7 @@ platform: lc
 id: 3799
 name: word squares II
 pattern: arrays/hashing
-tags: hashtable,hashmap,bruteforce,combinatorics,backtracking
+tags: hashing,bruteforce,combinatorics,backtracking
 - time = O(n^4) worst case
 - space = O(n)
 notes: bucket words by (first,last) letters, enumerate valid 4-word squares

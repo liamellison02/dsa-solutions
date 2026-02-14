@@ -3,7 +3,7 @@ platform: lc
 id: 1200
 name: minimum absolute difference
 pattern: arrays/sorting
-tags: arrays,sorting,greedy
+tags: array,sorting,greedy
 complexity:
 - time = O(nlogn)
 - space = O(1)

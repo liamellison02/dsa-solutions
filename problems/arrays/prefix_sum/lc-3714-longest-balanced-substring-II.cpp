@@ -3,7 +3,7 @@ platform: lc
 id: 3714
 name: longest balanced substring II
 pattern: arrays/prefix_sum
-tags: prefix_sum,string,hashing,hashtable,hashmap
+tags: prefix-sum,string,hashing
 complexity:
 - time = O()
 - space = O()

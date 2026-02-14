@@ -3,7 +3,7 @@ platform: lc
 id: 362
 name: design hit counter
 pattern: design
-tags: queue,simulation,design,binary_search,array
+tags: queue,simulation,design,binary-search,array
 complexity:
 notes:
 */

@@ -3,7 +3,7 @@ platform: lc
 id: 3510
 name: minimum pair removal to sort array II
 pattern: arrays/simulation
-tags: array,arrays,minheap,priority-queue,heap,linked-list,simulation
+tags: array,minheap,priority-queue,heap,linked-list,simulation
 complexity:
 - time = O(nlogn)
 - space = O(n)

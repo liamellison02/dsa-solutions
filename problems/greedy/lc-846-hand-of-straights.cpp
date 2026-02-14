@@ -3,7 +3,7 @@ platform: lc
 id: 846
 name: hand of straights
 pattern: greedy
-tags: greedy,sorting,hashmap
+tags: greedy,sorting,hashing
 complexity:
 - time = O(n*logn)
 - space = O(n)

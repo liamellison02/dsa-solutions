@@ -3,7 +3,7 @@ platform: lc
 id: 2013
 name: detect squares
 pattern: math/geometry
-tags: design,math,geometry,hashing,hashmap
+tags: design,math,geometry,hashing
 complexity:
 notes:
 simple design problem, just need to read problem statement carefully

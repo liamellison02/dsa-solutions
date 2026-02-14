@@ -3,7 +3,7 @@ platform: lc
 id: 3719
 name: longest balanced subarray I
 pattern: arrays/prefix_sum
-tags: prefix-sum,hashing,hashmap,hashtable,array
+tags: prefix-sum,hashing,array
 complexity:
 - time = O(n*n)
 - space = O(n)

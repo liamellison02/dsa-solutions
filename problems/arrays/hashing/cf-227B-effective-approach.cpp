@@ -3,7 +3,7 @@ platform: cf
 id: 227B
 name: effective-approach
 pattern: arrays/hashing
-tags: arrays,precompute
+tags: array,precompute
 complexity:
 - time = O(n + m)
 - space = O(n)

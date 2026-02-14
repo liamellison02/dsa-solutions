@@ -3,7 +3,7 @@ platform: lc
 id: 3713
 name: longest balanced substring I
 pattern: strings
-tags: string,hashing,array,hashmap,frequency
+tags: string,hashing,array,frequency
 complexity:
 - time = O(n*n)
 - space = O(26) = O(1)

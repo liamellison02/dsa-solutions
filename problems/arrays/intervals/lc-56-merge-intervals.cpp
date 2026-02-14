@@ -3,7 +3,7 @@ platform: lc
 id: 56
 name: merge intervals
 pattern: arrays/intervals
-tags: intervals,arrays,sorting
+tags: intervals,array,sorting
 complexity:
 - time = O(nlogn)
 - space = O(n)

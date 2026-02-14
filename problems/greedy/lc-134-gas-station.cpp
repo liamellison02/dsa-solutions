@@ -3,7 +3,7 @@ platform: lc
 id: 134
 name: gas station
 pattern: greedy
-tags: greedy,arrays
+tags: greedy,array
 complexity:
 - time = O(n)
 - space = O(1)

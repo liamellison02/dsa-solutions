@@ -3,7 +3,7 @@ platform: cf
 id: 499B
 name: lecture
 pattern: strings
-tags: strings,hashmap
+tags: string,hashing
 complexity:
 - time = O(n + m)
 - space = O(m)

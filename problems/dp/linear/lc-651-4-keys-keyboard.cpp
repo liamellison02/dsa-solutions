@@ -1,19 +1,23 @@
 /*
 platform: lc
-id: 3637
-name: trionic array I
-pattern: arrays/simulation
-tags: simulation,greedy,two-pointers,array
+id: 651
+name: 4 keys keyboard
+pattern: dp/linear
+tags: greedy,dp,optimization,enumeration
 complexity:
-- time = O(n)
-- space = O(1)
+- time = O()
+- space = O()
 notes:
-greedy/brute force but it's rly just simulation lol.
 */
 
+#include <algorithm>
+#include <climits>
+#include <cmath>
+#include <deque>
 #include <map>
 #include <queue>
 #include <set>
+#include <stack>
 #include <string>
 #include <tuple>
 #include <unordered_map>
@@ -22,9 +26,9 @@ greedy/brute force but it's rly just simulation lol.
 
 using namespace std;
 
-#define rep(i, n) for (int i = 0; i < (n); i++)
-#define rrep(i, n) for (int i = (n) - 1; i >= 0; i--)
-#define FOR(i, a, b) for (int i = (a); i < (b); i++)
+#define rep(i, n) for (int i{0}; i < (n); ++i)
+#define rrep(i, n) for (int i{(n) - 1}; i >= 0; --i)
+#define FOR(i, a, b) for (int i{(a)}; i < (b); ++i)
 
 using ll = long long;
 using ull = unsigned long long;
@@ -63,22 +67,15 @@ struct TreeNode {
 
 class Solution {
 public:
-  bool isTrionic(vector<int> &nums) {
-    if (nums[0] >= nums[1])
-      return false;
-    int i{1}, n = nums.size();
-
-    while (i < n && nums[i - 1] < nums[i])
-      ++i;
-    if (i == n)
-      return false;
-    while (i < n && nums[i - 1] > nums[i])
-      ++i;
-    if (i == n)
-      return false;
-    while (i < n && nums[i - 1] < nums[i])
-      ++i;
-
-    return i == n;
+  int maxA(int n) {
+    VI dp(n + 1);
+    FOR(i, 1, n + 1) {
+      dp[i] = i;
+      FOR(j, 1, i - 2) {
+        // after j 'A's, we start spam pasting
+        dp[i] = max(dp[i], dp[j] * (i - j - 1));
+      }
+    }
+    return dp[n];
   }
 };
