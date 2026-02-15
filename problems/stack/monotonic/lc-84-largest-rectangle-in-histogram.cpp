@@ -2,6 +2,8 @@
 platform: lc
 id: 84
 name: largest rectangle in histogram
+difficulty: hard
+url: https://leetcode.com/problems/largest-rectangle-in-histogram/
 pattern: stack/monotonic
 tags: stack,array,monotonic-stack
 complexity:

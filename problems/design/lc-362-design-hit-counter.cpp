@@ -2,10 +2,12 @@
 platform: lc
 id: 362
 name: design hit counter
+difficulty: medium
+url: https://leetcode.com/problems/design-hit-counter/
 pattern: design
 tags: queue,simulation,design,binary-search,array
 complexity:
-notes:
+notes: queue of timestamps; on getHits, pop entries older than 300 seconds from the front to maintain a sliding window count
 */
 
 #include <map>

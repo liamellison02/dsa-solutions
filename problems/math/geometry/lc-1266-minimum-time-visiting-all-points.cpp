@@ -2,6 +2,8 @@
 platform: lc
 id: 1266
 name: minimum time visiting all points
+difficulty: easy
+url: https://leetcode.com/problems/minimum-time-visiting-all-points/
 pattern: math/geometry
 tags: math,array,geometry
 complexity:

@@ -2,6 +2,8 @@
 platform: lc
 id: 3719
 name: longest balanced subarray I
+difficulty: medium
+url: https://leetcode.com/problems/longest-balanced-subarray-i/
 pattern: arrays/prefix_sum
 tags: prefix-sum,hashing,array
 complexity:

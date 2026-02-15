@@ -2,6 +2,7 @@
 platform: cf
 id: 499B
 name: lecture
+url: https://codeforces.com/problemset/problem/499/B
 pattern: strings
 tags: string,hashing
 complexity:

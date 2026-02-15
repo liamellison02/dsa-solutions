@@ -2,6 +2,8 @@
 platform: lc
 id: 3010
 name: divide an array into subarrays with minimum cost I
+difficulty: medium
+url: https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i/
 pattern: arrays/sorting
 tags: array,sorting,enumeration
 complexity:

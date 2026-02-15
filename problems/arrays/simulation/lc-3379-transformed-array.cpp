@@ -2,6 +2,8 @@
 platform: lc
 id: 3379
 name: transformed array
+difficulty: easy
+url: https://leetcode.com/problems/transformed-array/
 pattern: arrays/simulation
 tags: simulation,array
 complexity:

@@ -2,7 +2,9 @@
 platform: lc
 id: 799
 name: champagne tower
-pattern: arrays/simulation
+difficulty: medium
+url: https://leetcode.com/problems/champagne-tower/
+pattern: dp/grid
 tags: simulation,triangle,overflow,math
 complexity:
 - time = O(5050) = O(1)

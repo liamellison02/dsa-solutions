@@ -2,12 +2,14 @@
 platform: lc
 id: 5
 name: longest-palindromic-substring
+difficulty: medium
+url: https://leetcode.com/problems/longest-palindromic-substring/
 pattern: strings
 tags: palindrome,brute-force
 complexity:
 - time = O(n^2)
 - space = O(1)
-notes:
+notes: brute force checks all substrings using reverse comparison; can be optimized to O(n^2) with expand-around-center approach
 """
 
 class Solution:

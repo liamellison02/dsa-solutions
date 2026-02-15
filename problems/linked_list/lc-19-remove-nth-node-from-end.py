@@ -2,12 +2,14 @@
 platform: lc
 id: 19
 name: remove-nth-node-from-end
+difficulty: medium
+url: https://leetcode.com/problems/remove-nth-node-from-end/
 pattern: linked_list
 tags: linked-list,two-pointers
 complexity:
 - time = O(n)
 - space = O(1)
-notes:
+notes: advance a runner pointer n steps ahead, then move both runner and walker together; when runner hits the end, walker is right before the target node
 """
 from typing import Optional
 

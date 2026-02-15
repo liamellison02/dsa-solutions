@@ -2,8 +2,10 @@
 platform: lc
 id: 97
 name: interleaving string
-pattern: dp/lcs
-tags: dp,bottom-up,2D,interval,string
+difficulty: medium
+url: https://leetcode.com/problems/interleaving-string/
+pattern: dp/two_string
+tags: dp,bottom-up,2d-dp,interval,string
 complexity:
 - time = O(n*m)
 - space = O(min(n,m)) for version 1, O(m*n) for version 2

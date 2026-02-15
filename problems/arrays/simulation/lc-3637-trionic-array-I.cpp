@@ -2,6 +2,8 @@
 platform: lc
 id: 3637
 name: trionic array I
+difficulty: easy
+url: https://leetcode.com/problems/trionic-array-i/
 pattern: arrays/simulation
 tags: simulation,greedy,two-pointers,array
 complexity:

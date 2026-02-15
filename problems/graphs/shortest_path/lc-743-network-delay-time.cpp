@@ -2,6 +2,8 @@
 platform: lc
 id: 743
 name: network delay time
+difficulty: hard
+url: https://leetcode.com/problems/network-delay-time/
 pattern: graphs/shortest_path
 tags: dijkstras,heap
 complexity: O(ElogE) time, O(E) space : E = # of edges

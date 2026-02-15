@@ -2,12 +2,14 @@
 platform: lc
 id: 20
 name: valid-parentheses
+difficulty: easy
+url: https://leetcode.com/problems/valid-parentheses/
 pattern: stack
 tags: stack,matching
 complexity:
 - time = O(n)
 - space = O(n)
-notes:
+notes: push opening brackets onto stack; for each closing bracket, check it matches the top of stack. Valid only if stack is empty at end
 """
 
 class Solution:

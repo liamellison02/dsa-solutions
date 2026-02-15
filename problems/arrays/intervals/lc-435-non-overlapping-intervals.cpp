@@ -2,6 +2,8 @@
 platform: lc
 id: 435
 name: non overlapping intervals
+difficulty: medium
+url: https://leetcode.com/problems/non-overlapping-intervals/
 pattern: arrays/intervals
 tags: intervals,greedy,sorting
 complexity:

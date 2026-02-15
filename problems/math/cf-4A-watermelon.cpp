@@ -2,6 +2,7 @@
 platform: cf
 id: 4A
 name: watermelon
+url: https://codeforces.com/problemset/problem/4/A
 pattern: math
 tags: math,divisibility
 complexity:

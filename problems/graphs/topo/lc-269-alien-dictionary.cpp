@@ -2,6 +2,8 @@
 platform: lc
 id: 269
 name: alien dictionary
+difficulty: hard
+url: https://leetcode.com/problems/alien-dictionary/
 pattern: graphs/topo
 tags: topological,queue,cycle
 complexity:

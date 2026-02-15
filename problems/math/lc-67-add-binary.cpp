@@ -2,6 +2,8 @@
 platform: lc
 id: 67
 name: add binary
+difficulty: easy
+url: https://leetcode.com/problems/add-binary/
 pattern: math
 tags: binary,math,simulation,bit-manipulation,string,bitstring
 complexity:

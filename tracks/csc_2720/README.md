@@ -1,6 +1,7 @@
-# Track
+# CSC 2720
 
-Canonical solutions live in /problems.
+Canonical solutions live in `/problems`.
 
-Format:
-- [problem-name](../../problems/<pattern>/<file>)
+| # | Problem | Pattern | Tags |
+|---|---------|---------|------|
+|  | [Course Order](../../problems/graphs/topo/csc2720-course-order.py) | graphs/topo |  |

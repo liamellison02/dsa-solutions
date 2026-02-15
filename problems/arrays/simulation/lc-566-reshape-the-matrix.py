@@ -2,12 +2,14 @@
 platform: lc
 id: 566
 name: reshape-the-matrix
+difficulty: medium
+url: https://leetcode.com/problems/reshape-the-matrix/
 pattern: arrays/simulation
 tags: matrix
 complexity:
 - time = O(m*n)
 - space = O(1) excluding output
-notes:
+notes: flatten the matrix by iterating row-by-row and fill the new shape using a running column/row index; only valid if total element count matches r*c
 """
 from typing import List
 

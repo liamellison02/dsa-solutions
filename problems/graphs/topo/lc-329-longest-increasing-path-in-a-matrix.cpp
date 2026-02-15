@@ -2,8 +2,10 @@
 platform: lc
 id: 329
 name: longest increasing path in a matrix
-pattern: dp/2D
-tags: dp,graph,DAG,kahns,BFS,DFS,grid,matrix,topological,optimization
+difficulty: medium
+url: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+pattern: graphs/topo
+tags: dp,graph,dag,kahns,bfs,dfs,grid,matrix,topological,optimization
 complexity:
 - time = O(m*n)
 - space = O(m*n)

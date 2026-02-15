@@ -2,8 +2,10 @@
 platform: lc
 id: 1382
 name: balance a binary search tree
+difficulty: medium
+url: https://leetcode.com/problems/balance-a-binary-search-tree/
 pattern: trees/bst
-tags: trees,bst,sorting,inorder-traversal,IOT,stack
+tags: tree,bst,sorting,inorder-traversal,stack
 complexity:
 - time = O(n)
 - space = O(n)

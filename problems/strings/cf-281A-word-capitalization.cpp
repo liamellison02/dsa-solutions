@@ -2,6 +2,7 @@
 platform: cf
 id: 281A
 name: word-capitalization
+url: https://codeforces.com/problemset/problem/281/A
 pattern: strings
 tags: string,case-conversion
 complexity:

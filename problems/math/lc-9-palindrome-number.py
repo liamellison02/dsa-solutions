@@ -2,12 +2,14 @@
 platform: lc
 id: 9
 name: palindrome-number
+difficulty: easy
+url: https://leetcode.com/problems/palindrome-number/
 pattern: math
 tags: math,palindrome
 complexity:
 - time = O(log n)
 - space = O(log n) for digits array
-notes:
+notes: negative numbers are never palindromes; extract digits via mod 10 and compare with two pointers expanding from center
 """
 
 class Solution:

@@ -2,6 +2,8 @@
 platform: lc
 id: 134
 name: gas station
+difficulty: medium
+url: https://leetcode.com/problems/gas-station/
 pattern: greedy
 tags: greedy,array
 complexity:

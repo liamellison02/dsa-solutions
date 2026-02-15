@@ -2,6 +2,8 @@
 platform: lc
 id: 651
 name: 4 keys keyboard
+difficulty: medium
+url: https://leetcode.com/problems/4-keys-keyboard/
 pattern: dp/linear
 tags: greedy,dp,optimization,enumeration
 complexity:

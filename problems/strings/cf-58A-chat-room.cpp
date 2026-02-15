@@ -2,6 +2,7 @@
 platform: cf
 id: 58A
 name: chat-room
+url: https://codeforces.com/problemset/problem/58/A
 pattern: strings
 tags: string,subsequence
 complexity:

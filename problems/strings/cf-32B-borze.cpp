@@ -2,6 +2,7 @@
 platform: cf
 id: 32B
 name: borze
+url: https://codeforces.com/problemset/problem/32/B
 pattern: strings
 tags: string,decoding
 complexity:

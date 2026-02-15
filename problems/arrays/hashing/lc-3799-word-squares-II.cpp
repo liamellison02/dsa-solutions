@@ -2,6 +2,8 @@
 platform: lc
 id: 3799
 name: word squares II
+difficulty: medium
+url: https://leetcode.com/problems/word-squares-ii/
 pattern: arrays/hashing
 tags: hashing,bruteforce,combinatorics,backtracking
 - time = O(n^4) worst case

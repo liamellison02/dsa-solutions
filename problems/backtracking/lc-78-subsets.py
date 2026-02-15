@@ -2,6 +2,8 @@
 platform: lc
 id: 78
 name: subsets
+difficulty: easy
+url: https://leetcode.com/problems/subsets/
 pattern: backtracking
 tags: backtracking,recursion,iterative
 complexity:

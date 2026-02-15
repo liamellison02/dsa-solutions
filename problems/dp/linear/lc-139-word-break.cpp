@@ -2,6 +2,8 @@
 platform: lc
 id: 139
 name: word break
+difficulty: medium
+url: https://leetcode.com/problems/word-break/
 pattern: dp/linear
 tags: dp,1d-dp,string,substring,bottom-up
 complexity:

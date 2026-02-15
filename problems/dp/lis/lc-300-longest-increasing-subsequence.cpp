@@ -2,6 +2,8 @@
 platform: lc
 id: 300
 name: longest increasing subsequence
+difficulty: medium
+url: https://leetcode.com/problems/longest-increasing-subsequence/
 pattern: dp/lis
 tags: dp,bottom-up
 complexity:

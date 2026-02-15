@@ -2,6 +2,7 @@
 platform: cf
 id: 2193D
 name: monster game
+url: https://codeforces.com/problemset/problem/2193/D
 pattern: binary_search/on_array
 tags: prefix-sum,sorting,binary-search,greedy
 complexity:

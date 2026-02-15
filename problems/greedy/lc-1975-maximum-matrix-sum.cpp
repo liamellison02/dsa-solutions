@@ -2,6 +2,8 @@
 platform: lc
 id: 1975
 name: maximum matrix sum
+difficulty: medium
+url: https://leetcode.com/problems/maximum-matrix-sum/
 pattern: greedy
 tags: greedy,matrix,math
 complexity:

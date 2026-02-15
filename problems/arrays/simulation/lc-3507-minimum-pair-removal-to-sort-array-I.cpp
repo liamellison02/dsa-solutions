@@ -2,6 +2,8 @@
 platform: lc
 id: 3507
 name: minimum pair removal to sort array I
+difficulty: easy
+url: https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/
 pattern: arrays/simulation
 tags: array,simulation,sorting
 complexity:

@@ -2,6 +2,8 @@
 platform: lc
 id: 3800
 name: minimum cost to make two binary strings equal
+difficulty: medium
+url: https://leetcode.com/problems/minimum-cost-to-make-two-binary-strings-equal/
 pattern: greedy
 tags: greedy,math,string
 complexity:

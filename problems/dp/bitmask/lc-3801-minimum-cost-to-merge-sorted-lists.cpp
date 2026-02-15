@@ -2,6 +2,8 @@
 platform: lc
 id: 3801
 name: minimum cost to merge sorted lists
+difficulty: hard
+url: https://leetcode.com/problems/minimum-cost-to-merge-sorted-lists/
 pattern: dp/bitmask
 tags: dp,bitmask,merge,median
 complexity:

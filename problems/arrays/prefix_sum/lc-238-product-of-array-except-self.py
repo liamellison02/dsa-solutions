@@ -2,6 +2,8 @@
 platform: lc
 id: 238
 name: product-of-array-except-self
+difficulty: medium
+url: https://leetcode.com/problems/product-of-array-except-self/
 pattern: arrays/prefix_sum
 tags: prefix,product
 complexity:

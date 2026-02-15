@@ -2,6 +2,7 @@
 platform: cf
 id: 266B
 name: queue-at-the-school
+url: https://codeforces.com/problemset/problem/266/B
 pattern: arrays/simulation
 tags: simulation,swap
 complexity:

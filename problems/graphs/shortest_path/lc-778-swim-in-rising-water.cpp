@@ -2,6 +2,8 @@
 platform: lc
 id: 778
 name: swim in rising water
+difficulty: hard
+url: https://leetcode.com/problems/swim-in-rising-water/
 pattern: graphs/shortest_path
 tags: dijkstras,heap,matrix,grid
 complexity:

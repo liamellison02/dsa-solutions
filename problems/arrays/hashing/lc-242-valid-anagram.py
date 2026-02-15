@@ -2,12 +2,14 @@
 platform: lc
 id: 242
 name: valid-anagram
+difficulty: easy
+url: https://leetcode.com/problems/valid-anagram/
 pattern: arrays/hashing
 tags: hashmap,frequency-count
 complexity:
 - time = O(n)
 - space = O(1) for fixed alphabet size
-notes:
+notes: increment char counts for s, decrement for t; if any count goes negative or total != 0, not an anagram
 """
 import string
 

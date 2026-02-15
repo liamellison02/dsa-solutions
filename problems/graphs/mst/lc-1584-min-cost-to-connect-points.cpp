@@ -2,7 +2,9 @@
 platform: lc
 id: 1584
 name: min cost to connect points
-pattern: graphs/dsu
+difficulty: medium
+url: https://leetcode.com/problems/min-cost-to-connect-points/
+pattern: graphs/mst
 tags: mst,prims
 complexity:
 - time: O(n^2 * logn)

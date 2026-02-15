@@ -2,12 +2,14 @@
 platform: lc
 id: 59
 name: spiral-matrix-ii
+difficulty: medium
+url: https://leetcode.com/problems/spiral-matrix-ii/
 pattern: arrays/simulation
 tags: matrix,simulation
 complexity:
 - time = O(n^2)
 - space = O(1) excluding output
-notes:
+notes: same boundary-shrinking approach as spiral matrix I but filling values 1..n^2 instead of reading them
 """
 from typing import List
 

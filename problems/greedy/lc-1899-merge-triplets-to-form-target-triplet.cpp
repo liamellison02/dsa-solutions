@@ -2,6 +2,8 @@
 platform: lc
 id: 1899
 name: merge triplets to form target triplet
+difficulty: medium
+url: https://leetcode.com/problems/merge-triplets-to-form-target-triplet/
 pattern: greedy
 tags: greedy,array
 complexity:

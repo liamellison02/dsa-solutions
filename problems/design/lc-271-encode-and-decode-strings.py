@@ -2,6 +2,8 @@
 platform: lc
 id: 271
 name: encode-and-decode-strings
+difficulty: medium
+url: https://leetcode.com/problems/encode-and-decode-strings/
 pattern: design
 tags: string,encoding
 complexity:

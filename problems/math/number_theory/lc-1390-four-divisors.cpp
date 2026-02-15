@@ -2,6 +2,8 @@
 platform: lc
 id: 1390
 name: four divisors
+difficulty: medium
+url: https://leetcode.com/problems/four-divisors/
 pattern: math/number_theory
 tags: math,number-theory,factorization,primes
 complexity:

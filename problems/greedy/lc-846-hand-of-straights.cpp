@@ -2,6 +2,8 @@
 platform: lc
 id: 846
 name: hand of straights
+difficulty: medium
+url: https://leetcode.com/problems/hand-of-straights/
 pattern: greedy
 tags: greedy,sorting,hashing
 complexity:

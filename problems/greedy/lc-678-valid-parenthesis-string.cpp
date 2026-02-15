@@ -2,6 +2,8 @@
 platform: lc
 id: 678
 name: valid parenthesis string
+difficulty: medium
+url: https://leetcode.com/problems/valid-parenthesis-string/
 pattern: greedy
 tags: greedy,stack,string
 complexity:

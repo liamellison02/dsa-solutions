@@ -2,12 +2,14 @@
 platform: lc
 id: 141
 name: linked-list-cycle
-pattern: linked_list
+difficulty: easy
+url: https://leetcode.com/problems/linked-list-cycle/
+pattern: linked_list/fast_slow
 tags: linked-list,fast-slow-pointers
 complexity:
 - time = O(n)
 - space = O(1)
-notes:
+notes: Floyd's cycle detection: slow moves 1 step, fast moves 2 steps; they meet iff a cycle exists
 """
 from typing import Optional
 

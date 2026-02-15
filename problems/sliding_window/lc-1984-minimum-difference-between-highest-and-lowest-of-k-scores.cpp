@@ -2,6 +2,8 @@
 platform: lc
 id: 1984
 name: minimum difference between highest and lowest of k scores
+difficulty: medium
+url: https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/
 pattern: sliding_window
 tags: sorting,sliding-window,array
 complexity:

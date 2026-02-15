@@ -2,6 +2,8 @@
 platform: lc
 id: 286
 name: walls and gates
+difficulty: medium
+url: https://leetcode.com/problems/walls-and-gates/
 pattern: graphs/bfs
 tags: bfs,matrix,array
 complexity:

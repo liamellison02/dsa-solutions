@@ -2,6 +2,8 @@
 platform: lc
 id: 1292
 name: maximum side length of a square with sum less than or equal to threshold
+difficulty: medium
+url: https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/
 pattern: arrays/prefix_sum
 tags: prefix-sum,binary-search,array,matrix
 complexity:

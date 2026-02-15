@@ -2,6 +2,8 @@
 platform: lc
 id: 253
 name: meeting rooms II
+difficulty: medium
+url: https://leetcode.com/problems/meeting-rooms-ii/
 pattern: arrays/intervals
 tags: intervals,greedy,sorting
 complexity:

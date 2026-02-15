@@ -2,12 +2,14 @@
 platform: lc
 id: 733
 name: flood-fill
-pattern: graphs
+difficulty: easy
+url: https://leetcode.com/problems/flood-fill/
+pattern: graphs/traversal
 tags: dfs,matrix,recursion
 complexity:
 - time = O(m*n)
 - space = O(m*n) for recursion stack
-notes:
+notes: DFS from starting pixel; the newColor assignment acts as the visited check, but must short-circuit when newColor == original color to avoid infinite recursion
 """
 from typing import List
 

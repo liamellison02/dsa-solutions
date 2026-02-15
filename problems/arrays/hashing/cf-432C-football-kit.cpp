@@ -2,6 +2,7 @@
 platform: cf
 id: 432C
 name: football-kit
+url: https://codeforces.com/problemset/problem/432/C
 pattern: arrays/hashing
 tags: hashing,counting
 complexity:

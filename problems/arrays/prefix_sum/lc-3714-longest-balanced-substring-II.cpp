@@ -2,12 +2,14 @@
 platform: lc
 id: 3714
 name: longest balanced substring II
+difficulty: medium
+url: https://leetcode.com/problems/longest-balanced-substring-ii/
 pattern: arrays/prefix_sum
 tags: prefix-sum,string,hashing
 complexity:
 - time = O()
 - space = O()
-notes:
+notes: prefix-sum with difference encoding: track freq differences between each pair of chars, resetting on third char; for all three chars use (f0-f1, f0-f2) as hashmap key to find longest subarray with equal counts
 */
 
 #include <algorithm>

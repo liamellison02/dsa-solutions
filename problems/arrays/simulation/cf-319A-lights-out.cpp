@@ -2,6 +2,7 @@
 platform: cf
 id: 319A
 name: lights-out
+url: https://codeforces.com/problemset/problem/319/A
 pattern: arrays/simulation
 tags: simulation,grid,matrix
 complexity:

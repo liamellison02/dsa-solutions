@@ -2,6 +2,8 @@
 platform: lc
 id: 1123
 name: lowest common ancestor of deepest leaves
+difficulty: medium
+url: https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/
 pattern: trees/lca
 tags: tree,dfs,binary-tree,lca
 complexity:

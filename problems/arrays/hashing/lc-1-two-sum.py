@@ -2,12 +2,14 @@
 platform: lc
 id: 1
 name: two-sum
+difficulty: easy
+url: https://leetcode.com/problems/two-sum/
 pattern: arrays/hashing
 tags: hashmap,complement
 complexity:
 - time = O(n)
 - space = O(n)
-notes:
+notes: use hashmap to store complement; for each num check if target - num already seen
 """
 
 class Solution:

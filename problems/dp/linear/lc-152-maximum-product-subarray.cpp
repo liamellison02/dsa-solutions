@@ -2,6 +2,8 @@
 platform: lc
 id: 152
 name: maximum product subarray
+difficulty: medium
+url: https://leetcode.com/problems/maximum-product-subarray/
 pattern: dp/linear
 tags: kadanes,array,dp,1d-dp
 complexity:

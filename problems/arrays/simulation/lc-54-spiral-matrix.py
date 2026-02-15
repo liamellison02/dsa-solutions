@@ -2,12 +2,14 @@
 platform: lc
 id: 54
 name: spiral-matrix
+difficulty: medium
+url: https://leetcode.com/problems/spiral-matrix/
 pattern: arrays/simulation
 tags: matrix,simulation
 complexity:
 - time = O(m*n)
 - space = O(1) excluding output
-notes:
+notes: maintain four shrinking boundaries (left, right, top, bottom); traverse each edge then shrink that boundary inward, breaking if bounds cross
 """
 from typing import List
 

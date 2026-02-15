@@ -2,6 +2,8 @@
 platform: lc
 id: 10
 name: regular expression matching
+difficulty: hard
+url: https://leetcode.com/problems/regular-expression-matching/
 pattern: dp/interval
 tags: dp,interval-dp,regex,2d-dp,string
 complexity:

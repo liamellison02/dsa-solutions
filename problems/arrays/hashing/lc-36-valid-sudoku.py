@@ -2,6 +2,8 @@
 platform: lc
 id: 36
 name: valid sudoku
+difficulty: medium
+url: https://leetcode.com/problems/valid-sudoku/
 pattern: arrays/hashing
 tags: hashset,hashing,matrix,simulation
 complexity:

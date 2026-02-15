@@ -2,6 +2,7 @@
 platform: cf
 id: 271A
 name: beautiful-year
+url: https://codeforces.com/problemset/problem/271/A
 pattern: math
 tags: math,digits
 complexity:

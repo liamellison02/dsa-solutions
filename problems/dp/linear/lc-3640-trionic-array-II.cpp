@@ -2,12 +2,14 @@
 platform: lc
 id: 3640
 name: trionic array II
+difficulty: hard
+url: https://leetcode.com/problems/trionic-array-ii/
 pattern: dp/linear
 tags: dp,array,simulation
 complexity:
 - time = O(n)
 - space = O(1)
-notes:
+notes: find trionic (up-down-up) patterns by scanning for strictly increasing then decreasing then increasing segments; greedily extend the outer segments using max-suffix and max-prefix sums
 */
 
 #include <algorithm>

@@ -2,12 +2,14 @@
 platform: lc
 id: 21
 name: merge-two-sorted-lists
+difficulty: easy
+url: https://leetcode.com/problems/merge-two-sorted-lists/
 pattern: linked_list
 tags: linked-list,merge
 complexity:
 - time = O(n)
 - space = O(1)
-notes:
+notes: use a dummy head node to simplify edge cases; compare and append the smaller node, then attach whichever list remains
 """
 from typing import Optional
 

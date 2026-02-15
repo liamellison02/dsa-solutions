@@ -2,6 +2,8 @@
 platform: lc
 id: 3047
 name: find the largest area of square inside two rectangles
+difficulty: medium
+url: https://leetcode.com/problems/find-the-largest-area-of-square-inside-two-rectangles/
 pattern: math/geometry
 tags: math,geometry,area,overlap,array
 complexity:

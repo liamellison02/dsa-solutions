@@ -2,6 +2,8 @@
 platform: lc
 id: 499
 name: the maze III
+difficulty: hard
+url: https://leetcode.com/problems/the-maze-iii/
 pattern: graphs/shortest_path
 tags: dijkstras,simulation,heap,minheap,priority-queue,hashing,graphs,matrix,string
 complexity:

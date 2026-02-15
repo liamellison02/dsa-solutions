@@ -2,6 +2,8 @@
 platform: lc
 id: 490
 name: the maze
+difficulty: medium
+url: https://leetcode.com/problems/the-maze/
 pattern: graphs/bfs
 tags: bfs,dfs,matrix,paths
 complexity:

@@ -2,6 +2,8 @@
 platform: lc
 id: 3798
 name: largest even number
+difficulty: easy
+url: https://leetcode.com/problems/largest-even-number/
 pattern: greedy
 tags: greedy,string,bit
 complexity:

@@ -2,6 +2,7 @@
 platform: cf
 id: 466A
 name: cheap-travel
+url: https://codeforces.com/problemset/problem/466/A
 pattern: greedy
 tags: greedy,math
 complexity:

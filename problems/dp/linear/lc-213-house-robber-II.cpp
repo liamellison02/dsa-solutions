@@ -2,6 +2,8 @@
 platform: lc
 id: 213
 name: house robber II
+difficulty: medium
+url: https://leetcode.com/problems/house-robber-ii/
 pattern: dp/linear
 tags: dp,circular-array
 complexity:

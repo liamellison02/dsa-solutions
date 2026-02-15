@@ -2,7 +2,9 @@
 platform: lc
 id: 45
 name: jump game II
-pattern: dp/1D
+difficulty: medium
+url: https://leetcode.com/problems/jump-game-ii/
+pattern: greedy
 tags: dp,greedy,bfs,two-pointers
 complexity:
 - time = O(n)

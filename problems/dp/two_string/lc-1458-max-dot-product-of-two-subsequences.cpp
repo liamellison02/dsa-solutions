@@ -2,7 +2,9 @@
 platform: lc
 id: 1458
 name: max dot product of two subsequences
-pattern: dp/lcs
+difficulty: medium
+url: https://leetcode.com/problems/max-dot-product-of-two-subsequences/
+pattern: dp/two_string
 tags: dp,2d-dp,bottom-up,subsequence
 complexity:
 - time = O(m*n)

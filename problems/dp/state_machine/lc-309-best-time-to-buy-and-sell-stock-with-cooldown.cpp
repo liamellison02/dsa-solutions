@@ -2,6 +2,8 @@
 platform: lc
 id: 309
 name: best time to buy and sell stock with cooldown
+difficulty: medium
+url: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
 pattern: dp/state_machine
 tags: dp,2d-dp,bottom-up
 complexity:

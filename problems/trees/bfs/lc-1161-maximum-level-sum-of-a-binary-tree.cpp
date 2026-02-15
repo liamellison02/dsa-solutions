@@ -2,6 +2,8 @@
 platform: lc
 id: 1161
 name: maximum level sum of a binary tree
+difficulty: medium
+url: https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
 pattern: trees/bfs
 tags: bfs,tree,binary-tree
 complexity:

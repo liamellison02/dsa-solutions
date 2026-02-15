@@ -2,6 +2,8 @@
 platform: lc
 id: 312
 name: burst balloons
+difficulty: hard
+url: https://leetcode.com/problems/burst-balloons/
 pattern: dp/interval
 tags: dp,2d-dp,bottom-up,interval-dp,intervals
 complexity:

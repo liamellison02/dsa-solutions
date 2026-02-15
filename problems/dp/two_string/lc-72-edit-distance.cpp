@@ -1,23 +1,17 @@
 /*
 platform: lc
-id: 712
-name: minimum ascii delete sum for two strings
-pattern: dp/lcs
+id: 72
+name: edit distance
+difficulty: hard
+url: https://leetcode.com/problems/edit-distance/
+pattern: dp/two_string
 tags: dp,subsequence,bottom-up,string
 complexity:
 - time = O(m*n)
 - space = O(n)
 notes:
 bottom-up dp
-dp[i][j] = min cost to make s1[i:] == s2[j:]
-transitions:
-a) if s1[i] == s2[j]:
-  - dp[i][j] = dp[i+1][j+1]
-b) else:
-  - dp[i][j] = min(s1[i]+dp[i+1][j], s2[j]+dp[i][j+1])
-base cases:
-- dp[m][j] = sum(s2[j:])
-- dp[i][n] = sum(s1[i:])
+dp[i][j] = min operations to make w1[i:] == w2[j:]
 */
 
 #include <algorithm>
@@ -61,22 +55,25 @@ struct TreeNode {
 
 class Solution {
 public:
-  int minimumDeleteSum(string s1, string s2) {
-    int m = s1.size(), n = s2.size();
+  int minDistance(string word1, string word2) {
+    int m = word1.size(), n = word2.size();
 
-    vector<int> dp(n + 1, 0);
-    for (int j = n - 1; j >= 0; --j)
-      dp[j] = dp[j + 1] + s2[j];
+    if (m < n) {
+      swap(m, n);
+      swap(word1, word2);
+    }
+
+    vector<int> dp(n + 1), next(n + 1);
+    for (int j{}; j <= n; ++j)
+      dp[j] = n - j;
 
     for (int i = m - 1; i >= 0; --i) {
-      vector<int> next(n + 1, 0);
-      next[n] = dp[n] + s1[i];
-
+      next[n] = m - i;
       for (int j = n - 1; j >= 0; --j) {
-        if (s1[i] == s2[j])
+        if (word1[i] == word2[j])
           next[j] = dp[j + 1];
         else
-          next[j] = min(s1[i] + dp[j], s2[j] + next[j + 1]);
+          next[j] = 1 + min(dp[j], min(next[j + 1], dp[j + 1]));
       }
       dp = next;
     }

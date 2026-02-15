@@ -2,6 +2,8 @@
 platform: lc
 id: 56
 name: merge intervals
+difficulty: medium
+url: https://leetcode.com/problems/merge-intervals/
 pattern: arrays/intervals
 tags: intervals,array,sorting
 complexity:

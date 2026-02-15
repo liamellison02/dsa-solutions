@@ -2,6 +2,7 @@
 platform: cf
 id: 59A
 name: word
+url: https://codeforces.com/problemset/problem/59/A
 pattern: strings
 tags: string,case-conversion
 complexity:

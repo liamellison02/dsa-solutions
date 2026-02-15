@@ -2,12 +2,14 @@
 platform: lc
 id: 3
 name: longest-substring-without-repeating
-pattern: strings
+difficulty: medium
+url: https://leetcode.com/problems/longest-substring-without-repeating/
+pattern: sliding_window
 tags: sliding-window,hashset
 complexity:
 - time = O(n)
 - space = O(min(n, alphabet size))
-notes:
+notes: expand right pointer and add to set; when a duplicate is found, shrink from left removing chars until the duplicate is gone
 """
 
 class Solution:

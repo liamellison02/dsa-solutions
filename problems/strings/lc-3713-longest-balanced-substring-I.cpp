@@ -2,6 +2,8 @@
 platform: lc
 id: 3713
 name: longest balanced substring I
+difficulty: medium
+url: https://leetcode.com/problems/longest-balanced-substring-i/
 pattern: strings
 tags: string,hashing,array,frequency
 complexity:

@@ -2,6 +2,8 @@
 platform: lc
 id: 347
 name: top-k-frequent-elements
+difficulty: medium
+url: https://leetcode.com/problems/top-k-frequent-elements/
 pattern: arrays/hashing
 tags: hashmap,bucket-sort
 complexity:

@@ -2,7 +2,9 @@
 platform: lc
 id: 3510
 name: minimum pair removal to sort array II
-pattern: arrays/simulation
+difficulty: hard
+url: https://leetcode.com/problems/minimum-pair-removal-to-sort-array-ii/
+pattern: heap
 tags: array,minheap,priority-queue,heap,linked-list,simulation
 complexity:
 - time = O(nlogn)

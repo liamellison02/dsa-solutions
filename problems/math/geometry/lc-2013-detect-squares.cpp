@@ -2,6 +2,8 @@
 platform: lc
 id: 2013
 name: detect squares
+difficulty: medium
+url: https://leetcode.com/problems/detect-squares/
 pattern: math/geometry
 tags: design,math,geometry,hashing
 complexity:

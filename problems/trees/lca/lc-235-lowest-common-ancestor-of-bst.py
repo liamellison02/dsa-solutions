@@ -2,12 +2,14 @@
 platform: lc
 id: 235
 name: lowest-common-ancestor-of-bst
+difficulty: medium
+url: https://leetcode.com/problems/lowest-common-ancestor-of-bst/
 pattern: trees/lca
 tags: bst,tree
 complexity:
 - time = O(h) where h is tree height
 - space = O(1)
-notes:
+notes: BST property means both p and q are on the same side until they split; the first node where p and q diverge to different subtrees is the LCA
 """
 
 class TreeNode:

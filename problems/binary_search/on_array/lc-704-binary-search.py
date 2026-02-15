@@ -2,12 +2,14 @@
 platform: lc
 id: 704
 name: binary-search
-pattern: binary_search
+difficulty: easy
+url: https://leetcode.com/problems/binary-search/
+pattern: binary_search/on_array
 tags: binary-search
 complexity:
 - time = O(log n)
 - space = O(1)
-notes:
+notes: classic binary search with inclusive bounds; use lb <= rb as loop condition and move lb = mid + 1 or rb = mid - 1 to avoid infinite loops
 """
 from typing import List
 

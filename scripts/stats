@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""
+Generates a summary of all solutions in problems/.
+Parses metadata headers from .py and .cpp files and outputs stats.
+"""
+
+import os
+import re
+from collections import Counter
+from pathlib import Path
+
+PROBLEMS_DIR = Path(__file__).resolve().parent.parent / "problems"
+
+PLATFORM_DISPLAY = {
+    "lc": "LeetCode",
+    "cf": "Codeforces",
+    "tip102": "CodePath",
+    "csc2720": "CSC 2720",
+    "janestreet": "Jane Street",
+}
+
+
+def extract_metadata_block(content: str, ext: str) -> str | None:
+    """Extract the metadata block from a solution file."""
+    if ext == ".py":
+        match = re.match(r'^"""(.*?)"""', content, re.DOTALL)
+        if match:
+            return match.group(1)
+    elif ext == ".cpp":
+        match = re.match(r'^/\*(.*?)\*/', content, re.DOTALL)
+        if match:
+            return match.group(1)
+    return None
+
+
+def parse_metadata(block: str) -> dict:
+    """Parse key: value pairs from a metadata block."""
+    meta = {}
+    for line in block.splitlines():
+        line = line.strip()
+        # Match lines like "key: value" but not "- time = O(n)"
+        m = re.match(r'^([a-z]+):\s*(.*)', line)
+        if m:
+            key = m.group(1)
+            value = m.group(2).strip()
+            meta[key] = value
+    return meta
+
+
+def infer_platform_from_filename(filename: str) -> str | None:
+    """Infer platform from the filename prefix (e.g. lc-1-two-sum.py -> lc)."""
+    prefixes = ["lc", "cf", "tip102", "csc2720"]
+    for prefix in prefixes:
+        if filename.startswith(prefix + "-") or filename.startswith(prefix + "_"):
+            return prefix
+    # Check for janestreet by parent directory
+    return None
+
+
+def infer_platform_from_path(filepath: Path) -> str | None:
+    """Infer platform from path components (e.g. inbox/janestreet/)."""
+    parts = filepath.relative_to(PROBLEMS_DIR).parts
+    if "janestreet" in parts:
+        return "janestreet"
+    return None
+
+
+def get_top_level_pattern(filepath: Path) -> str:
+    """Get the top-level pattern directory (e.g. arrays, trees, dp)."""
+    rel = filepath.relative_to(PROBLEMS_DIR)
+    return rel.parts[0] if len(rel.parts) > 1 else "root"
+
+
+def collect_solutions():
+    """Walk through problems/ and collect metadata for all solutions."""
+    solutions = []
+
+    for root, _dirs, files in os.walk(PROBLEMS_DIR):
+        for filename in files:
+            ext = Path(filename).suffix
+            if ext not in (".py", ".cpp"):
+                continue
+
+            filepath = Path(root) / filename
+            content = filepath.read_text(errors="replace")
+
+            # Try to parse metadata from header block
+            block = extract_metadata_block(content, ext)
+            meta = parse_metadata(block) if block else {}
+
+            # Determine platform: prefer metadata, fall back to filename/path
+            platform = meta.get("platform", "").strip()
+            if not platform:
+                platform = infer_platform_from_filename(filename)
+            if not platform:
+                platform = infer_platform_from_path(filepath)
+            if not platform:
+                platform = "other"
+
+            # Skip empty template files (no platform, no id, basically blank)
+            has_id = bool(meta.get("id", "").strip())
+            is_template = not has_id and platform == "other"
+            # Still count scratch/template files if they have some content beyond the template
+            # but skip truly empty metadata blocks
+            if is_template and len(content.strip()) < 50:
+                continue
+
+            solutions.append({
+                "filepath": filepath,
+                "filename": filename,
+                "ext": ext,
+                "platform": platform,
+                "pattern": get_top_level_pattern(filepath),
+                "tags": meta.get("tags", ""),
+                "difficulty": meta.get("difficulty", ""),
+                "meta": meta,
+            })
+
+    return solutions
+
+
+def print_section(title: str, items: list[tuple[str, int]], total: int | None = None):
+    """Print a formatted section with aligned counts."""
+    print(f"\n{title}:")
+    if not items:
+        print("  (none)")
+        return
+    max_label = max(len(label) for label, _ in items)
+    for label, count in items:
+        print(f"  {label:<{max_label}}  {count:>4}")
+
+
+def main():
+    solutions = collect_solutions()
+    total = len(solutions)
+
+    print("DSA Solutions - Stats")
+    print("=" * 21)
+    print(f"\nTotal: {total} solutions")
+
+    # --- By Platform ---
+    platform_counts = Counter(s["platform"] for s in solutions)
+    platform_items = []
+    # Show known platforms in a fixed order, then anything else
+    for key in ["lc", "cf", "tip102", "csc2720", "janestreet"]:
+        if key in platform_counts:
+            platform_items.append((PLATFORM_DISPLAY.get(key, key), platform_counts.pop(key)))
+    for key in sorted(platform_counts):
+        platform_items.append((PLATFORM_DISPLAY.get(key, key.title()), platform_counts[key]))
+    print_section("By Platform", platform_items, total)
+
+    # --- By Difficulty ---
+    diff_counts = Counter()
+    for s in solutions:
+        d = s["difficulty"].strip().lower()
+        if d in ("easy", "medium", "hard"):
+            diff_counts[d] += 1
+        else:
+            diff_counts["unset"] += 1
+    diff_order = ["easy", "medium", "hard", "unset"]
+    diff_display = {"easy": "Easy", "medium": "Medium", "hard": "Hard", "unset": "Unset"}
+    diff_items = [(diff_display[d], diff_counts[d]) for d in diff_order if diff_counts.get(d)]
+    print_section("By Difficulty", diff_items, total)
+
+    # --- By Pattern ---
+    pattern_counts = Counter(s["pattern"] for s in solutions)
+    pattern_items = sorted(pattern_counts.items(), key=lambda x: -x[1])
+    print_section("By Pattern", pattern_items, total)
+
+    # --- By Language ---
+    lang_counts = Counter(s["ext"] for s in solutions)
+    lang_display = {".py": "Python", ".cpp": "C++"}
+    lang_items = sorted(
+        [(lang_display.get(k, k), v) for k, v in lang_counts.items()],
+        key=lambda x: -x[1],
+    )
+    print_section("By Language", lang_items, total)
+
+    # --- Top Tags ---
+    tag_counts = Counter()
+    for s in solutions:
+        tags_str = s["tags"].strip()
+        if tags_str:
+            for tag in tags_str.split(","):
+                tag = tag.strip()
+                if tag:
+                    tag_counts[tag] += 1
+    top_tags = tag_counts.most_common(15)
+    print_section("Top Tags", top_tags)
+
+    print()
+
+
+if __name__ == "__main__":
+    main()

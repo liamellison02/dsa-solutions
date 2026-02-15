@@ -2,12 +2,14 @@
 platform: lc
 id: 110
 name: balanced-binary-tree
+difficulty: easy
+url: https://leetcode.com/problems/balanced-binary-tree/
 pattern: trees/dfs
 tags: tree,dfs,recursion
 complexity:
 - time = O(n)
 - space = O(h) where h is tree height
-notes:
+notes: bottom-up DFS returning height at each node; if left and right subtree heights differ by more than 1 at any node, mark unbalanced
 """
 from typing import Optional
 

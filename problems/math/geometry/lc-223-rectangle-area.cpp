@@ -2,6 +2,8 @@
 platform: lc
 id: 223
 name: rectangle area
+difficulty: medium
+url: https://leetcode.com/problems/rectangle-area/
 pattern: math/geometry
 tags: math,geometry,area,overlap
 complexity:

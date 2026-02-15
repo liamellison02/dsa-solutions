@@ -2,7 +2,9 @@
 platform: lc
 id: 115
 name: distinct subsequences
-pattern: dp/lcs
+difficulty: hard
+url: https://leetcode.com/problems/distinct-subsequences/
+pattern: dp/two_string
 tags: dp,subsequence,bottom-up,string
 complexity:
 - time = O(m*n)

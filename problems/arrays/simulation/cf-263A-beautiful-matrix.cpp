@@ -2,6 +2,7 @@
 platform: cf
 id: 263A
 name: beautiful-matrix
+url: https://codeforces.com/problemset/problem/263/A
 pattern: arrays/simulation
 tags: simulation,matrix
 complexity:

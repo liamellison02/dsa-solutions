@@ -2,8 +2,10 @@
 platform: lc
 id: 332
 name: reconstruct itinerary
+difficulty: medium
+url: https://leetcode.com/problems/reconstruct-itinerary/
 pattern: graphs/traversal
-tags: dfs, hierholzer, eulerian path/circuit
+tags: dfs,hierholzer,eulerian-path
 complexity:
 E = tickets.size(), V=|airports|
 - time = O(E * logE)

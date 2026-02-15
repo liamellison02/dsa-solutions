@@ -2,6 +2,8 @@
 platform: lc
 id: 3651
 name: minimum cost path with teleportations
+difficulty: hard
+url: https://leetcode.com/problems/minimum-cost-path-with-teleportations/
 pattern: dp/grid
 tags: min-path,dp,grid-dp,bottom-up,prefix-sum,sorting
 complexity:

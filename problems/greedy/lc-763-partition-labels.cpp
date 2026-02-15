@@ -2,6 +2,8 @@
 platform: lc
 id: 763
 name: partition labels
+difficulty: medium
+url: https://leetcode.com/problems/partition-labels/
 pattern: greedy
 tags: greedy,intervals,two-pointers,string,sorting,hashing
 complexity:

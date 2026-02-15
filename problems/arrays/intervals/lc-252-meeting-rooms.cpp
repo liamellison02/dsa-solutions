@@ -2,6 +2,8 @@
 platform: lc
 id: 252
 name: meeting rooms
+difficulty: easy
+url: https://leetcode.com/problems/meeting-rooms/
 pattern: arrays/intervals
 tags: intervals,sorting
 complexity:

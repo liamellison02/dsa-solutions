@@ -2,6 +2,8 @@
 platform: lc
 id: 1200
 name: minimum absolute difference
+difficulty: easy
+url: https://leetcode.com/problems/minimum-absolute-difference/
 pattern: arrays/sorting
 tags: array,sorting,greedy
 complexity:

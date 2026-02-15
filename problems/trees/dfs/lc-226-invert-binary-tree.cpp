@@ -2,12 +2,14 @@
 platform: lc
 id: 226
 name: invert binary tree
+difficulty: easy
+url: https://leetcode.com/problems/invert-binary-tree/
 pattern: trees/dfs
-tags: binary-tree,
+tags: binary-tree,dfs
 complexity:
 - time = O()
 - space = O()
-notes:
+notes: recursively swap left and right children at every node; any traversal order works
 */
 
 #include <algorithm>

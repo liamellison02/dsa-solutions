@@ -2,6 +2,8 @@
 platform: lc
 id: 85
 name: maximal rectangle
+difficulty: hard
+url: https://leetcode.com/problems/maximal-rectangle/
 pattern: stack/monotonic
 tags: stack,matrix,monotonic-stack,dp
 complexity:

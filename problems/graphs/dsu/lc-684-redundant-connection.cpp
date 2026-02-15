@@ -2,12 +2,14 @@
 platform: lc
 id: 684
 name: redundant-connection
-pattern: graphs
+difficulty: medium
+url: https://leetcode.com/problems/redundant-connection/
+pattern: graphs/dsu
 tags: union-find,graph
 complexity:
 - time = O(n * alpha(n)) where alpha is inverse Ackermann
 - space = O(n)
-notes:
+notes: union-find: process edges in order; the first edge that connects two already-connected components is the redundant edge
 */
 
 #include <vector>

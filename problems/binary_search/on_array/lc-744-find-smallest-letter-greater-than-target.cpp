@@ -2,6 +2,8 @@
 platform: lc
 id: 744
 name: find smallest letter greater than target
+difficulty: easy
+url: https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 pattern: binary_search/on_array
 tags: array,binary-search
 complexity:

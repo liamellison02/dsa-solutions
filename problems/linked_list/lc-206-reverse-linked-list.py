@@ -2,12 +2,14 @@
 platform: lc
 id: 206
 name: reverse-linked-list
+difficulty: easy
+url: https://leetcode.com/problems/reverse-linked-list/
 pattern: linked_list
 tags: linked-list,iterative
 complexity:
 - time = O(n)
 - space = O(1)
-notes:
+notes: iteratively reverse by saving next, pointing curr.next to prev, then advancing prev and curr; return prev as new head
 """
 from typing import Optional
 

@@ -2,6 +2,8 @@
 platform: lc
 id: 3650
 name: minimum cost path with edge reversal
+difficulty: medium
+url: https://leetcode.com/problems/minimum-cost-path-with-edge-reversal/
 pattern: graphs/shortest_path
 tags: dijkstras,shortest-path,graphs,priority-queue,minheap,heap
 complexity:

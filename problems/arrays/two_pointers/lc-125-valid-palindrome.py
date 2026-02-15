@@ -2,10 +2,12 @@
 platform: lc
 id: 125
 name: valid palindrome
+difficulty: easy
+url: https://leetcode.com/problems/valid-palindrome/
 pattern: arrays/two_pointers
 tags: palindrome,string
 complexity:
-notes:
+notes: convert to digits and use two pointers expanding from center; handle odd/even length separately
 """
 
 def solve():

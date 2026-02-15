@@ -2,6 +2,7 @@
 platform: cf
 id: 69A
 name: young-physicist
+url: https://codeforces.com/problemset/problem/69/A
 pattern: math
 tags: math,vectors
 complexity:

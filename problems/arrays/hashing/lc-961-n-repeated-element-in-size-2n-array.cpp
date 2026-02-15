@@ -2,6 +2,8 @@
 platform: lc
 id: 961
 name: n repeated element in size 2n array
+difficulty: easy
+url: https://leetcode.com/problems/n-repeated-element-in-size-2n-array/
 pattern: arrays/hashing
 tags: hashing,frequencies
 complexity:

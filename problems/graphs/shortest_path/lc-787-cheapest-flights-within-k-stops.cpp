@@ -2,6 +2,8 @@
 platform: lc
 id: 787
 name: cheapest flights within k stops
+difficulty: medium
+url: https://leetcode.com/problems/cheapest-flights-within-k-stops/
 pattern: graphs/shortest_path
 tags: dijkstras,heap,constraints
 complexity:

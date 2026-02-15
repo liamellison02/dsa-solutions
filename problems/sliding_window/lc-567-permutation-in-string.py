@@ -2,12 +2,14 @@
 platform: lc
 id: 567
 name: permutation-in-string
-pattern: strings
+difficulty: medium
+url: https://leetcode.com/problems/permutation-in-string/
+pattern: sliding_window
 tags: sliding-window,frequency-count
 complexity:
 - time = O(n)
 - space = O(1) for fixed alphabet
-notes:
+notes: fixed-size sliding window with frequency arrays; track how many of 26 char counts match between s1 and the window, updating matches incrementally as the window slides
 """
 
 class Solution:

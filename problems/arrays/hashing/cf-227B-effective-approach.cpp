@@ -2,6 +2,7 @@
 platform: cf
 id: 227B
 name: effective-approach
+url: https://codeforces.com/problemset/problem/227/B
 pattern: arrays/hashing
 tags: array,precompute
 complexity:

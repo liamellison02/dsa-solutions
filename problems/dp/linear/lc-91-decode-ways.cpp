@@ -2,6 +2,8 @@
 platform: lc
 id: 91
 name: decode ways
+difficulty: medium
+url: https://leetcode.com/problems/decode-ways/
 pattern: dp/linear
 tags: dp,string
 complexity:

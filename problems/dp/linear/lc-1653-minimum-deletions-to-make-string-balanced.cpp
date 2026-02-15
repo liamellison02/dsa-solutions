@@ -2,6 +2,8 @@
 platform: lc
 id: 1653
 name: minimum deletions to make string balanced
+difficulty: medium
+url: https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/
 pattern: dp/linear
 tags: dp,bottom-up,greedy
 complexity:

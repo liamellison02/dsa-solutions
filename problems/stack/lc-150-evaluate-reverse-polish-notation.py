@@ -2,12 +2,14 @@
 platform: lc
 id: 150
 name: evaluate-reverse-polish-notation
+difficulty: easy
+url: https://leetcode.com/problems/evaluate-reverse-polish-notation/
 pattern: stack
 tags: stack,expression
 complexity:
 - time = O(n)
 - space = O(n)
-notes:
+notes: push numbers onto stack; when an operator appears, pop two operands, apply the op, and push the result back. Note: for subtraction and division, the second popped value is the left operand
 """
 from typing import List
 

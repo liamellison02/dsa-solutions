@@ -2,6 +2,8 @@
 platform: lc
 id: 1339
 name: maximum product of splitted binary tree
+difficulty: medium
+url: https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/
 pattern: trees/dfs
 tags: dfs,binary-tree,tree,postorder
 complexity:

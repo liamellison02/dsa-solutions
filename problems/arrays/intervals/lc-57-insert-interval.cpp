@@ -2,6 +2,8 @@
 platform: lc
 id: 57
 name: insert interval
+difficulty: medium
+url: https://leetcode.com/problems/insert-interval/
 pattern: arrays/intervals
 tags: intervals,array
 complexity:
