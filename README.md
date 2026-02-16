@@ -7,15 +7,15 @@ Personal Data Structures and Algorithms solutions repository. Python and C++ sol
 <!-- stats-start -->
 | | Count |
 |---|---|
-| Total solutions | 199 |
-| LeetCode | 101 |
+| Total solutions | 200 |
+| LeetCode | 102 |
 | Codeforces | 15 |
 | CF EDU | 1 |
 | CodePath | 79 |
 | CSC 2720 | 1 |
 | Jane Street | 1 |
 | Python | 107 |
-| C++ | 92 |
+| C++ | 93 |
 <!-- stats-end -->
 
 Run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
@@ -33,6 +33,7 @@ problems/
 │   ├── simulation/       # step-by-step simulation
 │   ├── sorting/          # sort-based solutions
 │   └── two_pointers/     # left/right pointers, fast/slow
+├── bit/                  # bit manipulation, bitwise operations
 ├── backtracking/         # subset/permutation generation, constraint satisfaction
 ├── binary_search/
 │   ├── on_answer/        # binary search on the answer space

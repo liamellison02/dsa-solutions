@@ -104,3 +104,4 @@ Canonical solutions live in `/problems`.
 | 3799 | [Word squares ii](../../problems/arrays/hashing/lc-3799-word-squares-II.cpp) | arrays/hashing | hashing,bruteforce,combinatorics,backtracking |
 | 3800 | [Minimum cost to make two binary strings equal](../../problems/greedy/lc-3800-minimum-cost-to-make-two-binary-strings-equal.cpp) | greedy | greedy,math,string |
 | 3801 | [Minimum cost to merge sorted lists](../../problems/dp/bitmask/lc-3801-minimum-cost-to-merge-sorted-lists.cpp) | dp/bitmask | dp,bitmask,merge,median |
+| 190 | [Reverse Bits](../../problems/bit//lc-190-reverse-bits.cpp) | bit/ | bit-manipulation |

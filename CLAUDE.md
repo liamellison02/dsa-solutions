@@ -31,6 +31,7 @@ There is no build system, test framework, or linting configured—solutions are 
 | Pattern | Subcategories |
 |---------|---------------|
 | `arrays/` | `hashing/`, `intervals/`, `prefix_sum/`, `simulation/`, `sorting/`, `two_pointers/` |
+| `bit/` | |
 | `backtracking/` | |
 | `binary_search/` | `on_answer/`, `on_array/` |
 | `design/` | |
