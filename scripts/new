@@ -4,19 +4,45 @@ set -euo pipefail
 if [ "$#" -lt 5 ]; then
   echo "Usage:"
   echo "  ./scripts/new <platform> <id> <slug> <lang> <pattern> [tags]"
+  echo "  ./scripts/new cf-edu <url> <slug> <lang> <pattern> [tags]"
   echo ""
   echo "Examples:"
   echo "  ./scripts/new lc 125 valid-palindrome cpp arrays_hashing/two_pointers palindrome,string"
   echo "  ./scripts/new cf 1791c prepend-append cpp arrays_hashing/two_pointers two-pointers,string"
+  echo '  ./scripts/new cf-edu "https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A" binary-search cpp binary_search/on_array binary-search'
   exit 1
 fi
 
-platform="$1" # lc | cf | ...
+platform="$1" # lc | cf | cf-edu | ...
 id="$2"
 slug="$3"     # kebab-case
 lang="$4"     # cpp | py
 pattern="$5"  # arrays_hashing/two_pointers
 tags="${6:-}" # optional, comma-separated
+
+url=""
+course=""
+lesson=""
+
+if [ "$platform" = "cf-edu" ]; then
+  # For cf-edu, $2 is a URL — parse contest ID and problem letter
+  edu_url="$2"
+
+  if [[ ! "$edu_url" =~ ^https?://codeforces\.com/edu/course/([0-9]+)/lesson/([0-9]+)/([0-9]+)/practice/contest/([0-9]+)/problem/([A-Z][0-9]*)$ ]]; then
+    echo "Error: invalid CF EDU URL format"
+    echo "Expected: https://codeforces.com/edu/course/{course}/lesson/{lesson}/{step}/practice/contest/{contest}/problem/{letter}"
+    exit 1
+  fi
+
+  course="${BASH_REMATCH[1]}"
+  lesson="${BASH_REMATCH[2]}"
+  edu_step="${BASH_REMATCH[3]}"
+  contest="${BASH_REMATCH[4]}"
+  problem="${BASH_REMATCH[5]}"
+
+  id="${contest}${problem}"
+  url="$edu_url"
+fi
 
 case "$lang" in
 cpp) ext="cpp" ;;
@@ -61,6 +87,44 @@ sed "${SED_INPLACE[@]}" "s|id:|id: $id|" "$file"
 sed "${SED_INPLACE[@]}" "s|name:|name: ${slug//-/ }|" "$file"
 sed "${SED_INPLACE[@]}" "s|pattern:|pattern: $pattern|" "$file"
 sed "${SED_INPLACE[@]}" "s|tags:|tags: $tags|" "$file"
+
+if [ -n "$url" ]; then
+  sed "${SED_INPLACE[@]}" "s|url:|url: $url|" "$file"
+fi
+if [ -n "$course" ]; then
+  sed "${SED_INPLACE[@]}" "s|course:|course: $course|" "$file"
+fi
+if [ -n "$lesson" ]; then
+  sed "${SED_INPLACE[@]}" "s|lesson:|lesson: $lesson|" "$file"
+fi
+
+# append row to track README
+track_readme=""
+case "$platform" in
+  lc)      track_readme="tracks/leetcode/README.md" ;;
+  cf)      track_readme="tracks/codeforces/README.md" ;;
+  cf-edu)  track_readme="tracks/cf_edu/README.md" ;;
+  tip102)  track_readme="tracks/codepath_tip102/README.md" ;;
+  csc2720) track_readme="tracks/csc_2720/README.md" ;;
+esac
+
+if [ -n "$track_readme" ] && [ -f "$track_readme" ]; then
+  display_name=$(echo "${slug//-/ }" | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)}1')
+  link="../../${file}"
+
+  if [ "$platform" = "cf-edu" ]; then
+    echo "| ${id} | [${display_name}](${link}) | ${course}/${lesson} | ${pattern} | ${tags} |" >> "$track_readme"
+  else
+    echo "| ${id} | [${display_name}](${link}) | ${pattern} | ${tags} |" >> "$track_readme"
+  fi
+
+  echo "Track:"
+  echo "  $track_readme"
+fi
+
+# update README.md stats
+script_dir="$(cd "$(dirname "$0")" && pwd)"
+"$script_dir/stats" --update-readme
 
 echo "Created:"
 echo "  $file"

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal Data Structures and Algorithms (DSA) solutions repository containing Python and C++ solutions to problems from LeetCode, Codeforces, Grind 75, and university coursework.
+This is a personal Data Structures and Algorithms (DSA) solutions repository containing Python and C++ solutions to problems from LeetCode, Codeforces, Codeforces EDU, Grind 75, and university coursework.
 
 ## Common Commands
 
@@ -16,6 +16,7 @@ This is a personal Data Structures and Algorithms (DSA) solutions repository con
 ./scripts/new lc 125 valid-palindrome cpp arrays/two_pointers palindrome,string
 ./scripts/new lc 3 longest-substring-without-repeating py sliding_window hashset
 ./scripts/new cf 4A watermelon cpp math divisibility
+./scripts/new cf-edu "https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A" binary-search cpp binary_search/on_array binary-search
 
 # Show stats breakdown by platform, difficulty, pattern, language, and tags
 ./scripts/stats
@@ -46,9 +47,9 @@ There is no build system, test framework, or linting configured—solutions are 
 | `inbox/` | Legacy/uncategorized problems |
 | `scratch/` | Work in progress |
 
-**`tracks/`** - Problem tracking by platform/course (leetcode, codeforces, grind75, janestreet, csc_2720, codepath_tip102)
+**`tracks/`** - Problem tracking by platform/course (leetcode, codeforces, cf_edu, grind75, janestreet, csc_2720, codepath_tip102)
 
-**`templates/`** - Language and platform-specific templates (`lc.py`, `lc.cpp`, `cf.py`, `cf.cpp`)
+**`templates/`** - Language and platform-specific templates (`lc.py`, `lc.cpp`, `cf.py`, `cf.cpp`, `cf-edu.py`, `cf-edu.cpp`)
 
 ## Solution File Format
 
@@ -56,7 +57,7 @@ All solutions must include this metadata header:
 
 ```python
 """
-platform: lc              # lc or cf
+platform: lc              # lc, cf, or cf-edu
 id: 1
 name: two-sum
 difficulty: easy          # easy, medium, hard (LC only)
@@ -67,6 +68,25 @@ complexity:
 - time = O(n)
 - space = O(n)
 notes: use hashmap to store complement; for each num check if target - num already seen
+"""
+```
+
+For Codeforces EDU problems, the `url:`, `course:`, and `lesson:` fields are auto-populated from the URL:
+
+```python
+"""
+platform: cf-edu
+id: 273169A
+name: binary-search
+url: https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A
+course: 2
+lesson: 4
+pattern: binary_search/on_array
+tags: binary-search
+complexity:
+- time = O(log n)
+- space = O(1)
+notes: standard binary search on sorted array
 """
 ```
 
@@ -99,6 +119,6 @@ Tags describe the **techniques, data structures, and problem characteristics** u
 
 - Use the `./scripts/new` script to create new problem files (handles templates and metadata automatically)
 - Place solutions in the appropriate `problems/<pattern>/` directory
-- Commit messages follow: "solved LC/CF #ID - description"
+- Commit messages follow: "solved LC/CF/CF-EDU #ID - description"
 - Templates include common STL imports for C++ and typing imports for Python
 - Scripts are cross-platform (macOS BSD and Linux GNU compatible)
