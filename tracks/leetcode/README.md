@@ -105,3 +105,4 @@ Canonical solutions live in `/problems`.
 | 3800 | [Minimum cost to make two binary strings equal](../../problems/greedy/lc-3800-minimum-cost-to-make-two-binary-strings-equal.cpp) | greedy | greedy,math,string |
 | 3801 | [Minimum cost to merge sorted lists](../../problems/dp/bitmask/lc-3801-minimum-cost-to-merge-sorted-lists.cpp) | dp/bitmask | dp,bitmask,merge,median |
 | 190 | [Reverse Bits](../../problems/bit//lc-190-reverse-bits.cpp) | bit/ | bit-manipulation |
+| 401 | [Binary Watch](../../problems/bit/lc-401-binary-watch.cpp) | bit | binary,math,bit-operations,simulation,backtracking,combinations |

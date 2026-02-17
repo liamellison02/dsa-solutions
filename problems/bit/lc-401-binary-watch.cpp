@@ -1,19 +1,34 @@
 /*
-platform:
-id:
-name:
-pattern:
-tags:
+platform: lc
+id: 401
+name: binary watch
+pattern: bit
+tags: binary,math,bit-operations,simulation,backtracking,combinations
 complexity:
-- time = O()
-- space = O()
+- time = O(12 * 60) = O(720) = O(1)
+- space = O(1)
 notes:
+
+the key observation to make is that the digits shown on the binary
+watch (from image in problem statement) match the place value
+of each digit in binary.
+
+ex: the hour on the watch has numbers 8 4 2 1.
+if the hour == 4 (only 4 is lit up), then the binary representation
+of the hour would be 0100.
+if the hour == 7 (4, 2, and 1 are lit up), then the binary
+representation of the hour would be 0111.
+
+this makes the solution straightforward:
+- enumerate all possible values for hr and min,
+- check the number of bits in the binary representation of both
+- if the total == turnedOn, add the string representation to res.
+
 */
 
 #include <algorithm>
 #include <climits>
 #include <cmath>
-#include <cstdint>
 #include <deque>
 #include <map>
 #include <queue>
@@ -33,9 +48,6 @@ using namespace std;
 
 using ll = long long;
 using ull = unsigned long long;
-using str = string;
-using ui32 = uint32_t;
-using ui64 = uint64_t;
 using PI = pair<int, int>;
 using TI = tuple<int, int, int>;
 using VB = vector<bool>;
@@ -71,5 +83,27 @@ struct TreeNode {
 
 class Solution {
 public:
-  // paste method here
+  vector<string> readBinaryWatch(uint32_t turnedOn) {
+    VS res;
+    auto bits = [](uint32_t a, uint32_t b) -> int {
+      int r{0};
+      while (a) {
+        if (a & 1)
+          ++r;
+        a >>= 1;
+      }
+      while (b) {
+        if (b & 1)
+          ++r;
+        b >>= 1;
+      }
+      return r;
+    };
+    for (uint32_t h{0}; h < 12; ++h)
+      for (uint32_t m{0}; m < 60; ++m)
+        if (bits(h, m) == turnedOn)
+          res.push_back(to_string(h) + ":" + (m < 10 ? "0" : "") +
+                        to_string(m));
+    return res;
+  }
 };
