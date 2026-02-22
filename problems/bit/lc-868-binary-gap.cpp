@@ -1,14 +1,14 @@
 /*
 platform: lc
-id: 693
-name: binary number with alternating bits
-pattern: bit
-tags: binary,bit-operations
+id: 868
+name: binary gap
+pattern: bit/
+tags: bit-manipulation,bitmask,math
 complexity:
-- time = O(1)
+- time = O(32) = O(1)
 - space = O(1)
 notes:
-just throw bitmasks at it
+just simulate the problem statement lol
 */
 
 #include <algorithm>
@@ -72,8 +72,17 @@ struct TreeNode {
 
 class Solution {
 public:
-  bool hasAlternatingBits(uint32_t n) {
-    return (n & (n >> 1)) ? false
-                          : ((n ^ (n >> 1)) & ((n ^ (n >> 1)) + 1)) == 0;
+  int binaryGap(uint32_t n) {
+    uint32_t m{0x80000000};
+    int res{-1}, last{-1};
+    rep(i, 32) {
+      if ((m & n) == m) {
+        if (last >= 0)
+          res = max(i - last, res);
+        last = i;
+      }
+      m >>= 1;
+    }
+    return res == -1 ? 0 : res;
   }
 };

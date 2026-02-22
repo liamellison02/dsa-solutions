@@ -108,3 +108,4 @@ Canonical solutions live in `/problems`.
 | 401 | [Binary Watch](../../problems/bit/lc-401-binary-watch.cpp) | bit | binary,math,bit-operations,simulation,backtracking,combinations |
 | 693 | [Binary Number With Alternating Bits](../../problems/bit/lc-693-binary-number-with-alternating-bits.cpp) | bit | binary,bit-operations |
 | 696 | [Count Binary Substrings](../../problems/bit/lc-696-count-binary-substrings.cpp) | bit | binary,bit-operations,enumeration,subsequence,bitstring |
+| 868 | [Binary Gap](../../problems/bit//lc-868-binary-gap.cpp) | bit/ | bit-manipulation,bitmask,math |
