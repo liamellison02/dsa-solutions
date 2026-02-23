@@ -111,3 +111,4 @@ Canonical solutions live in `/problems`.
 | 868 | [Binary Gap](../../problems/bit//lc-868-binary-gap.cpp) | bit/ | bit-manipulation,bitmask,math |
 | 1461 | [Check If A String Contains All Binary Codes Of Size K](../../problems/bit//lc-1461-check-if-a-string-contains-all-binary-codes-of-size-k.cpp) | bit/ | bit-manipulation,bitstring,string |
 | 746 | [Min Cost Climbing Stairs](../../problems/dp/linear/lc-746-min-cost-climbing-stairs.cpp) | dp/linear | min-cost,dp,bottom-up |
+| 198 | [House Robber](../../problems/dp/linear/lc-198-house-robber.cpp) | dp/linear | greedy,dp,bottom-up |
