@@ -8,6 +8,9 @@ complexity:
 - time = O(n-k) = O(n)
 - space = O(2^k) = O(n)
 notes:
+given that there are 2^k bitstrings of size k,
+add all unique k-sized substrings of s to a set,
+then return size of the set == 2^k.
 */
 
 #include <algorithm>
