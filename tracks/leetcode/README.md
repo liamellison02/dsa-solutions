@@ -110,3 +110,4 @@ Canonical solutions live in `/problems`.
 | 696 | [Count Binary Substrings](../../problems/bit/lc-696-count-binary-substrings.cpp) | bit | binary,bit-operations,enumeration,subsequence,bitstring |
 | 868 | [Binary Gap](../../problems/bit//lc-868-binary-gap.cpp) | bit/ | bit-manipulation,bitmask,math |
 | 1461 | [Check If A String Contains All Binary Codes Of Size K](../../problems/bit//lc-1461-check-if-a-string-contains-all-binary-codes-of-size-k.cpp) | bit/ | bit-manipulation,bitstring,string |
+| 746 | [Min Cost Climbing Stairs](../../problems/dp/linear/lc-746-min-cost-climbing-stairs.cpp) | dp/linear | min-cost,dp,bottom-up |

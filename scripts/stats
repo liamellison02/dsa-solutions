@@ -8,6 +8,7 @@ import os
 import re
 import sys
 from collections import Counter
+from typing import Optional
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,7 @@ PLATFORM_DISPLAY = {
 }
 
 
-def extract_metadata_block(content: str, ext: str) -> str | None:
+def extract_metadata_block(content: str, ext: str) -> Optional[str]:
     """Extract the metadata block from a solution file."""
     if ext == ".py":
         match = re.match(r'^"""(.*?)"""', content, re.DOTALL)
@@ -51,7 +52,7 @@ def parse_metadata(block: str) -> dict:
     return meta
 
 
-def infer_platform_from_filename(filename: str) -> str | None:
+def infer_platform_from_filename(filename: str) -> Optional[str]:
     """Infer platform from the filename prefix (e.g. lc-1-two-sum.py -> lc)."""
     prefixes = ["lc", "cf-edu", "cf", "tip102", "csc2720"]
     for prefix in prefixes:
@@ -61,7 +62,7 @@ def infer_platform_from_filename(filename: str) -> str | None:
     return None
 
 
-def infer_platform_from_path(filepath: Path) -> str | None:
+def infer_platform_from_path(filepath: Path) -> Optional[str]:
     """Infer platform from path components (e.g. inbox/janestreet/)."""
     parts = filepath.relative_to(PROBLEMS_DIR).parts
     if "janestreet" in parts:
@@ -123,7 +124,7 @@ def collect_solutions():
     return solutions
 
 
-def print_section(title: str, items: list[tuple[str, int]], total: int | None = None):
+def print_section(title: str, items: list[tuple[str, int]], total: Optional[int] = None):
     """Print a formatted section with aligned counts."""
     print(f"\n{title}:")
     if not items:
