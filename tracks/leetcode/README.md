@@ -113,3 +113,4 @@ Canonical solutions live in `/problems`.
 | 746 | [Min Cost Climbing Stairs](../../problems/dp/linear/lc-746-min-cost-climbing-stairs.cpp) | dp/linear | min-cost,dp,bottom-up |
 | 198 | [House Robber](../../problems/dp/linear/lc-198-house-robber.cpp) | dp/linear | greedy,dp,bottom-up |
 | 358 | [Rearrange String K Distance Apart](../../problems/heap/lc-358-rearrange-string-k-distance-apart.cpp) | heap | greedy,priority-queue,frequency,string,queue |
+| 1022 | [Sum Of Root To Leaf Binary Numbers](../../problems/trees/dfs/lc-1022-sum-of-root-to-leaf-binary-numbers.cpp) | trees/dfs | binary,dfs,bit-operations,binary-tree |
