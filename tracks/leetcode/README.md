@@ -116,3 +116,4 @@ Canonical solutions live in `/problems`.
 | 1022 | [Sum Of Root To Leaf Binary Numbers](../../problems/trees/dfs/lc-1022-sum-of-root-to-leaf-binary-numbers.cpp) | trees/dfs | binary,dfs,bit-operations,binary-tree |
 | 1356 | [Sort Integers By The Number Of 1 Bits](../../problems/bit/lc-1356-sort-integers-by-the-number-of-1-bits.cpp) | bit | bit,bit-manipulation,sorting,counting |
 | 1404 | [Number Of Steps To Reduce A Number In Binary Representation To One](../../problems/bit/lc-1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one.cpp) | bit | binary,bit-operations,bit-manipulation,math,simulation |
+| 3666 | [Minimum Operations To Equalize Binary String](../../problems/math/lc-3666-minimum-operations-to-equalize-binary-string.cpp) | math | math,string,parity,counting,enumeration,greedy,bit,bit-manipulation,binary |
