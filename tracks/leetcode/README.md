@@ -118,3 +118,4 @@ Canonical solutions live in `/problems`.
 | 1404 | [Number Of Steps To Reduce A Number In Binary Representation To One](../../problems/bit/lc-1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one.cpp) | bit | binary,bit-operations,bit-manipulation,math,simulation |
 | 3666 | [Minimum Operations To Equalize Binary String](../../problems/math/lc-3666-minimum-operations-to-equalize-binary-string.cpp) | math | math,string,parity,counting,enumeration,greedy,bit,bit-manipulation,binary |
 | 1689 | [Partitioning Into Minimum Number Of Deci Binary Numbers](../../problems/greedy/lc-1689-partitioning-into-minimum-number-of-deci-binary-numbers.cpp) | greedy | math,string,greedy |
+| 1536 | [Minimum Swaps To Arrange A Binary Grid](../../problems/greedy/lc-1536-minimum-swaps-to-arrange-a-binary-grid.cpp) | greedy | sorting,simulation,greedy,matrix |
