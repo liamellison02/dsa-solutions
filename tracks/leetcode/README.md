@@ -119,3 +119,4 @@ Canonical solutions live in `/problems`.
 | 3666 | [Minimum Operations To Equalize Binary String](../../problems/math/lc-3666-minimum-operations-to-equalize-binary-string.cpp) | math | math,string,parity,counting,enumeration,greedy,bit,bit-manipulation,binary |
 | 1689 | [Partitioning Into Minimum Number Of Deci Binary Numbers](../../problems/greedy/lc-1689-partitioning-into-minimum-number-of-deci-binary-numbers.cpp) | greedy | math,string,greedy |
 | 1536 | [Minimum Swaps To Arrange A Binary Grid](../../problems/greedy/lc-1536-minimum-swaps-to-arrange-a-binary-grid.cpp) | greedy | sorting,simulation,greedy,matrix |
+| 1545 | [Find Kth Bit In Nth Binary String](../../problems/strings/lc-1545-find-kth-bit-in-nth-binary-string.cpp) | strings | string,binary,simulation |
