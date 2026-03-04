@@ -120,3 +120,4 @@ Canonical solutions live in `/problems`.
 | 1689 | [Partitioning Into Minimum Number Of Deci Binary Numbers](../../problems/greedy/lc-1689-partitioning-into-minimum-number-of-deci-binary-numbers.cpp) | greedy | math,string,greedy |
 | 1536 | [Minimum Swaps To Arrange A Binary Grid](../../problems/greedy/lc-1536-minimum-swaps-to-arrange-a-binary-grid.cpp) | greedy | sorting,simulation,greedy,matrix |
 | 1545 | [Find Kth Bit In Nth Binary String](../../problems/strings/lc-1545-find-kth-bit-in-nth-binary-string.cpp) | strings | string,binary,simulation |
+| 1582 | [Special Positions In A Binary Matrix](../../problems/arrays/simulation/lc-1582-special-positions-in-a-binary-matrix.cpp) | arrays/simulation | array,simulation,frequency,counting |
