@@ -34,6 +34,8 @@ using namespace std;
 using ll = long long;
 using ull = unsigned long long;
 using str = string;
+using ui8 = uint8_t;
+using ui16 = uint16_t;
 using ui32 = uint32_t;
 using ui64 = uint64_t;
 using PI = pair<int, int>;
@@ -58,6 +60,7 @@ using UMII = unordered_map<int, int>;
 template <typename T> using vec = vector<T>;
 template <typename T> using pq = priority_queue<T>;
 template <typename T> using minpq = priority_queue<T, vector<T>, greater<T>>;
+template <typename K, typename V> using umap = unordered_map<K, V>;
 
 struct TreeNode {
   int val;
