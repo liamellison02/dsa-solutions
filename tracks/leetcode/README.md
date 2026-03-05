@@ -121,3 +121,4 @@ Canonical solutions live in `/problems`.
 | 1536 | [Minimum Swaps To Arrange A Binary Grid](../../problems/greedy/lc-1536-minimum-swaps-to-arrange-a-binary-grid.cpp) | greedy | sorting,simulation,greedy,matrix |
 | 1545 | [Find Kth Bit In Nth Binary String](../../problems/strings/lc-1545-find-kth-bit-in-nth-binary-string.cpp) | strings | string,binary,simulation |
 | 1582 | [Special Positions In A Binary Matrix](../../problems/arrays/simulation/lc-1582-special-positions-in-a-binary-matrix.cpp) | arrays/simulation | array,simulation,frequency,counting |
+| 1758 | [Minimum Changes To Make Alternating Binary String](../../problems/strings/lc-1758-minimum-changes-to-make-alternating-binary-string.cpp) | strings | string,simulation,greedy |
