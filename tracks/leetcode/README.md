@@ -123,3 +123,4 @@ Canonical solutions live in `/problems`.
 | 1582 | [Special Positions In A Binary Matrix](../../problems/arrays/simulation/lc-1582-special-positions-in-a-binary-matrix.cpp) | arrays/simulation | array,simulation,frequency,counting |
 | 1758 | [Minimum Changes To Make Alternating Binary String](../../problems/strings/lc-1758-minimum-changes-to-make-alternating-binary-string.cpp) | strings | string,simulation,greedy |
 | 1784 | [Check If A Binary String Has At Most One Segment Of Ones](../../problems/strings/lc-1784-check-if-a-binary-string-has-at-most-one-segment-of-ones.cpp) | strings | simulation,string,greedy |
+| 1888 | [Minimum Number Of flips To Make The Binary String Alternating](../../problems/sliding_window/lc-1888-minimum-number-of-flips-to-make-the-binary-string-alternating.cpp) | sliding_window | sliding-window,string,parity,circular-array,bit,binary-string |
