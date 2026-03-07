@@ -5,9 +5,18 @@ name: minimum changes to make alternating binary string
 pattern: strings
 tags: string,simulation,greedy
 complexity:
-- time = O()
-- space = O()
+- time = O(n)
+- space = O(1)
 notes:
+
+consider two possible target strings:
+- standard alternating form -> 010101
+- inverse alternating form -> 101010
+by symmetry:
+  n = (ops needed for standard form) + (ops needed for inverse form)
+
+count the operations needed to turn the string into standard alternating form
+return min(ops for standard form, n - (ops for standard form))
 */
 
 #include <algorithm>
@@ -74,5 +83,9 @@ struct TreeNode {
 
 class Solution {
 public:
-  // paste method here
+  int minOperations(string s) {
+    int n = s.length(), res{0};
+    rep(i, n) if (s[i] - '0' != i % 2)++ res;
+    return res < n - res ? res : n - res;
+  }
 };
