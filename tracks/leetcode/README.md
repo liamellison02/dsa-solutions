@@ -124,3 +124,7 @@ Canonical solutions live in `/problems`.
 | 1758 | [Minimum Changes To Make Alternating Binary String](../../problems/strings/lc-1758-minimum-changes-to-make-alternating-binary-string.cpp) | strings | string,simulation,greedy |
 | 1784 | [Check If A Binary String Has At Most One Segment Of Ones](../../problems/strings/lc-1784-check-if-a-binary-string-has-at-most-one-segment-of-ones.cpp) | strings | simulation,string,greedy |
 | 1888 | [Minimum Number Of flips To Make The Binary String Alternating](../../problems/sliding_window/lc-1888-minimum-number-of-flips-to-make-the-binary-string-alternating.cpp) | sliding_window | sliding-window,string,parity,circular-array,bit,binary-string |
+| 347 | [Top K Frequent Elements](../../problems/arrays/hashing/lc-347-top-k-frequent-elements.cpp) | arrays/hashing | bucket-sort,counting,frequency,minheap,heap,hashing,sorting,arrays |
+| 128 | [Longest Consecutive Sequence](../../problems/arrays/hashing/lc-128-longest-consecutive-sequence.py) | arrays/hashing | hashset,sequence,hashing |
+| 1980 | [Find Unique Binary String](../../problems/arrays/hashing/lc-1980-find-unique-binary-string.py) | arrays/hashing | hashset,enumeration,hashing,binary-string,strings |
+| 1373 | [Maximum Sum Bst In Binary Tree](../../problems/trees/dfs/lc-1373-maximum-sum-bst-in-binary-tree.py) | trees/dfs | dfs,bst,binary-tree,recursion,post-order,trees |
