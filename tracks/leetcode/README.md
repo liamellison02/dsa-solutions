@@ -131,3 +131,4 @@ Canonical solutions live in `/problems`.
 | 124 | [Binary Tree Maximum Path Sum](../../problems/trees/dfs/lc-124-binary-tree-maximum-path-sum.py) | trees/dfs | dfs,max-path,max,binary-tree,recursion,post-order,trees |
 | 236 | [Lowest Common Ancestor Of A Binary Tree](../../problems/trees/lca/lc-236-lowest-common-ancestor-of-a-binary-tree.py) | trees/lca | dfs,trees,binary-tree,lca |
 | 3130 | [Find All Possible Stable Binary Arrays II](../../problems/dp/state_machine/lc-3130-find-all-possible-stable-binary-arrays-II.py) | dp/state_machine | dp,combinatorics,top-down,prefix-sum,optimization,sliding-window |
+| 3129 | [Find All Possible Stable Binary Arrays I](../../problems/dp/state_machine/lc-3129-find-all-possible-stable-binary-arrays-I.py) | dp/state_machine | dp,combinatorics,top-down,prefix-sum,optimization,sliding-window |
