@@ -2,7 +2,7 @@
 platform: lc
 id: 127
 name: word ladder
-pattern: graphs/dfs
+pattern: graphs/bfs
 tags: string,bfs,hashtable,hashmap
 complexity:
 m = wordList.length

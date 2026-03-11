@@ -108,7 +108,7 @@ Tags describe the **techniques, data structures, and problem characteristics** u
 | Traversal / search | `bfs`, `dfs`, `binary-search`, `two-pointers`, `sliding-window`, `recursion`, `iterative` |
 | Sorting / ordering | `sorting`, `greedy`, `intervals`, `merge` |
 | DP techniques | `dp`, `bottom-up`, `1d-dp`, `2d-dp`, `grid-dp`, `interval-dp`, `kadanes`, `subsequence`, `bitmask` |
-| Graph algorithms | `dijkstras`, `topological`, `kahns`, `union-find`, `shortest-path`, `mst`, `dag`, `cycle` |
+| Graph algorithms | `dijkstras`, `topological`, `kahns`, `union-find`, `shortest-path`, `mst`, `dag`, `cycle`, `bfs` |
 | Tree techniques | `lca`, `inorder-traversal`, `postorder` |
 | String techniques | `string`, `palindrome`, `substring`, `subsequence`, `regex`, `decoding`, `encoding`, `case-conversion` |
 | Math | `math`, `geometry`, `number-theory`, `combinatorics`, `divisibility`, `primes`, `factorization` |
