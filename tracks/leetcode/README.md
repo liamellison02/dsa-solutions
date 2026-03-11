@@ -134,3 +134,4 @@ Canonical solutions live in `/problems`.
 | 3129 | [Find All Possible Stable Binary Arrays I](../../problems/dp/state_machine/lc-3129-find-all-possible-stable-binary-arrays-I.py) | dp/state_machine | dp,combinatorics,top-down,prefix-sum,optimization,sliding-window |
 | 560 | [Subarray Sum Equals K](../../problems/arrays/prefix_sum/lc-560-subarray-sum-equals-k.py) | arrays/prefix_sum | hashmap,hashtable,complement,frequency,enumeration,prefix-sum |
 | 1009 | [Complement Of Base 10 Integer](../../problems/bit/lc-1009-complement-of-base-10-integer.cpp) | bit | bitmask,bit-manipulation |
+| 127 | [Word Ladder](../../problems/graphs/dfs/lc-127-word-ladder.cpp) | graphs/dfs | string,bfs,hashtable,hashmap |
