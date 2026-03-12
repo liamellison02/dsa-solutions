@@ -135,3 +135,4 @@ Canonical solutions live in `/problems`.
 | 560 | [Subarray Sum Equals K](../../problems/arrays/prefix_sum/lc-560-subarray-sum-equals-k.py) | arrays/prefix_sum | hashmap,hashtable,complement,frequency,enumeration,prefix-sum |
 | 1009 | [Complement Of Base 10 Integer](../../problems/bit/lc-1009-complement-of-base-10-integer.cpp) | bit | bitmask,bit-manipulation |
 | 127 | [Word Ladder](../../problems/graphs/bfs/lc-127-word-ladder.cpp) | graphs/bfs | string,bfs,hashtable,hashmap |
+| 767 | [Reorganize String](../../problems/greedy/lc-767-reorganize-string.cpp) | greedy | greedy,priority-queue,maxheap,heap,string,frequency,counting |
