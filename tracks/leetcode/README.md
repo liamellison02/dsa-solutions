@@ -136,3 +136,4 @@ Canonical solutions live in `/problems`.
 | 1009 | [Complement Of Base 10 Integer](../../problems/bit/lc-1009-complement-of-base-10-integer.cpp) | bit | bitmask,bit-manipulation |
 | 127 | [Word Ladder](../../problems/graphs/bfs/lc-127-word-ladder.cpp) | graphs/bfs | string,bfs,hashtable,hashmap |
 | 767 | [Reorganize String](../../problems/greedy/lc-767-reorganize-string.cpp) | greedy | greedy,priority-queue,maxheap,heap,string,frequency,counting |
+| 3600 | [Maximize Spanning Tree Stability With Upgrades](../../problems/graphs/mst/lc-3600-maximize-spanning-tree-stability-with-upgrades.py) | graphs/mst | mst,dsu,union-find,graph,optimization,greedy,sorting,stack |
