@@ -1,21 +1,22 @@
 # DSA Solutions
 
-Personal Data Structures and Algorithms solutions repository. Python and C++ solutions to problems from LeetCode, Codeforces, Grind 75, and university coursework.
+Personal Data Structures and Algorithms solutions repository. Python and C++ solutions to problems from LeetCode, Codeforces, ICPC prep, university coursework, and more.
 
 ## Stats
 
 <!-- stats-start -->
 | | Count |
 |---|---|
-| Total solutions | 239 |
-| LeetCode | 133 |
+| Total solutions | 238 |
+| LeetCode | 134 |
 | Codeforces | 19 |
 | CF EDU | 1 |
 | CodePath | 79 |
 | CSC 2720 | 1 |
 | Jane Street | 1 |
+| Other | 3 |
 | Python | 116 |
-| C++ | 123 |
+| C++ | 122 |
 <!-- stats-end -->
 
 Run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.

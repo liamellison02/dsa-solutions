@@ -7,9 +7,10 @@ url: https://leetcode.com/problems/redundant-connection/
 pattern: graphs/dsu
 tags: union-find,graph
 complexity:
-- time = O(n * alpha(n)) where alpha is inverse Ackermann
+- time = O(n * α(n)) where α is inverse Ackermann
 - space = O(n)
-notes: union-find: process edges in order; the first edge that connects two already-connected components is the redundant edge
+notes: union-find: process edges in order; the first edge that connects two
+already-connected components is the redundant edge
 */
 
 #include <vector>
@@ -38,8 +39,8 @@ class Solution {
 
   int find(int a, VI &rt) {
     int r = rt[a];
-    while (r != rt[r]) {
-      rt[r] = rt[rt[r]];
+    while (r != rt[r]) { // while a is not 1 lvl removed from the true root
+      rt[r] = rt[rt[r]]; // make root of root of a = root of root of root of a
       r = rt[r];
     }
     return r;
@@ -48,8 +49,9 @@ class Solution {
 public:
   vector<int> findRedundantConnection(vector<vector<int>> &edges) {
     int n = edges.size();
-    VI rank(n + 1, 0);
-    VI root(n + 1, 0);
+
+    VI rank(n + 1, 0), root(n + 1, 0);
+
     for (int i{}; i < n; ++i)
       root[i] = i;
     for (auto &e : edges)
