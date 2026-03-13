@@ -138,3 +138,4 @@ Canonical solutions live in `/problems`.
 | 767 | [Reorganize String](../../problems/greedy/lc-767-reorganize-string.cpp) | greedy | greedy,priority-queue,maxheap,heap,string,frequency,counting |
 | 3600 | [Maximize Spanning Tree Stability With Upgrades](../../problems/graphs/mst/lc-3600-maximize-spanning-tree-stability-with-upgrades.py) | graphs/mst | mst,dsu,union-find,graph,optimization,greedy,sorting,stack |
 | 4 | [Median Of Two Sorted Arrays](../../problems/binary_search/on_array/lc-4-median-of-two-sorted-arrays.cpp) | binary_search/on_array | binary-search,array,divide-and-conquer,median |
+| 3296 | [Minimum Number Of Seconds To Make Mountain Height Zero](../../problems/binary_search/on_answer/lc-3296-minimum-number-of-seconds-to-make-mountain-height-zero.py) | binary_search/on_answer | binary-search,math |
