@@ -137,3 +137,4 @@ Canonical solutions live in `/problems`.
 | 127 | [Word Ladder](../../problems/graphs/bfs/lc-127-word-ladder.cpp) | graphs/bfs | string,bfs,hashtable,hashmap |
 | 767 | [Reorganize String](../../problems/greedy/lc-767-reorganize-string.cpp) | greedy | greedy,priority-queue,maxheap,heap,string,frequency,counting |
 | 3600 | [Maximize Spanning Tree Stability With Upgrades](../../problems/graphs/mst/lc-3600-maximize-spanning-tree-stability-with-upgrades.py) | graphs/mst | mst,dsu,union-find,graph,optimization,greedy,sorting,stack |
+| 4 | [Median Of Two Sorted Arrays](../../problems/binary_search/on_array/lc-4-median-of-two-sorted-arrays.cpp) | binary_search/on_array | binary-search,array,divide-and-conquer,median |
