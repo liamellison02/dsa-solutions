@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal Data Structures and Algorithms (DSA) solutions repository containing Python and C++ solutions to problems from LeetCode, Codeforces, Codeforces EDU, Grind 75, and university coursework.
+This is a personal Data Structures and Algorithms (DSA) solutions repository containing Python and C++ solutions to problems from LeetCode, Codeforces, Codeforces EDU, and university coursework.
 
 ## Common Commands
 
@@ -48,7 +48,7 @@ There is no build system, test framework, or linting configured—solutions are 
 | `inbox/` | Legacy/uncategorized problems |
 | `scratch/` | Work in progress |
 
-**`tracks/`** - Problem tracking by platform/course (leetcode, codeforces, cf_edu, grind75, janestreet, csc_2720, codepath_tip102)
+**`tracks/`** - Problem tracking by platform/course (leetcode, codeforces, cf_edu, janestreet, csc_2720, codepath_tip102)
 
 **`templates/`** - Language and platform-specific templates (`lc.py`, `lc.cpp`, `cf.py`, `cf.cpp`, `cf-edu.py`, `cf-edu.cpp`)
 

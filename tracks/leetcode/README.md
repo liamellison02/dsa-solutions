@@ -140,3 +140,4 @@ Canonical solutions live in `/problems`.
 | 4 | [Median Of Two Sorted Arrays](../../problems/binary_search/on_array/lc-4-median-of-two-sorted-arrays.cpp) | binary_search/on_array | binary-search,array,divide-and-conquer,median |
 | 3296 | [Minimum Number Of Seconds To Make Mountain Height Zero](../../problems/binary_search/on_answer/lc-3296-minimum-number-of-seconds-to-make-mountain-height-zero.py) | binary_search/on_answer | binary-search,math |
 | 16 | [3sum Closest](../../problems/arrays/two_pointers/lc-16-3sum-closest.py) | arrays/two_pointers | two-pointers,array,sorting |
+| 1415 | [The K Th Lexicographical String Of All Happy Strings Of Length N](../../problems/math/combinatorics/lc-1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.cpp) | math/combinatorics | combinatorics,permutations,modulus,string |

@@ -7,15 +7,15 @@ Personal Data Structures and Algorithms solutions repository. Python and C++ sol
 <!-- stats-start -->
 | | Count |
 |---|---|
-| Total solutions | 241 |
+| Total solutions | 243 |
 | LeetCode | 137 |
-| Codeforces | 19 |
+| Codeforces | 20 |
 | CF EDU | 1 |
 | CodePath | 79 |
 | CSC 2720 | 1 |
 | Jane Street | 1 |
 | Python | 118 |
-| C++ | 123 |
+| C++ | 126 |
 <!-- stats-end -->
 
 Run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
@@ -113,7 +113,7 @@ Solutions can also be browsed by platform/course in `tracks/`:
 
 - [LeetCode](tracks/leetcode/)
 - [Codeforces](tracks/codeforces/)
-- [Grind 75](tracks/grind75/)
+- [Codeforces EDU](tracks/cf_edu/)
+- [Jane Street](tracks/janestreet/)
 - [CodePath TIP102](tracks/codepath_tip102/)
 - [CSC 2720](tracks/csc_2720/)
-- [Jane Street](tracks/janestreet/)
