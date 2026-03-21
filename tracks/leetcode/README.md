@@ -143,3 +143,4 @@ Canonical solutions live in `/problems`.
 | 1415 | [The K-th Lexicographical String Of All Happy Strings Of Length N](../../problems/math/combinatorics/lc-1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.cpp) | math/combinatorics | combinatorics,permutations,modulus,string |
 | 3212 | [Count Submatrices With Equal Frequency Of X And Y](../../problems/arrays/prefix_sum/lc-3212-count-submatrices-with-equal-frequency-of-x-and-y.py) | arrays/prefix_sum | prefix-sum,matrix,counting,array |
 | 3567 | [Minimum Absolute Difference In Sliding Submatrix](../../problems/arrays/sorting/lc-3567-minimum-absolute-difference-in-sliding-submatrix.cpp) | arrays/sorting | sorting,matrix,enumeration,counting |
+| 3643 | [Flip Square Submatrix Vertically](../../problems/arrays/two_pointers/lc-3643-flip-square-submatrix-vertically.cpp) | arrays/two_pointers | two-pointers,simulation,matrix,move-semantics |
