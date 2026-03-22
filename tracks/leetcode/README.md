@@ -144,3 +144,4 @@ Canonical solutions live in `/problems`.
 | 3212 | [Count Submatrices With Equal Frequency Of X And Y](../../problems/arrays/prefix_sum/lc-3212-count-submatrices-with-equal-frequency-of-x-and-y.py) | arrays/prefix_sum | prefix-sum,matrix,counting,array |
 | 3567 | [Minimum Absolute Difference In Sliding Submatrix](../../problems/arrays/sorting/lc-3567-minimum-absolute-difference-in-sliding-submatrix.cpp) | arrays/sorting | sorting,matrix,enumeration,counting |
 | 3643 | [Flip Square Submatrix Vertically](../../problems/arrays/two_pointers/lc-3643-flip-square-submatrix-vertically.cpp) | arrays/two_pointers | two-pointers,simulation,matrix,move-semantics |
+| 1886 | [Determine Whether Matrix Can Be Obtained By Rotation](../../problems/arrays/simulation/lc-1886-determine-whether-matrix-can-be-obtained-by-rotation.cpp) | arrays/simulation | simulation,matrix,rotation |
