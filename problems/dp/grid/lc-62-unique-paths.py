@@ -3,7 +3,7 @@ platform: lc
 id: 62
 name: unique paths
 pattern: dp/grid
-tags: bottom-up,dp,grid,paths
+tags: bottom-up,dp,grid,paths,enumeration
 complexity:
 - time = O(m * n)
 - space = O(n)
