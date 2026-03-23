@@ -147,3 +147,4 @@ Canonical solutions live in `/problems`.
 | 1886 | [Determine Whether Matrix Can Be Obtained By Rotation](../../problems/arrays/simulation/lc-1886-determine-whether-matrix-can-be-obtained-by-rotation.cpp) | arrays/simulation | simulation,matrix,rotation |
 | 1594 | [Maximum Non Negative Product In A Matrix](../../problems/dp/grid/lc-1594-maximum-non-negative-product-in-a-matrix.cpp) | dp/grid | dp,bottom-up,grid-dp,grid,matrix |
 | 740 | [Delete And Earn](../../problems/dp/linear/lc-740-delete-and-earn.py) | dp/linear | bottom-up,dp,linear,array,sorting,frequency,counting |
+| 62 | [Unique Paths](../../problems/dp/grid/lc-62-unique-paths.py) | dp/grid | bottom-up,dp,grid,paths |
