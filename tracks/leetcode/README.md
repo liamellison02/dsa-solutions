@@ -149,3 +149,4 @@ Canonical solutions live in `/problems`.
 | 740 | [Delete And Earn](../../problems/dp/linear/lc-740-delete-and-earn.py) | dp/linear | bottom-up,dp,linear,array,sorting,frequency,counting |
 | 62 | [Unique Paths](../../problems/dp/grid/lc-62-unique-paths.py) | dp/grid | bottom-up,dp,grid,paths |
 | 63 | [Unique Paths II](../../problems/dp/grid/lc-63-unique-paths-II.py) | dp/grid | bottom-up,dp,grid,paths,enumeration |
+| 5 | [Longest Palindromic Substring](../../problems/dp/linear/lc-5-longest-palindromic-substring.py) | dp/linear | bottom-up,dp,string,palindrome,substring,two-pointers |
