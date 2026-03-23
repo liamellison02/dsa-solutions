@@ -9,7 +9,7 @@ complexity:
 - space = O(m * n)
 notes:
 classic bottom-up dp solution.
-could improve to 1d but not super necessary.
+did the 2d and 1d optimized approaches.
 */
 
 #include <algorithm>
@@ -117,5 +117,32 @@ public:
     }
 
     return dp[m][n].first >= 0 ? (int)(dp[m][n].first % MOD) : -1;
+  }
+  int maxProductPath1D(vector<vector<int>> &grid) {
+    int m = grid.size(), n = grid[0].size();
+    vec<pll> dp(n);
+
+    dp[0] = {grid[0][0], grid[0][0]};
+
+    FOR(j, 1, n) {
+      ll v{grid[0][j]};
+      ll a{v * dp[j - 1].first}, b{v * dp[j - 1].second};
+      dp[j] = {max(a, b), min(a, b)};
+    }
+
+    FOR(i, 1, m) {
+      ll v{grid[i][0]};
+      ll a{v * dp[0].first}, b{v * dp[0].second};
+      dp[0] = {max(a, b), min(a, b)};
+
+      FOR(j, 1, n) {
+        v = grid[i][j];
+        ll la{v * dp[j - 1].first}, lb{v * dp[j - 1].second};
+        ll ua{v * dp[j].first}, ub{v * dp[j].second};
+        dp[j] = {max({la, lb, ua, ub}), min({la, lb, ua, ub})};
+      }
+    }
+
+    return dp[n - 1].first >= 0 ? (int)(dp[n - 1].first % MOD) : -1;
   }
 };
