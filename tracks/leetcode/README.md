@@ -146,3 +146,4 @@ Canonical solutions live in `/problems`.
 | 3643 | [Flip Square Submatrix Vertically](../../problems/arrays/two_pointers/lc-3643-flip-square-submatrix-vertically.cpp) | arrays/two_pointers | two-pointers,simulation,matrix,move-semantics |
 | 1886 | [Determine Whether Matrix Can Be Obtained By Rotation](../../problems/arrays/simulation/lc-1886-determine-whether-matrix-can-be-obtained-by-rotation.cpp) | arrays/simulation | simulation,matrix,rotation |
 | 1594 | [Maximum Non Negative Product In A Matrix](../../problems/dp/grid/lc-1594-maximum-non-negative-product-in-a-matrix.cpp) | dp/grid | dp,bottom-up,grid-dp,grid,matrix |
+| 740 | [Delete And Earn](../../problems/dp/linear/lc-740-delete-and-earn.py) | dp/linear | bottom-up,dp,linear,array,sorting,frequency,counting |
