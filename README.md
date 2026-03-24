@@ -7,15 +7,26 @@ Personal Data Structures and Algorithms solutions repository. Python and C++ sol
 <!-- stats-start -->
 | | Count |
 |---|---|
+<<<<<<< HEAD
 | Total solutions | 251 |
 | LeetCode | 147 |
 | Codeforces | 19 |
+=======
+| Total solutions | 250 |
+| LeetCode | 144 |
+| Codeforces | 20 |
+>>>>>>> 6cb04fb (solved LC #2906 - 03/24 daily challenge)
 | CF EDU | 1 |
 | CodePath | 79 |
 | CSC 2720 | 1 |
 | Jane Street | 1 |
+<<<<<<< HEAD
 | Python | 123 |
 | C++ | 128 |
+=======
+| Python | 119 |
+| C++ | 131 |
+>>>>>>> 6cb04fb (solved LC #2906 - 03/24 daily challenge)
 <!-- stats-end -->
 
 Run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
