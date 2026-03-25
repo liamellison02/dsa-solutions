@@ -6,17 +6,17 @@ includes c++ & python solutions to problems from LeetCode, Codeforces, ICPC prep
 ## stats
 
 <!-- stats-start -->
-| | count |
+| | Count |
 |---|---|
-| total solutions | 254 |
-| leetcode | 150 |
-| codeforces | 19 |
-| cf edu | 1 |
-| codepath | 79 |
-| csc 2720 | 1 |
-| jane street | 1 |
-| python | 125 |
-| c++ | 129 |
+| Total solutions | 255 |
+| LeetCode | 151 |
+| Codeforces | 19 |
+| CF EDU | 1 |
+| CodePath | 79 |
+| CSC 2720 | 1 |
+| Jane Street | 1 |
+| Python | 126 |
+| C++ | 129 |
 <!-- stats-end -->
 
 run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
