@@ -1,28 +1,29 @@
-# DSA Solutions
+# dsa-solutions
 
-Personal Data Structures and Algorithms solutions repository. Python and C++ solutions to problems from LeetCode, Codeforces, ICPC prep, university coursework, and more.
+personal data structures & algorithms repository for solutions, write-ups, and any other algorithmic "explorations".
+includes c++ & python solutions to problems from LeetCode, Codeforces, ICPC prep, university coursework, and more.
 
-## Stats
+## stats
 
 <!-- stats-start -->
-| | Count |
+| | count |
 |---|---|
-| Total solutions | 255 |
-| LeetCode | 149 |
-| Codeforces | 20 |
-| CF EDU | 1 |
-| CodePath | 79 |
-| CSC 2720 | 1 |
-| Jane Street | 1 |
-| Python | 124 |
-| C++ | 131 |
+| total solutions | 254 |
+| leetcode | 150 |
+| codeforces | 19 |
+| cf edu | 1 |
+| codepath | 79 |
+| csc 2720 | 1 |
+| jane street | 1 |
+| python | 125 |
+| c++ | 129 |
 <!-- stats-end -->
 
-Run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
+run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
 
-## Pattern Directory
+## pattern directories
 
-Solutions are organized by algorithm pattern in `problems/`:
+solutions are organized by algorithm/solution pattern in `problems/`:
 
 ```
 problems/
@@ -74,22 +75,22 @@ problems/
     └── traversal/        # iterative traversal
 ```
 
-## Usage
+## usage
 
-### Create a new solution
+### create a new solution
 
 ```bash
 ./scripts/new <platform> <id> <slug> <lang> <pattern> [tags]
 
-# Examples:
+# examples:
 ./scripts/new lc 125 valid-palindrome cpp arrays/two_pointers palindrome,string
 ./scripts/new lc 3 longest-substring-without-repeating py sliding_window hashset
 ./scripts/new cf 4A watermelon cpp math divisibility
 ```
 
-### Solution metadata format
+### solution metadata format
 
-Every solution includes a metadata header:
+every solution includes a metadata header:
 
 ```python
 """
@@ -107,9 +108,9 @@ notes: use hashmap to store complement; for each num check if target - num alrea
 """
 ```
 
-## Tracks
+## tracks
 
-Solutions can also be browsed by platform/course in `tracks/`:
+solutions can also be browsed by platform/course in `tracks/`:
 
 - [LeetCode](tracks/leetcode/)
 - [Codeforces](tracks/codeforces/)

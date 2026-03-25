@@ -152,3 +152,4 @@ Canonical solutions live in `/problems`.
 | 5 | [Longest Palindromic Substring](../../problems/dp/linear/lc-5-longest-palindromic-substring.py) | dp/linear | bottom-up,dp,string,palindrome,substring,two-pointers |
 | 2906 | [Construct Product Matrix](../../problems/arrays/prefix_sum/lc-2906-construct-product-matrix.cpp) | arrays/prefix_sum | prefix-sum,simulation,modulo,grid,matrix |
 | 139 | [Word Break](../../problems/dp/linear/lc-139-word-break.py) | dp/linear | dp,bottom-up,string |
+| 297 | [Serialize And Deserialize Binary Tree](../../problems/trees/construct/lc-297-serialize-and-deserialize-binary-tree.py) | trees/construct | binary-tree,tree,design,construction,dfs,bfs,string |
