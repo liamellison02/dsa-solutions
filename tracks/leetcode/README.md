@@ -154,3 +154,4 @@ Canonical solutions live in `/problems`.
 | 139 | [Word Break](../../problems/dp/linear/lc-139-word-break.py) | dp/linear | dp,bottom-up,string |
 | 297 | [Serialize And Deserialize Binary Tree](../../problems/trees/construct/lc-297-serialize-and-deserialize-binary-tree.py) | trees/construct | binary-tree,tree,design,construction,dfs,bfs,string |
 | 3546 | [Equalize Sum Grid Partition I](../../problems/arrays/prefix_sum/lc-3546-equalize-sum-grid-partition-I.py) | arrays/prefix_sum | prefix-sum,grid,matrix,array,suffix,enumeration |
+| 3548 | [Equalize Sum Grid Partition II](../../problems/arrays/prefix_sum/lc-3548-equalize-sum-grid-partition-II.py) | arrays/prefix_sum | prefix-sum,grid,matrix,array,suffix,enumeration |
