@@ -5,26 +5,12 @@ name: equalize sum grid partition II
 pattern: arrays/prefix_sum
 tags: prefix-sum,grid,matrix,array,suffix,enumeration
 complexity:
-- time = O()
-- space = O()
+- time = O(m * n)
+- space = O(m * n)
 notes:
-"""
-
-from collections import defaultdict
-from typing import List
-
-
-"""
-
-
 turn each row, col into a set
-perform v1 problem solution but at each check:
-- lookup in hashmap for existence of complement
-
-
-what cases does erasing a cell result in disconnectivity?
-if count(rows/cols in split) == 1 && cell is not at the end of row/col
-
+perform v1 problem solution but at each check,
+lookup in hashmap for existence of complement
 
 algo:
 0) build hashmap of (cell_value -> list of indices)
@@ -38,13 +24,13 @@ algo:
         - check for existence + location for delta
         - if delta exists in grid && no disconnectivity:
             - return True
-
 2) check for horizontal cuts (same as step 1)
-
 3) return False
 
-
 """
+
+from collections import defaultdict
+from typing import List
 
 
 class Solution:
@@ -54,6 +40,15 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 lookup[grid[i][j]].append((i, j))
+
+        def valid(R, C, r_rel, c_rel):
+            if R == 1 and C == 1:
+                return False
+            if R == 1:
+                return c_rel == 0 or c_rel == C - 1
+            if C == 1:
+                return r_rel == 0 or r_rel == R - 1
+            return True
 
         cols = [0 for _ in range(n)]
         for j in range(n - 2, -1, -1):
@@ -72,11 +67,11 @@ class Solution:
             diff = abs(suffix - curr)
             if curr > suffix:
                 for r, c in lookup[diff]:
-                    if c <= j and (m == 1 or (m > 1 and not (m > 2 and r == 1))):
+                    if c <= j and valid(m, j + 1, r, c):
                         return True
             else:
                 for r, c in lookup[diff]:
-                    if c > j and (m == 1 or (m > 1 and not (m > 2 and r == 1))):
+                    if c > j and valid(m, n - 1 - j, r, c - (j + 1)):
                         return True
 
             curr += cols[j] - cols[j + 1]
@@ -90,11 +85,11 @@ class Solution:
             diff = abs(rows[i] - curr)
             if curr > suffix:
                 for r, c in lookup[diff]:
-                    if r <= i and (n == 1 or (n > 1 and not (n > 2 and c == 1))):
+                    if r <= i and valid(i + 1, n, r, c):
                         return True
             else:
                 for r, c in lookup[diff]:
-                    if r > i and (n == 1 or (n > 1 and not (n > 2 and c == 1))):
+                    if r > i and valid(m - 1 - i, n, r - (i + 1), c):
                         return True
 
             curr += rows[i] - rows[i + 1]
