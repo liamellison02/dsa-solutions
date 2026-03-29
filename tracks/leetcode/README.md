@@ -156,3 +156,4 @@ Canonical solutions live in `/problems`.
 | 3546 | [Equalize Sum Grid Partition I](../../problems/arrays/prefix_sum/lc-3546-equalize-sum-grid-partition-I.py) | arrays/prefix_sum | prefix-sum,grid,matrix,array,suffix,enumeration |
 | 3548 | [Equalize Sum Grid Partition II](../../problems/arrays/prefix_sum/lc-3548-equalize-sum-grid-partition-II.py) | arrays/prefix_sum | prefix-sum,grid,matrix,array,suffix,enumeration |
 | 2946 | [Matrix Similarity After Cyclic Shifts](../../problems/arrays/simulation/lc-2946-matrix-similarity-after-cyclic-shifts.py) | arrays/simulation | simulation,matrix,grid |
+| 2839 | [Check If Strings Can Be Made Equal With Operations I](../../problems/strings/lc-2839-check-if-strings-can-be-made-equal-with-operations-I.py) | strings | simulation,swap |
