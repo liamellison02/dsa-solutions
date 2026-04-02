@@ -5,7 +5,7 @@ name: minimum cost path with teleportations
 difficulty: hard
 url: https://leetcode.com/problems/minimum-cost-path-with-teleportations/
 pattern: dp/grid
-tags: min-path,dp,grid-dp,bottom-up,prefix-sum,sorting
+tags: min-path,dp,grid-dp,bottom-up,prefix-sum,sorting,path
 complexity:
 - time = O(k*m*n)
 - space = O(m*n)

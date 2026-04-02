@@ -159,3 +159,4 @@ Canonical solutions live in `/problems`.
 | 2839 | [Check If Strings Can Be Made Equal With Operations I](../../problems/strings/lc-2839-check-if-strings-can-be-made-equal-with-operations-I.py) | strings | simulation,swap |
 | 2840 | [Check If Strings Can Be Made Equal With Operations II](../../problems/arrays/hashing/lc-2840-check-if-strings-can-be-made-equal-with-operations-II.py) | arrays/hashing | hashmap,frequency,string |
 | 2751 | [Robot Collisions](../../problems/stack/lc-2751-robot-collisions.py) | stack | stack,sorting,simulation |
+| 3418 | [Maximum Amount Of Money Robot Can Earn](../../problems/dp/grid/lc-3418-maximum-amount-of-money-robot-can-earn.py) | dp/grid | dp,grid,simulation,max-path,path |
