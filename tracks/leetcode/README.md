@@ -161,3 +161,4 @@ Canonical solutions live in `/problems`.
 | 2751 | [Robot Collisions](../../problems/stack/lc-2751-robot-collisions.py) | stack | stack,sorting,simulation |
 | 3418 | [Maximum Amount Of Money Robot Can Earn](../../problems/dp/grid/lc-3418-maximum-amount-of-money-robot-can-earn.py) | dp/grid | dp,grid,simulation,max-path,path |
 | 582 | [Kill Process](../../problems/trees/bfs/lc-582-kill-process.py) | trees/bfs | bfs,tree,dfs,hashmap,hash-table,queue |
+| 3661 | [Maximum Walls Destroyed By Robots](../../problems/dp/linear/lc-3661-maximum-walls-destroyed-by-robots.py) | dp/linear | dp,greedy,sorting,binary-search,range-query |
