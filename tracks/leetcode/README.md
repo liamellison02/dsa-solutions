@@ -163,3 +163,4 @@ Canonical solutions live in `/problems`.
 | 582 | [Kill Process](../../problems/trees/bfs/lc-582-kill-process.py) | trees/bfs | bfs,tree,dfs,hashmap,hash-table,queue |
 | 3661 | [Maximum Walls Destroyed By Robots](../../problems/dp/linear/lc-3661-maximum-walls-destroyed-by-robots.py) | dp/linear | dp,greedy,sorting,binary-search,range-query |
 | 2075 | [Decode The Slanted Ciphertext](../../problems/strings/lc-2075-decode-the-slanted-ciphertext.py) | strings | simulation,grid,decode,encode |
+| 657 | [Robot Return To Origin](../../problems/strings/lc-657-robot-return-to-origin.py) | strings | simulation,string,enumeration,count,frequency |
