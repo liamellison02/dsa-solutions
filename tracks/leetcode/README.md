@@ -164,3 +164,4 @@ Canonical solutions live in `/problems`.
 | 3661 | [Maximum Walls Destroyed By Robots](../../problems/dp/linear/lc-3661-maximum-walls-destroyed-by-robots.py) | dp/linear | dp,greedy,sorting,binary-search,range-query |
 | 2075 | [Decode The Slanted Ciphertext](../../problems/strings/lc-2075-decode-the-slanted-ciphertext.py) | strings | simulation,grid,decode,encode |
 | 657 | [Robot Return To Origin](../../problems/strings/lc-657-robot-return-to-origin.py) | strings | simulation,string,enumeration,count,frequency |
+| 3653 | [Xor After Range Multiplication Queries I](../../problems/bit/lc-3653-xor-after-range-multiplication-queries-I.py) | bit | simulation,bitwise,bit-operations,xor |
