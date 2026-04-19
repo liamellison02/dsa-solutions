@@ -8,15 +8,15 @@ includes c++ & python solutions to problems from LeetCode, Codeforces, ICPC prep
 <!-- stats-start -->
 | | Count |
 |---|---|
-| Total solutions | 267 |
-| LeetCode | 163 |
-| Codeforces | 19 |
+| Total solutions | 270 |
+| LeetCode | 164 |
+| Codeforces | 20 |
 | CF EDU | 1 |
 | CodePath | 79 |
 | CSC 2720 | 1 |
 | Jane Street | 1 |
-| Python | 138 |
-| C++ | 129 |
+| Python | 139 |
+| C++ | 131 |
 <!-- stats-end -->
 
 run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
