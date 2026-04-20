@@ -167,3 +167,4 @@ Canonical solutions live in `/problems`.
 | 3653 | [Xor After Range Multiplication Queries I](../../problems/bit/lc-3653-xor-after-range-multiplication-queries-I.py) | bit | simulation,bitwise,bit-operations,xor |
 | 1848 | [Minimum Distance To The Target Element](../../problems/arrays/two_pointers/lc-1848-minimum-distance-to-the-target-element.py) | arrays/two_pointers | arrays,two-pointers |
 | 1855 | [Maximum Distance Between A Pair Of Values](../../problems/binary_search/on_array/lc-1855-maximum-distance-between-a-pair-of-values.py) | binary_search/on_array | binary-search |
+| 2078 | [Two Furthest Houses With Different Colors](../../problems/arrays/simulation/lc-2078-two-furthest-houses-with-different-colors.py) | arrays/simulation | simulation |
