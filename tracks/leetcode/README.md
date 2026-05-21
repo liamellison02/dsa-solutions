@@ -171,3 +171,5 @@ Canonical solutions live in `/problems`.
 | 2452 | [Words Within Two Edits Of Dictionary](../../problems/strings/lc-2452-words-within-two-edits-of-dictionary.py) | strings | string,array,frequency,enumeration,counting |
 | 2540 | [Minimum Common Value](../../problems/arrays/two_pointers/lc-2540-minimum-common-value.py) | arrays/two_pointers | two-pointers,arrays,frequency |
 | 2657 | [Find The Common Prefix Array Of Two Arrays](../../problems/arrays/hashing/lc-2657-find-the-common-prefix-array-of-two-arrays.py) | arrays/hashing | hashmap,hashtable,hashing,bitmask,arrays,frequency |
+| 3043 | [Find The Length Of The Longest Common Prefix](../../problems/strings/trie/lc-3043-find-the-length-of-the-longest-common-prefix.py) | strings/trie | trie,prefix-tree,prefix,bfs,hashing,hashmap,hashtable,map |
+| 3043 | [Find The Length Of The Longest Common Prefix](../../problems/arrays/hashing/lc-3043-find-the-length-of-the-longest-common-prefix.py) | arrays/hashing | set,hashset,hashing,prefix,string |
