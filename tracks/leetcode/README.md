@@ -174,3 +174,5 @@ Canonical solutions live in `/problems`.
 | 3043 | [Find The Length Of The Longest Common Prefix](../../problems/strings/trie/lc-3043-find-the-length-of-the-longest-common-prefix.py) | strings/trie | trie,prefix-tree,prefix,bfs,hashing,hashmap,hashtable,map |
 | 3043 | [Find The Length Of The Longest Common Prefix](../../problems/arrays/hashing/lc-3043-find-the-length-of-the-longest-common-prefix.py) | arrays/hashing | set,hashset,hashing,prefix,string |
 | 33 | [Search In Rotated Sorted Array](../../problems/binary_search/on_array/lc-33-search-in-rotated-sorted-array.py) | binary_search/on_array | binary-search,sorting,sorted,arrays |
+| 208 | [Implement Trie](../../problems/strings/trie/lc-208-implement-trie.cpp) | strings/trie | tries,prefix-trees,design,implementation |
+| 211 | [Design Add And Search Words Data Structure](../../problems/design/lc-211-design-add-and-search-words-data-structure.cpp) | design | tries,prefix-tree,dfs,strings,design |
