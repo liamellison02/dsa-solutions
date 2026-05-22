@@ -173,3 +173,4 @@ Canonical solutions live in `/problems`.
 | 2657 | [Find The Common Prefix Array Of Two Arrays](../../problems/arrays/hashing/lc-2657-find-the-common-prefix-array-of-two-arrays.py) | arrays/hashing | hashmap,hashtable,hashing,bitmask,arrays,frequency |
 | 3043 | [Find The Length Of The Longest Common Prefix](../../problems/strings/trie/lc-3043-find-the-length-of-the-longest-common-prefix.py) | strings/trie | trie,prefix-tree,prefix,bfs,hashing,hashmap,hashtable,map |
 | 3043 | [Find The Length Of The Longest Common Prefix](../../problems/arrays/hashing/lc-3043-find-the-length-of-the-longest-common-prefix.py) | arrays/hashing | set,hashset,hashing,prefix,string |
+| 33 | [Search In Rotated Sorted Array](../../problems/binary_search/on_array/lc-33-search-in-rotated-sorted-array.py) | binary_search/on_array | binary-search,sorting,sorted,arrays |
