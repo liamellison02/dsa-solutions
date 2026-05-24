@@ -178,3 +178,4 @@ Canonical solutions live in `/problems`.
 | 211 | [Design Add And Search Words Data Structure](../../problems/design/lc-211-design-add-and-search-words-data-structure.cpp) | design | tries,prefix-tree,dfs,strings,design |
 | 140 | [Word Break II](../../problems/strings/trie/lc-140-word-break-II.py) | strings/trie | bfs,string,prefix,trie,prefix-tree,prefix-set,substring,strings,hashset,enumeration |
 | 1752 | [Check If Array Is Sorted And Rotated](../../problems/arrays/sorting/lc-1752-check-if-array-is-sorted-and-rotated.py) | arrays/sorting | array,counting,circular-array |
+| 1340 | [Jump Game V](../../problems/stack/monotonic/lc-1340-jump-game-V.py) | stack/monotonic | segment-tree,mrq,sorting,stack,monotonic-stack,dp |
