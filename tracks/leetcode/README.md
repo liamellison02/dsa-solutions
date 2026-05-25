@@ -179,3 +179,4 @@ Canonical solutions live in `/problems`.
 | 140 | [Word Break II](../../problems/strings/trie/lc-140-word-break-II.py) | strings/trie | bfs,string,prefix,trie,prefix-tree,prefix-set,substring,strings,hashset,enumeration |
 | 1752 | [Check If Array Is Sorted And Rotated](../../problems/arrays/sorting/lc-1752-check-if-array-is-sorted-and-rotated.py) | arrays/sorting | array,counting,circular-array |
 | 1340 | [Jump Game V](../../problems/stack/monotonic/lc-1340-jump-game-V.py) | stack/monotonic | segment-tree,mrq,sorting,stack,monotonic-stack,dp |
+| 1871 | [Jump Game VII](../../problems/dp/linear/lc-1871-jump-game-VII.py) | dp/linear | dp,1d-dp,bottom-up,sliding-window,string,prefix-sum |
