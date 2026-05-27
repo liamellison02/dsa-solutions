@@ -181,3 +181,4 @@ Canonical solutions live in `/problems`.
 | 1340 | [Jump Game V](../../problems/stack/monotonic/lc-1340-jump-game-V.py) | stack/monotonic | segment-tree,mrq,sorting,stack,monotonic-stack,dp |
 | 1871 | [Jump Game VII](../../problems/dp/linear/lc-1871-jump-game-VII.py) | dp/linear | dp,1d-dp,bottom-up,sliding-window,string,prefix-sum |
 | 3120 | [Count The Number Of Special Characters I](../../problems/bit/lc-3120-count-the-number-of-special-characters-I.cpp) | bit | bit,bit-manipulation,bitmask,string |
+| 3121 | [Count The Number Of Special Characters II](../../problems/arrays/hashing/lc-3121-count-the-number-of-special-characters-ii.py) | arrays/hashing | array,hashing,string,counting |
