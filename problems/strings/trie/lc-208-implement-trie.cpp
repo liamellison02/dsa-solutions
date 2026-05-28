@@ -66,16 +66,6 @@ template <typename T> using pq = priority_queue<T>;
 template <typename T> using minpq = priority_queue<T, vector<T>, greater<T>>;
 template <typename K, typename V> using umap = unordered_map<K, V>;
 
-struct TreeNode {
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode *left, TreeNode *right)
-      : val(x), left(left), right(right) {}
-};
-
 struct TrieNode {
   TrieNode *next[26];
   bool word;
