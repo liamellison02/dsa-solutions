@@ -91,6 +91,24 @@ notes: standard binary search on sorted array
 """
 ```
 
+## Notes and Complexity Style
+
+**Notes**: keep them concise and casual: short lowercase lines, not formal prose. Capture the core idea plus any tie-break or edge detail; skip step-by-step narration. Length scales with difficulty:
+- easy: ~2 short lines
+- medium: a couple of short lines
+- hard: a bit more depth, but still trim all the extra fluff
+
+**Complexity**: declare any helper variables on their own line first, then the `time`/`space` lines. Add qualifiers inline when relevant.
+
+```
+complexity:
+k = max value in nums
+- time = O(n + k)
+- space = O(n + k)
+```
+
+(e.g. `- space = O(1) for fixed alphabet size`)
+
 ## Tags
 
 Tags describe the **techniques, data structures, and problem characteristics** used in a solution. They are comma-separated in the `tags:` metadata field.
@@ -120,6 +138,8 @@ Tags describe the **techniques, data structures, and problem characteristics** u
 
 - Use the `./scripts/new` script to create new problem files (handles templates and metadata automatically)
 - Place solutions in the appropriate `problems/<pattern>/` directory
+- Pick the `pattern/` directory by the solution's **overarching conceptual driver**, not the literal control structure used. E.g. a BFS queue whose efficiency comes from a monotonic forward window → `sliding_window/`; an explicit boolean DP recurrence → `dp/linear/`. Record the implementation flavor (e.g. `bfs`) as a tag instead.
+- Roman numerals in a problem title are **uppercase** in the `name:` field and the `tracks/` README display link (e.g. `jump game VII`, `Count The Number Of Special Characters II`); the filename slug should also be uppercase (`...-VII.py`, `...-II.py`).
 - Commit messages follow: "solved LC/CF/CF-EDU #ID - description"
 - Templates include common STL imports for C++ and typing imports for Python
 - Scripts are cross-platform (macOS BSD and Linux GNU compatible)
