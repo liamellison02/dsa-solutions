@@ -183,3 +183,4 @@ Canonical solutions live in `/problems`.
 | 3120 | [Count The Number Of Special Characters I](../../problems/bit/lc-3120-count-the-number-of-special-characters-I.cpp) | bit | bit,bit-manipulation,bitmask,string |
 | 3121 | [Count The Number Of Special Characters II](../../problems/arrays/hashing/lc-3121-count-the-number-of-special-characters-II.py) | arrays/hashing | array,hashing,string,counting |
 | 3093 | [Longest Common Suffix Queries](../../problems/strings/trie/lc-3093-longest-common-suffix-queries.py) | strings/trie | trie,string,suffix,hashmap |
+| 3300 | [Minimum Element After Replacement With Digit Sum](../../problems/math/lc-3300-minimum-element-after-replacement-with-digit-sum.py) | math | math,digit-sum,string |
