@@ -185,3 +185,4 @@ Canonical solutions live in `/problems`.
 | 3093 | [Longest Common Suffix Queries](../../problems/strings/trie/lc-3093-longest-common-suffix-queries.py) | strings/trie | trie,string,suffix,hashmap |
 | 3300 | [Minimum Element After Replacement With Digit Sum](../../problems/math/lc-3300-minimum-element-after-replacement-with-digit-sum.py) | math | math,digit-sum,string |
 | 3751 | [Total Waviness Of Numbers In Range I](../../problems/math/number_theory/lc-3751-total-waviness-of-numbers-in-range-I.py) | math/number_theory | enumeration,counting,digits,math,number-theory,bruteforce |
+| 2574 | [Left And Right Sum Differences](../../problems/arrays/prefix_sum/lc-2574-left-and-right-sum-differences.py) | arrays/prefix_sum | prefix-sum,array,math |
