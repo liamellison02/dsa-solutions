@@ -8,14 +8,14 @@ includes c++ & python solutions to problems from LeetCode, Codeforces, ICPC prep
 <!-- stats-start -->
 | | Count |
 |---|---|
-| Total solutions | 289 |
-| LeetCode | 185 |
+| Total solutions | 290 |
+| LeetCode | 186 |
 | Codeforces | 19 |
 | CF EDU | 1 |
 | CodePath | 79 |
 | CSC 2720 | 1 |
 | Jane Street | 1 |
-| Python | 156 |
+| Python | 157 |
 | C++ | 133 |
 <!-- stats-end -->
 
