@@ -187,3 +187,4 @@ Canonical solutions live in `/problems`.
 | 3751 | [Total Waviness Of Numbers In Range I](../../problems/math/number_theory/lc-3751-total-waviness-of-numbers-in-range-I.py) | math/number_theory | enumeration,counting,digits,math,number-theory,bruteforce |
 | 2574 | [Left And Right Sum Differences](../../problems/arrays/prefix_sum/lc-2574-left-and-right-sum-differences.py) | arrays/prefix_sum | prefix-sum,array,math |
 | 3558 | [Number Of Ways To Assign Edge Weights I](../../problems/math/lc-3558-number-of-ways-to-assign-edge-weights-I.py) | math | combinatorics,tree,bfs,parity |
+| 25 | [Reverse Nodes In K Group](../../problems/linked_list/lc-25-reverse-nodes-in-k-group.cpp) | linked_list | linked-list,recursion,reversal |
