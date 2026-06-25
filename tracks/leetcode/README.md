@@ -189,3 +189,5 @@ Canonical solutions live in `/problems`.
 | 3558 | [Number Of Ways To Assign Edge Weights I](../../problems/math/lc-3558-number-of-ways-to-assign-edge-weights-I.py) | math | combinatorics,tree,bfs,parity |
 | 25 | [Reverse Nodes In K Group](../../problems/linked_list/lc-25-reverse-nodes-in-k-group.cpp) | linked_list | linked-list,recursion,reversal |
 | 3612 | [Process String With Special Operations I](../../problems/strings/lc-3612-process-string-with-special-operations-I.py) | strings | simulation,string,bytearray |
+| 3699 | [Number Of Zigzag Arrays I](../../problems/dp/state_machine/lc-3699-number-of-zigzag-arrays-I.cpp) | dp/state_machine | dp,state-machine,prefix-sum,counting |
+| 3739 | [Count Subarrays With Majority Element II](../../problems/arrays/prefix_sum/lc-3739-count-subarrays-with-majority-element-II.cpp) | arrays/prefix_sum | prefix-sum,hashing,counting,array |
