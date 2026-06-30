@@ -193,3 +193,4 @@ Canonical solutions live in `/problems`.
 | 3739 | [Count Subarrays With Majority Element II](../../problems/arrays/prefix_sum/lc-3739-count-subarrays-with-majority-element-II.cpp) | arrays/prefix_sum | prefix-sum,hashing,counting,array |
 | 1967 | [Number Of Strings That Appear As Substrings In Word](../../problems/strings/lc-1967-number-of-strings-that-appear-as-substrings-in-word.cpp) | strings | string,substring,counting |
 | 1358 | [Number Of Substrings Containing All Three Characters](../../problems/sliding_window/lc-1358-number-of-substrings-containing-all-three-characters.py) | sliding_window | sliding-window,string,counting |
+| 1765 | [Map Of Highest Peak](../../problems/graphs/bfs/lc-1765-map-of-highest-peak.py) | graphs/bfs | bfs,grid,matrix |
