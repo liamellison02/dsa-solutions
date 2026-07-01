@@ -194,3 +194,4 @@ Canonical solutions live in `/problems`.
 | 1967 | [Number Of Strings That Appear As Substrings In Word](../../problems/strings/lc-1967-number-of-strings-that-appear-as-substrings-in-word.cpp) | strings | string,substring,counting |
 | 1358 | [Number Of Substrings Containing All Three Characters](../../problems/sliding_window/lc-1358-number-of-substrings-containing-all-three-characters.py) | sliding_window | sliding-window,string,counting |
 | 1765 | [Map Of Highest Peak](../../problems/graphs/bfs/lc-1765-map-of-highest-peak.py) | graphs/bfs | bfs,grid,matrix |
+| 2812 | [Find The Safest Path In A Grid](../../problems/graphs/shortest_path/lc-2812-find-the-safest-path-in-a-grid.py) | graphs/shortest_path | bfs,dijkstras,shortest-path,grid,priority-queue |
