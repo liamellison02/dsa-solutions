@@ -135,6 +135,34 @@ L = final length of res
 
 (e.g. `- space = O(26) = O(1) for fixed alphabet size`)
 
+Use the **standard mathematical names** for a problem's size parameters so the
+complexity reads the way the literature does — declare the helper variable once,
+then use it in the `time`/`space` lines. Common conventions:
+
+| Domain | Variables |
+|--------|-----------|
+| Graphs | `V` = vertices/nodes, `E` = edges (capitalized). Grid graphs: `V = m*n` cells, `E = O(4*V)` |
+| Trees | `n` = nodes, `h` = height, `d` = depth |
+| Strings | `n`, `m` = lengths of the two strings; `k` = alphabet / distinct chars |
+| Matrix / grid | `m` = rows, `n` = cols (raw dims, when not framed as a graph) |
+| Numeric / value-range | `k` or `W` = max value / weight; `B` = number of bits |
+| Heap / sort | `n` = elements, `k` = heap size or number of lists |
+
+For **graph solutions**, prefer the canonical `V`/`E` form and pin it to the
+concrete grid/adjacency size on the same line, so both the algorithmic and the
+input-shaped complexity are visible:
+
+```
+complexity:
+V = m*n grid cells (vertices), E = O(4*V) grid edges
+- time = O(E log V) = O(m*n log(m*n))    # dijkstra with a binary heap
+- space = O(V) = O(m*n)
+```
+
+Match the algorithm's textbook bound: BFS/DFS `O(V + E)`, Dijkstra (binary heap)
+`O(E log V)`, Bellman-Ford `O(V*E)`, Floyd-Warshall `O(V^3)`, union-find
+`O(E α(V))`, topological sort `O(V + E)`.
+
 **Notes** — concise and casual: short lowercase lines, not formal prose. Captur
 the core idea plus any tie-break / edge detail; skip step-by-step narration.
 Length scales with difficulty:
