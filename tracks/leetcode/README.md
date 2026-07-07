@@ -196,3 +196,4 @@ Canonical solutions live in `/problems`.
 | 1765 | [Map Of Highest Peak](../../problems/graphs/bfs/lc-1765-map-of-highest-peak.py) | graphs/bfs | bfs,grid,matrix |
 | 2812 | [Find The Safest Path In A Grid](../../problems/graphs/shortest_path/lc-2812-find-the-safest-path-in-a-grid.py) | graphs/shortest_path | bfs,dijkstras,shortest-path,grid,priority-queue |
 | 3286 | [Find A Safe Walk Through A Grid](../../problems/graphs/shortest_path/lc-3286-find-a-safe-walk-through-a-grid.py) | graphs/shortest_path | dijkstras,grid,heap,shortest-path,matrix |
+| 3754 | [Concatenate Non Zero Digits And Multiply By Sum I](../../problems/math/lc-3754-concatenate-non-zero-digits-and-multiply-by-sum-I.cpp) | math | math,simulation,digits |
