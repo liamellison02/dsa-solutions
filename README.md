@@ -16,7 +16,7 @@ includes c++ & python solutions to problems from LeetCode, Codeforces, ICPC prep
 | CSC 2720 | 1 |
 | Jane Street | 1 |
 | Python | 162 |
-| C++ | 139 |
+| C++ | 138 |
 <!-- stats-end -->
 
 run `./scripts/stats` for a full breakdown by difficulty, pattern, and tags.
