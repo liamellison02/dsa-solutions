@@ -200,3 +200,4 @@ Canonical solutions live in `/problems`.
 | 1889 | [Minimum Space Wasted From Packaging](../../problems/binary_search/on_array/lc-1889-minimum-space-wasted-from-packaging.cpp) | binary_search/on_array | binary-search,sorting |
 | 2492 | [Minimum Score Of A Path Between Two Cities](../../problems/graphs/traversal/lc-2492-minimum-score-of-a-path-between-two-cities.py) | graphs/traversal | bfs,graph,connected-components |
 | 1293 | [Shortest Path In A Grid With Obstacles Elimination](../../problems/graphs/bfs/lc-1293-shortest-path-in-a-grid-with-obstacles-elimination.py) | graphs/bfs | bfs,grid,shortest-path,matrix,state |
+| 1260 | [Shift 2d Grid](../../problems/arrays/simulation/lc-1260-shift-2d-grid.cpp) | arrays/simulation | matrix,grid,simulation,math |
