@@ -201,3 +201,4 @@ Canonical solutions live in `/problems`.
 | 2492 | [Minimum Score Of A Path Between Two Cities](../../problems/graphs/traversal/lc-2492-minimum-score-of-a-path-between-two-cities.py) | graphs/traversal | bfs,graph,connected-components |
 | 1293 | [Shortest Path In A Grid With Obstacles Elimination](../../problems/graphs/bfs/lc-1293-shortest-path-in-a-grid-with-obstacles-elimination.py) | graphs/bfs | bfs,grid,shortest-path,matrix,state |
 | 1260 | [Shift 2d Grid](../../problems/arrays/simulation/lc-1260-shift-2d-grid.cpp) | arrays/simulation | matrix,grid,simulation,math |
+| 3517 | [Smallest Palindromic Rearrangement I](../../problems/greedy/lc-3517-smallest-palindromic-rearrangement-I.cpp) | greedy | greedy,string,palindrome,counting,frequency,two-pointers |
