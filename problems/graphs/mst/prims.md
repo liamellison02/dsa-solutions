@@ -3,7 +3,12 @@ single-source greedy algorithm that **grows** MST by repeatedly adding the light
 **dijkstra's, but for MST** -> grows MST by greedily adding smallest edge of an unvisited node to the MST at each step (via priority queue)
 
 ## in a nutshell
-start from any vertex, push all outgoing edges into a min-heap, and keep choosing the smallest edge that reaches an unvisited vertex. continue until all vertices are in the tree. works on **undirected** graphs with non-negative weights. uses DSU/Union-Find structure to manage MST.
+start from any vertex,
+push all outgoing edges into a min-heap,
+and keep choosing the smallest edge that reaches an unvisited vertex.
+continue until all vertices are in the tree.
+works on **undirected** graphs with non-negative weights.
+uses DSU/Union-Find structure to manage MST.
 
 ## steps
 1. build an **undirected** adjacency list and pick an arbitrary start vertex.

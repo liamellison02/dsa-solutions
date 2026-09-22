@@ -2,7 +2,7 @@
 tracks a partition of elements into non-overlapping sets with near-constant-time merges and queries.
 
 ## in a nutshell
-supports two operations: 
+supports two operations:
 a) **find(a)** -> returns the fixed root of a's set
 b) **union(a, b)** -> merges the two sets
 with **path compression** and **union by rank/size**, both operations run in amortized **α(n)** time (inverse Ackermann, effectively constant for practical n).
