@@ -202,3 +202,4 @@ Canonical solutions live in `/problems`.
 | 1293 | [Shortest Path In A Grid With Obstacles Elimination](../../problems/graphs/bfs/lc-1293-shortest-path-in-a-grid-with-obstacles-elimination.py) | graphs/bfs | bfs,grid,shortest-path,matrix,state |
 | 1260 | [Shift 2d Grid](../../problems/arrays/simulation/lc-1260-shift-2d-grid.cpp) | arrays/simulation | matrix,grid,simulation,math |
 | 3517 | [Smallest Palindromic Rearrangement I](../../problems/greedy/lc-3517-smallest-palindromic-rearrangement-I.cpp) | greedy | greedy,string,palindrome,counting,frequency,two-pointers |
+| 921 | [Minimum Add To Make Parentheses Valid](../../problems/greedy/lc-921-minimum-add-to-make-parentheses-valid.cpp) | greedy | greedy,string,counting,parentheses |

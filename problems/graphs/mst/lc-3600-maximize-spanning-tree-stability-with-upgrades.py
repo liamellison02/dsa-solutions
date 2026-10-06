@@ -57,12 +57,9 @@ class Solution:
 
     def maxStability(self, n: int, edges: List[List[int]], k: int) -> int:
         fixed_min, remaining = float("inf"), n - 1
-
         roots = [i for i in range(n)]
         ranks = [0 for i in range(n)]
-
         upgradable = []
-
         # part A
         for e in edges:
             if e[3] == 1:
@@ -73,15 +70,12 @@ class Solution:
                 remaining -= 1
             else:
                 upgradable.append(e)
-
         if remaining == 0:
             return fixed_min
-        # part B
-        # 1) sort rem edges
+
+        # part B - 1) sort rem edges
         upgradable.sort(key=lambda x: -x[2])
-
         stack = []
-
         # 2) complete the MST
         for idx, edge in enumerate(upgradable):
             if remaining == 0:

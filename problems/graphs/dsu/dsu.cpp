@@ -33,3 +33,15 @@ struct DSU {
 
   bool same(int a, int b) { return find(a) == find(b); }
 };
+
+/*
+*
+*
+* what are some examples of successful intern projects that you can share?
+
+how long is the internship program and how are performance evals done
+
+do you feel like you have broad scope and high ownership over your work?
+
+*
+* /
