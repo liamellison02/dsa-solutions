@@ -204,3 +204,4 @@ Canonical solutions live in `/problems`.
 | 3517 | [Smallest Palindromic Rearrangement I](../../problems/greedy/lc-3517-smallest-palindromic-rearrangement-I.cpp) | greedy | greedy,string,palindrome,counting,frequency,two-pointers |
 | 921 | [Minimum Add To Make Parentheses Valid](../../problems/greedy/lc-921-minimum-add-to-make-parentheses-valid.cpp) | greedy | greedy,string,counting,parentheses |
 | 2361 | [Minimum Costs Using The Train Line](../../problems/dp/state_machine/lc-2361-minimum-costs-using-the-train-line.cpp) | dp/state_machine | dp,state-machine,1d-dp,bottom-up,array |
+| 1021 | [Remove Outermost Parentheses](../../problems/stack/lc-1021-remove-outermost-parentheses.cpp) | stack | string,stack,counting |
